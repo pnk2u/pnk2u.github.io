@@ -1426,9 +1426,9 @@
                 
                 window.addEventListener("resize", applyScale);
 
-                compactS.addEventListener("click", () => {isTableCompact = true; isAuto = false; applyScale();});
-                bigS.addEventListener("click", () => {isTableCompact = false; isAuto = false; applyScale();});
-                autoS.addEventListener("click", () => {isAuto = true; isTableCompact = false; applyScale();});
+                compactS.addEventListener("click", () => {isTableCompact = true; isAuto = false; applyScale();  compactS.setAttribute("style", 'color: #fdee');bigS.setAttribute("style", 'color: #fdea');autoS.setAttribute("style", 'color: #fdea');});
+                bigS.addEventListener("click", () => {isTableCompact = false; isAuto = false; applyScale();     compactS.setAttribute("style", 'color: #fdea');bigS.setAttribute("style", 'color: #fdee');autoS.setAttribute("style", 'color: #fdea');});
+                autoS.addEventListener("click", () => {isAuto = true; isTableCompact = false; applyScale();     compactS.setAttribute("style", 'color: #fdea');bigS.setAttribute("style", 'color: #fdea');autoS.setAttribute("style", 'color: #fdee');});
             }
 
             getversion("Bake-Your-Bread", "1.20.1");
