@@ -53,7 +53,10 @@
             .th-small {
                 padding: 0;
                 margin: 0;
-                border: 0;
+                border-top: 0 !important;
+                border-left: 0 !important;
+                border-right: 0 !important;
+                border-bottom: 1px #fdea !important;
                 font-family: monospace;
                 font-size: 10px;
                 -webkit-text-stroke: 0.034vw;
@@ -88,7 +91,6 @@
             .th-small:hover {
                 padding: 0 0 !important;
                 margin: 0 0 !important;
-                border: 0 !important;
                 background-color: #f06 !important;
                 color: white;
             }
@@ -104,7 +106,7 @@
                 height: auto;
                 display: inline-block;
                 margin-bottom: -50%;
-                background-color: white;
+                background-color: #fff;
                 object-fit: cover;
                 border-radius: 50%;
                 padding: 2px;
@@ -112,9 +114,6 @@
                 top: 4px;
                 left: -4px;
                 filter: opacity(85%);
-            }
-            .author-icon:hover {
-                background-color: #0f9;
             }
             .author-icon_o {
                 width: 18px;
@@ -169,8 +168,26 @@
             .author-name {
                 font-size: 15px;
             }
+            .author-link:hover .author-icon {
+                background-color: #0f9;
+            }
             .social-icon {
                 width: 16px;
+            }
+            #s-i_modrinth_o:hover #s-i_modrinth {
+                fill: #0f9;
+            }
+            #s-i_curseforge {
+                background-color: #fff;
+            }
+            #s-i_curseforge_o:hover > #s-i_curseforge {
+                background-color: #0f9;
+            }
+            #s-i_github {
+                filter: invert(1);
+            }
+            #s-i_github_o:hover > #s-i_github {
+                filter: invert(50%) sepia(100%) saturate(200) hue-rotate(159deg) brightness(5);
             }
             .sizeSwitch {
                background-color: #f06;
