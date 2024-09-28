@@ -54,6 +54,7 @@
             }
             function scaleTableOnWidth(tableId, widthThreshold, scaleFactor) {
                 const table = document.getElementById(tableId);
+                const bottom = document.getElementById("footer");
                 
                 const compactS = document.getElementById("compactSwitch");
                 const bigS = document.getElementById("bigSwitch");
@@ -63,9 +64,11 @@
                     if (((window.innerWidth < widthThreshold) & isTableAuto) || isTableCompact) {
                         table.style.transform = `scale(${scaleFactor})`;
                         table.style.marginTop = '0';
+                        bottom.style.marginTop = '16%';
                     } else {
                         table.style.transform = 'scale(1.5)';
                         table.style.marginTop = '496px';
+                        bottom.style.marginTop = '40%';
                     }
                 }
                 
