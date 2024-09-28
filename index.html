@@ -66,7 +66,7 @@
                 margin: 0;
                 border: 0;
                 font-family: monospace;
-                font-size: 12.5px;
+                font-size: 10px;
                 -webkit-text-stroke: 0.034vw;
                 -webkit-text-stroke-color: #0f94;
             }
@@ -175,7 +175,10 @@
                 -webkit-text-stroke: 0.5px;
             }
             .mod_name {
-             -webkit-text-stroke: 0.2px;
+                font-size: 17px
+            }
+            .author-name {
+                font-size: 15px;
             }
             .social-icon {
                 width: 16px;
@@ -201,21 +204,21 @@
     <body>
         <header id="header">
             <h1 style="font-size: 5vw; text-align: center; margin-top: -1vw">
-                <a href="https://modrinth.com/user/pnku" style="text-decoration: none">pnku</a>
+                <a target="_blank" href="https://modrinth.com/user/pnku" style="text-decoration: none">pnku</a>
             </h1>
         </header>
         <div style="display: inline-flexbox; color: white;">You can find my projects on:<br>
-            <a href="https://www.modrinth.com/user/pnku">
+            <a href="https://www.modrinth.com/user/pnku" target="_blank">
             <svg style="width: 16px;height: 16px;position: relative;top: 2px;left: -1px;" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" xml:space="preserve" viewBox="275 -30 50 625">
                 <g fill="#fff">
                     <path d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28 19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95 34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"></path>
                     <path d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24 171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28 244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"></path>
                     <path d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05 1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77 148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"></path>
                 </g>
-            </svg>Modrinth</a> | <a href="https://www.curseforge.com/members/pnku/projects">
+            </svg>Modrinth</a> | <a href="https://www.curseforge.com/members/pnku/projects" target="_blank">
             <svg class="social-icon" fill="#f06" style="background-color: white;border-radius: 50%;position: relative;top: 2px;left: -2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 114 48">
                 <path d="M86.9804 22.9535C86.9804 22.9535 110.238 19.2696 113.911 8.52538H78.2827V0H0L9.64353 11.2401V22.7565C9.64353 22.7565 33.9764 21.4856 43.3888 28.655C56.2728 40.6503 28.898 56.8651 28.898 56.8651L24.2038 72.4678C31.5443 65.4472 45.5345 56.365 71.1848 56.8028C61.4236 59.9015 51.6085 64.7416 43.9674 72.4678H95.8198L90.937 56.8651C90.937 56.8651 53.3556 34.6059 86.9804 22.9549V22.9535Z" fill="#f06"></path>
-            </svg>Curseforge</a> | <span><a href="https://github.com/pnk2u?tab=repositories"><img class="social-icon" style="filter: invert(1);position: relative;top: 2.5px;left: -2px;" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg">Github</a></span></div>
+            </svg>Curseforge</a> | <span><a target="_blank" href="https://github.com/pnk2u?tab=repositories"><img class="social-icon" style="filter: invert(1);position: relative;top: 2.5px;left: -2px;" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg">Github</a></span></div>
         
         <table class="mod-info-table" id="mod-table">
             <thead>
@@ -242,9 +245,9 @@
                             class="mod-icon" />
                     </td>
                     <td>
-                         <a class="mod_name" href="https://modrinth.com/mod/bake-your-bread">Bake Your Bread</a>
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/bake-your-bread">Bake Your Bread</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_Bake-Your-Bread_1.20.1"></div>
                         <a href="https://modrinth.com/mod/bake-your-bread" target="_blank" id="dw_Bake-Your-Bread_1.20.1">1.20.1</a>
@@ -270,28 +273,28 @@
                     </td>
                     <td  style="padding: 0;">
                         <div class="rec-icon_o">
-                            <a title="Appleskin (recommended)" href="https://modrinth.com/mod/appleskin">
+                            <a title="Appleskin (recommended)" target="_blank" href="https://modrinth.com/mod/appleskin">
                                 <img src="https://raw.githubusercontent.com/squeek502/Appleskin/refs/heads/1.21-fabric/resources/assets/appleskin/appleskin.png" class="rec-icon"/>
                             </a>
                         </div>
                         <div class="rec-icon_o">
-                            <a title="Modmenu (recommended)" href="https://modrinth.com/mod/modmenu">
+                            <a title="Modmenu (recommended)" target="_blank" href="https://modrinth.com/mod/modmenu">
                                 <img src="https://raw.githubusercontent.com/TerraformersMC/ModMenu/refs/heads/1.21/src/main/resources/assets/modmenu/icon.png" class="rec-icon"/>
                             </a>
                         </div>
                         <div class="rec-icon_o">
-                            <a title="Cloth Config (recommended)" href="https://modrinth.com/mod/cloth-config">
+                            <a title="Cloth Config (recommended)" target="_blank" href="https://modrinth.com/mod/cloth-config">
                                 <img src="https://raw.githubusercontent.com/shedaniel/cloth-config/refs/heads/v8/fabric/src/main/resources/icon.png" class="rec-icon"/>
                             </a>
                         </div>
                         <div class="rec-icon_o">
-                            <a title="Jade (recommended)" href="https://modrinth.com/mod/jade">
+                            <a title="Jade (recommended)" target="_blank" href="https://modrinth.com/mod/jade">
                                 <img src="https://raw.githubusercontent.com/snownee/jade/refs/heads/1.21-fabric/src/main/resources/icon.png" class="rec-icon"/>
                             </a>
                         </div>
-                         <a class="mod_name" href="https://modrinth.com/mod/hungrycows" style="position: relative;top: -40px;">Hungry Cows</a>
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/hungrycows" style="position: relative;top: -40px;">Hungry Cows</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_hungrycows_1.20.1"></div>
                         <a href="https://modrinth.com/mod/hungrycows" target="_blank" id="dw_hungrycows_1.20.1">1.20.1</a>
@@ -328,9 +331,9 @@
 								<img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/>
 							</a>
                         </div>
-                         <a class="mod_name" href="https://modrinth.com/mod/More-Barrel-Variants" style="position: relative;top: -10px;">More Barrel Variants</a>
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Barrel-Variants" style="position: relative;top: -10px;">More Barrel Variants</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Barrel-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/more-barrel-variants" target="_blank" id="dw_More-Barrel-Variants_1.20.1"
@@ -364,15 +367,15 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                         <a class="mod_name" href="https://modrinth.com/mod/More-Bed-Variants" style="position: relative; top: -10px">More Bed Variants</a>
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Bed-Variants" style="position: relative; top: -10px">More Bed Variants</a>
                     </td>
                     <td>
-                        <a href="https://modrinth.com/user/pnku"
+                        <a target="_blank" href="https://modrinth.com/user/pnku"
                             ><div class="author-icon_o">
                                 <img
                                     class="author-icon"
                                     src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg" />
-                            </div>pnku</a>
+                            </div><span class="author-name">pnku</span></a>
                     </td><td>
                         <div class="mod_version" id="mod_version_More-Bed-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/more-Bed-variants" target="_blank" id="dw_More-Bed-Variants_1.20.1">1.20.1</a>
@@ -398,9 +401,9 @@
                     </td>
                     <td  style="padding: 0;">
                         <div class="req-icon_o">
-                            <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>                         </div>                          <a class="mod_name" href="https://modrinth.com/mod/More-Beehive-Variants" style="position: relative;top: -10px;">More Beehive Variants</a></td>
+                            <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>                         </div>                          <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Beehive-Variants" style="position: relative;top: -10px;">More Beehive Variants</a></td>
                     <td>
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Beehive-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Beehive-Variants" target="_blank" id="dw_More-Beehive-Variants_1.20.1"
@@ -434,9 +437,9 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                         <a class="mod_name" href="https://modrinth.com/mod/More-Bookshelf-Variants-lieonlion" style="position: relative;top: -10px;">More Bookshelf Variants</a>
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Bookshelf-Variants-lieonlion" style="position: relative;top: -10px;">More Bookshelf Variants</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/LieOnLion"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div>LieOnLion</a></td>
+                    <td><a href="https://modrinth.com/user/LieOnLion" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div><span class="author-name">LieOnLion</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Bookshelf-Variants-lieonlion_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Bookshelf-Variants-lieonlion" target="_blank" id="dw_More-Bookshelf-Variants-lieonlion_1.20.1">1.20.1</a>
@@ -462,9 +465,9 @@
                     </td>
                     <td  style="padding: 0;">
                         <div class="req-icon_o">
-                            <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>                         </div>                          <a class="mod_name" href="https://modrinth.com/mod/More-Cartography-Tables" style="position: relative;top: -10px;">More Cartography Tables</a></td>
+                            <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>                         </div>                          <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Cartography-Tables" style="position: relative;top: -10px;">More Cartography Tables</a></td>
                     <td>
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Cartography-Tables_1.20.1"></div>
                         <a
@@ -506,11 +509,11 @@
                         <div class="req-icon_o" style="top: -10px">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                         <a class="mod_name" href="https://modrinth.com/mod/More-Chiseled-Bookshelf-Variants" style="position: relative; top: -10px">More Chiseled Bookshelf Variants</a>
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Chiseled-Bookshelf-Variants" style="position: relative; top: -10px">More Chiseled Bookshelf Variants</a>
                     </td>
                     <td>
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a>,<br/>
-                        <a href="https://modrinth.com/user/Cyyynthia"><div class="author-icon_o"><img class="author-icon" src="https://avatars.githubusercontent.com/u/9999055?v=4"></div>Cynthia</a>
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a>,<br/>
+                        <a href="https://modrinth.com/user/Cyyynthia" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://avatars.githubusercontent.com/u/9999055?v=4"></div><span class="author-name">Cynthia</span></a>
                     </td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Chiseled-Bookshelf-Variants_1.20.1"></div>
@@ -549,9 +552,9 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                        <a class="mod_name" href="https://modrinth.com/mod/More-Chest-Variants-lieonlion" style="position: relative;top: -10px;">More Chest Variants</a></td>
+                        <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Chest-Variants-lieonlion" style="position: relative;top: -10px;">More Chest Variants</a></td>
                     <td>
-                        <a href="https://modrinth.com/user/LieOnLion"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div>LieOnLion</a></td>
+                        <a href="https://modrinth.com/user/LieOnLion" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div><span class="author-name">LieOnLion</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Chest-Variants-lieonlion_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Chest-Variants-lieonlion" target="_blank" id="dw_More-Chest-Variants-lieonlion_1.20.1">1.20.1</a>
@@ -579,9 +582,9 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                        <a class="mod_name" href="https://modrinth.com/mod/More-Composter-Variants" style="position: relative;top: -10px;">More Composter Variants</a></td>
+                        <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Composter-Variants" style="position: relative;top: -10px;">More Composter Variants</a></td>
                     <td>
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Composter-Variants_1.20.1"></div>
                         <a
@@ -616,9 +619,9 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                        <a class="mod_name" href="https://modrinth.com/mod/More-Crafter-Variants" style="position: relative;top: -10px;">More Crafter Variants</a></td>
+                        <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Crafter-Variants" style="position: relative;top: -10px;">More Crafter Variants</a></td>
                     <td>
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td colspan="3" class="empty_cell"></td>
                     <td colspan="2">
                         <div class="mod_version" id="mod_version_More-Crafter-Variants_1.21"></div>
@@ -633,8 +636,8 @@
                             src="https://raw.githubusercontent.com/LieOnLion/More-Crafting-Tables/refs/heads/fabric+1.20.6/src/main/resources/logo.png"
                             class="mod-icon" />
                     </td>
-                    <td  style="padding: 0;">                         <div class="req-icon_o">                             <img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/>                         </div>                          <a class="mod_name" href="https://modrinth.com/mod/More-Crafting-Tables-lieonlion" style="position: relative;top: -10px;">More Crafting Tables</a></td>
-                    <td><a href="https://modrinth.com/user/LieOnLion"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div>LieOnLion</a></td>
+                    <td  style="padding: 0;">                         <div class="req-icon_o">                             <img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/>                         </div>                          <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Crafting-Tables-lieonlion" style="position: relative;top: -10px;">More Crafting Tables</a></td>
+                    <td><a href="https://modrinth.com/user/LieOnLion" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div><span class="author-name">LieOnLion</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Crafting-Tables-lieonlion_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Crafting-Tables-lieonlion" target="_blank" id="dw_More-Crafting-Tables-lieonlion_1.20.1">1.20.1</a>
@@ -670,11 +673,11 @@
                         </div>
                         <a
                             class="mod_name"
-                            href="https://modrinth.com/mod/More-Feeding-Trough-Variants"
+                            target="_blank" href="https://modrinth.com/mod/More-Feeding-Trough-Variants"
                             style="position: relative; top: -20px; text-indent: 50%"
                             >More Feeding Trough Variants</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Feeding-Trough-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Feeding-Trough-Variants" target="_blank" id="dw_More-Feeding-Trough-Variants_1.20.1">1.20.1</a>
@@ -696,8 +699,8 @@
                     <td style="background-color: #140a37">
                         <img src="https://raw.githubusercontent.com/pnk2u/More-Fletching-Tables/refs/heads/1.21/src/main/resources/logo.png" class="mod-icon"/>
                     </td>
-                    <td  style="padding: 0;">                         <div class="req-icon_o">                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>                         </div>                          <a class="mod_name" href="https://modrinth.com/mod/More-Fletching-Tables" style="position: relative;top: -10px;">More Fletching Tables</a></td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td  style="padding: 0;">                         <div class="req-icon_o">                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>                         </div>                          <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Fletching-Tables" style="position: relative;top: -10px;">More Fletching Tables</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Fletching-Tables_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Fletching-Tables" target="_blank" id="dw_More-Fletching-Tables_1.20.1"
@@ -731,9 +734,9 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                         <a class="mod_name" href="https://modrinth.com/mod/More-Furnace-Variants-lieonlion" style="position: relative;top: -10px;">More Furnace Variants</a>
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Furnace-Variants-lieonlion" style="position: relative;top: -10px;">More Furnace Variants</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/LieOnLion"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div>LieOnLion</a></td>
+                    <td><a href="https://modrinth.com/user/LieOnLion" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div><span class="author-name">LieOnLion</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Furnace-Variants-lieonlion_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Furnace-Variants-lieonlion" target="_blank" id="dw_More-Furnace-Variants-lieonlion_1.20.1">1.20.1</a>
@@ -759,9 +762,9 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                        <a class="mod_name" href="https://modrinth.com/mod/More-Grindstone-Variants" style="position: relative;top: -10px;">More Grindstone Variants</a></td>
+                        <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Grindstone-Variants" style="position: relative;top: -10px;">More Grindstone Variants</a></td>
                     <td>
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Grindstone-Variants_1.20.1"></div>
                         <a
@@ -805,9 +808,9 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                         <a class="mod_name" href="https://modrinth.com/mod/More-Jukebox-Noteblock-Variants" style="position: relative; top: -10px">More Jukebox/Noteblock Variants</a>
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Jukebox-Noteblock-Variants" style="position: relative; top: -10px">More Jukebox/Noteblock Variants</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Jukebox-Noteblock-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Jukebox-Noteblock-Variants" target="_blank" id="dw_More-Jukebox-Noteblock-Variants_1.20.1">1.20.1</a>
@@ -835,8 +838,8 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                        <a class="mod_name" href="https://modrinth.com/mod/More-Lectern-Variants" style="position: relative;top: -10px;">More Lectern Variants</a></td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                        <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Lectern-Variants" style="position: relative;top: -10px;">More Lectern Variants</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Lectern-Variants_1.20.1"></div>
                         <a
@@ -874,8 +877,8 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                        <a class="mod_name" href="https://modrinth.com/mod/More-Loom-Variants" style="position: relative;top: -10px;">More Loom Variants</a></td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                        <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Loom-Variants" style="position: relative;top: -10px;">More Loom Variants</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Loom-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Loom-Variants" target="_blank" id="dw_More-Loom-Variants_1.20.1"
@@ -907,17 +910,17 @@
                     </td>
                     <td style="padding: 0">
                         <div class="req-icon_o" style="top: -10px">
-                            <a title="Nemo's Woodcutter (required)" href="https://modrinth.com/mod/Nemos-Woodcutter">
+                            <a title="Nemo's Woodcutter (required)" target="_blank" href="https://modrinth.com/mod/Nemos-Woodcutter">
                                 <img src="https://raw.githubusercontent.com/NemoNotFound/NemosWoodcutter/refs/heads/master/src/main/resources/assets/nemos-woodcutter/icon.png"
                                     class="req-icon" style="filter: opacity(100%) contrast(119.9%) brightness(120%);"/>
                             </a>
                         </div>
-                         <a class="mod_name" href="https://modrinth.com/mod/More-Nemos-Woodcutter-Variants" style="position: relative; top: -10px">More Nemo's Woodcutter Variants</a
+                         <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Nemos-Woodcutter-Variants" style="position: relative; top: -10px">More Nemo's Woodcutter Variants</a
                         >
                     </td>
                     <td>
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a>,<br/>
-                        <a href="https://modrinth.com/user/NemoNotFound"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/djWlhnKQ/f6f099fc7bed17982a5ec6edcf1a0297a3052981.png"></div>NemoNotFound</a>
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a>,<br/>
+                        <a href="https://modrinth.com/user/NemoNotFound" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/djWlhnKQ/f6f099fc7bed17982a5ec6edcf1a0297a3052981.png"></div><span class="author-name">NemoNotFound</span></a>
                     </td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Nemos-Woodcutter-Variants_1.20.1"></div>
@@ -953,24 +956,24 @@
                             </a>
                         </div>
                         <div class="rec-icon_o" style="top: -20.5px">
-                            <a title="Modmenu (recommended)" href="https://modrinth.com/mod/modmenu">
+                            <a title="Modmenu (recommended)" target="_blank" href="https://modrinth.com/mod/modmenu">
                                 <img src="https://raw.githubusercontent.com/TerraformersMC/ModMenu/refs/heads/1.21/src/main/resources/assets/modmenu/icon.png" class="rec-icon"/>
                             </a>
                         </div>
                         <div class="rec-icon_o" style="top: -20.5px">
-                            <a title="Cloth Config (recommended)" href="https://modrinth.com/mod/cloth-config">
+                            <a title="Cloth Config (recommended)" target="_blank" href="https://modrinth.com/mod/cloth-config">
                                 <img src="https://raw.githubusercontent.com/shedaniel/cloth-config/refs/heads/v8/fabric/src/main/resources/icon.png" class="rec-icon"/>
                             </a>
                         </div>
                         <a
                             class="mod_name"
-                            href="https://modrinth.com/mod/More-Shield-Variants"
+                            target="_blank" href="https://modrinth.com/mod/More-Shield-Variants"
                             style="position: relative; top: -30px"
                             >More Shield Variants</a
                         >
                     </td><td>
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a>,<br/>
-                        <a href="https://modrinth.com/user/hypothetiKal"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/fN0tsZb7/91d3e161a1e06ff9a542361ce36756dd46567abc.webp"></div>hypothetiKal</a>
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a>,<br/>
+                    <a href="https://modrinth.com/user/hypothetiKal" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/fN0tsZb7/91d3e161a1e06ff9a542361ce36756dd46567abc.webp"></div><span class="author-name">hypothetiKal</span></a>
                     </td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Shield-Variants_1.20.1"></div>
@@ -1005,8 +1008,8 @@
                         <div class="req-icon_o">
                             <a title="Quad (required)" href="#mod_version_Quad_1.21"><img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/></a>
                         </div>
-                        <a class="mod_name" href="https://modrinth.com/mod/More-Smithing-Tables" style="position: relative;top: -10px;">More Smithing Tables</a></td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                        <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Smithing-Tables" style="position: relative;top: -10px;">More Smithing Tables</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Smithing-Tables_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Smithing-Tables" target="_blank" id="dw_More-Smithing-Tables_1.20.1"
@@ -1049,9 +1052,9 @@
                                 class="rec-icon" style="filter: opacity(80%) contrast(105.0%) brightness(115%);"/></a>
                         </div>
                         <a  class="mod_name"
-                            href="https://modrinth.com/mod/More-Smoker-Variants"
+                            target="_blank" href="https://modrinth.com/mod/More-Smoker-Variants"
                             style="position: relative; top: -20px">More Smoker Variants</a>
-                    </td><td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    </td><td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Smoker-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Smoker-Variants" target="_blank" id="dw_More-Smoker-Variants_1.20.1">1.20.1</a>
@@ -1085,9 +1088,9 @@
                             class="mod-icon" />
                     </td>
                     <td>
-                        <b> <a class="mod_name" href="https://modrinth.com/mod/More-Stick-Variants">More Stick Variants</a></b>
+                        <b> <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Stick-Variants">More Stick Variants</a></b>
                     </td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Stick-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Stick-Variants" target="_blank" id="dw_More-Stick-Variants_1.20.1">1.20.1</a>
@@ -1119,9 +1122,9 @@
                             </a>
                         </div>
                         <a  class="mod_name"
-                            href="https://modrinth.com/mod/More-Armor-Stand-Variants"
+                            target="_blank" href="https://modrinth.com/mod/More-Armor-Stand-Variants"
                             style="position: relative; top: -10px">More Armor Stand Variants</a></td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Armor-Stand-Variants_1.20.1"></div>
                         <a
@@ -1175,12 +1178,12 @@
                             </a>
                         </div>
                         <a  class="mod_name"
-                            href="https://modrinth.com/mod/Nemos-More-Ladder-Variants"
+                            target="_blank" href="https://modrinth.com/mod/Nemos-More-Ladder-Variants"
                             style="position: relative; top: -20px">Nemo's More Ladder Variants</a>
                     </td>
                     <td>
-                        <a href="https://modrinth.com/user/NemoNotFound"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/djWlhnKQ/f6f099fc7bed17982a5ec6edcf1a0297a3052981.png"></div>NemoNotFound</a>,<br />
-                        <a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a>
+                        <a href="https://modrinth.com/user/NemoNotFound" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/djWlhnKQ/f6f099fc7bed17982a5ec6edcf1a0297a3052981.png"></div><span class="author-name">NemoNotFound</span></a>,<br />
+                        <a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a>
                     </td>
                     <td>
                         <div class="mod_version" id="mod_version_Nemos-More-Ladder-Variants_1.20.1"></div>
@@ -1214,10 +1217,10 @@
                             </a>
                         </div>
                         <a  class="mod_name"
-                            href="https://modrinth.com/mod/More-Fishing-Rod-Variants"
+                            target="_blank" href="https://modrinth.com/mod/More-Fishing-Rod-Variants"
                             style="position: relative; top: -10px">More (Fishing) Rod Variants</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Fishing-Rod-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Fishing-Rod-Variants" target="_blank" id="dw_More-Fishing-Rod-Variants_1.20.1">1.20.1</a>
@@ -1255,9 +1258,9 @@
                             </a>
                         </div>
                         <a  class="mod_name"
-                            href="https://modrinth.com/mod/More-Torch-Variants"
+                            target="_blank" href="https://modrinth.com/mod/More-Torch-Variants"
                             style="position: relative; top: -20px">More Torch Variants</a></td>
-                    <td><a href="https://modrinth.com/user/pnku"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div>pnku</a></td>
+                    <td><a href="https://modrinth.com/user/pnku" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg"></div><span class="author-name">pnku</span></a></td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Torch-Variants_1.20.1"></div>
                         <a href="https://modrinth.com/mod/More-Torch-Variants" target="_blank" id="dw_More-Torch-Variants_1.20.1"
@@ -1312,11 +1315,11 @@
                             </a>
                         </div>
                         <a  class="mod_name"
-                            href="https://modrinth.com/mod/Nemos-Campfires"
+                            target="_blank" href="https://modrinth.com/mod/Nemos-Campfires"
                             style="position: relative; top: -20px">Nemo's Campfires</a>
                     </td>
                     <td>
-                        <a href="https://modrinth.com/user/NemoNotFound"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/djWlhnKQ/f6f099fc7bed17982a5ec6edcf1a0297a3052981.png"></div>NemoNotFound</a>
+                        <a href="https://modrinth.com/user/NemoNotFound" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/djWlhnKQ/f6f099fc7bed17982a5ec6edcf1a0297a3052981.png"></div><span class="author-name">NemoNotFound</span></a>
                     </td>
                     <td>
                         <div class="mod_version" id="mod_version_Nemos-Campfires_1.20.1"></div>
@@ -1351,9 +1354,9 @@
                             class="mod-icon" />
                     </td>
                     <td>
-                         <a class="mod_name" href="https://modrinth.com/mod/quad">Quad</a>
+                         <a class="mod_name" href="https://modrinth.com/user/LieOnLion" target="_blank">Quad</a>
                     </td>
-                    <td><a href="https://modrinth.com/user/LieOnLion"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div>LieOnLion</a></td>
+                    <td><a href="https://modrinth.com/user/LieOnLion" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div><span class="author-name">LieOnLion</span></a></td>
                     <td colspan="2">
                         <div class="mod_version" id="mod_version_Quad_1.20.4"></div>
                         <a href="https://modrinth.com/mod/Quad" target="_blank" id="dw_Quad_1.20.4">1.20-1.20.4</a>
