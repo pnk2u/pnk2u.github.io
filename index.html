@@ -3,203 +3,13 @@
     <head>
         <title>pnku</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet"  href="./index.css">
         <link rel="icon" type="image/x-icon" href="\res\img\favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap&text=0123456789" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-        <style>
-            #header {
-            }
-            body {
-                background-color: #ff0066;
-                font-family: Rubik, Cabin, Ubuntu;
-            }
-            h1 {
-                color: white;
-            }
-            p {
-                color: white;
-            }
-            a {
-                color: #fff;
-                text-shadow: 0px 0px 1px #0f99;
-                text-decoration-color: #fdea;
-            }
-            a:visited {
-                color: #fff7fb;
-            }
-            a:hover {
-                color: #0f9;
-            }
-            #footer {
-                position: relative;
-                bottom: 1vw;
-                right: 0.75vw;
-            }
-            .mod-info-table {
-                margin-left: auto;
-                margin-right: auto;
-                padding: 1px;
-                border: 1px solid #ffffff;
-                border-spacing: 0;
-                transform: scale(1.5);
-                margin-top: 496px;
-                color: #fff;
-            }
-            table.mod-info-table th,
-            .th, .th-small {
-                background-color: white;
-                color: #ff0066;
-                -webkit-text-stroke: 0.005vw;
-            }
-            .th {
-                padding: 0px 0px;
-                margin: 0px 0px;
-                border: 0px;
-            }
-            .th:hover, .th-small:hover {
-                background-color: #fde !important;
-            }
-            .th-small {
-                padding: 0;
-                margin: 0;
-                border: 0;
-                font-family: monospace;
-                font-size: 10px;
-                -webkit-text-stroke: 0.034vw;
-                -webkit-text-stroke-color: #0f94;
-            }
-            table.mod-info-table td,
-            table.mod-info-table th {
-                border: 1px solid rgba(255, 255, 255, 0.625);
-                padding: 5px 10px;
-            }
-            table.mod-info-table td:nth-child(1) {
-                border: 1.25px solid #ff83c1ff;
-                padding: 0px;
-            }
-            table.mod-info-table td:hover {
-                background-color: #f37;
-            }
-            table.mod-info-table thead {
-                font-size: larger;
-            }
-            table.mod-info-table tbody {
-                text-align: center;
-            }
-            .empty_cell,
-            .empty_cell:hover {
-                padding: 0px 0px !important;
-                margin: 0px 0px !important;
-                background-color: #f06 !important;
-                color: white;
-            }
-            .th-small,
-            .th-small:hover {
-                padding: 0px 0px !important;
-                margin: 0px 0px !important;
-                border: 0px !important;
-                background-color: #f06 !important;
-                color: white;
-            }
-            .mod-icon {
-                width: 44px;
-                height: auto;
-                margin: 0.175vw;
-                margin-bottom: 0.075vw;
-                filter: contrast(107.5%) brightness(107.5%)
-            }
-            .author-icon {
-                width: 16px;
-                height: auto;
-                display: inline-block;
-                margin-bottom: -50%;
-                background-color: white;
-                object-fit: cover;
-                border-radius: 50%;
-                padding: 2px;
-                position: relative;
-                top: 4px;
-                left: -4px;
-                filter: opacity(85%);
-            }
-            .author-icon:hover {
-                background-color: #0f9;
-            }
-            .author-icon_o {
-                width: 18px;
-                height: 18px;
-                display: inline-grid;
-                border-radius: 50%;
-                margin-bottom: 1%;
-                padding: 1px;
-                position: relative;
-                top: 0;
-                left: 0;
-            }
-            .req-icon_o {
-                width: 18px;
-                height: 18px;
-                padding: 1px;
-                background-color: #fdea;
-                position: relative;
-                top: -7px;
-                left: 0;
-                filter: opacity(80%);
-            }
-            .rec-icon_o {
-                width: 18px;
-                height: 18px;
-                padding: 1px;
-                background-color: #fdea;
-                position: relative;
-                top: -0.5px;
-                right: -92%;
-                filter: opacity(90%);
-            }
-            .rec-icon_o:hover, .req-icon_o:hover {
-                background-color: #0f9d;
-            }
-            .rec-icon, .req-icon {
-                width: 16px;
-                height: 16px;
-                display: inline-grid;
-            }
-            .mod_version {
-                text-align: left;
-                margin: -0.225vw;
-                font-size: 11px;
-                color: #00ff99cc;
-                text-shadow: 0px 0px 1.5px #fde;
-                -webkit-text-stroke: 0.5px;
-            }
-            .mod_name {
-                font-size: 17px
-            }
-            .author-name {
-                font-size: 15px;
-            }
-            .social-icon {
-                width: 16px;
-            }
-            .sizeSwitch {
-               background-color: #f06;
-               color: #fdea;
-               text-shadow: 1px 1px #5027;
-               font-size: 7px;
-               padding: 1px;
-               border-color: #fdea;
-            }
-            .sizeSwitch:hover {
-	           background-color: #fdea;
-	           text-shadow: 1px 1px #f069;
-            }
-            .sizeSwitch:active {
-                background-color: #903a;
-	            text-shadow: 1px 1px #fde3;
-            }
-        </style>
+        <style></style>
     </head>
     <body>
         <header id="header">
@@ -440,13 +250,9 @@
                          <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Bookshelf-Variants-lieonlion" style="position: relative;top: -10px;">More Bookshelf Variants</a>
                     </td>
                     <td><a href="https://modrinth.com/user/LieOnLion" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div><span class="author-name">LieOnLion</span></a></td>
-                    <td>
-                        <div class="mod_version" id="mod_version_More-Bookshelf-Variants-lieonlion_1.20.1"></div>
-                        <a href="https://modrinth.com/mod/More-Bookshelf-Variants-lieonlion" target="_blank" id="dw_More-Bookshelf-Variants-lieonlion_1.20.1">1.20.1</a>
-                    </td>
-                    <td>
+                    <td  colspan="2">
                         <div class="mod_version" id="mod_version_More-Bookshelf-Variants-lieonlion_1.20.4"></div>
-                        <a href="https://modrinth.com/mod/More-Bookshelf-Variants-lieonlion" target="_blank" id="dw_More-Bookshelf-Variants-lieonlion_1.20.4">1.20.4</a>
+                        <a href="https://modrinth.com/mod/More-Bookshelf-Variants-lieonlion" target="_blank" id="dw_More-Bookshelf-Variants-lieonlion_1.20.4">1.20-1.20.4</a>
                     </td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Bookshelf-Variants-lieonlion_1.20.6"></div>
@@ -638,13 +444,9 @@
                     </td>
                     <td  style="padding: 0;">                         <div class="req-icon_o">                             <img src="https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png" class="req-icon"/>                         </div>                          <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Crafting-Tables-lieonlion" style="position: relative;top: -10px;">More Crafting Tables</a></td>
                     <td><a href="https://modrinth.com/user/LieOnLion" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div><span class="author-name">LieOnLion</span></a></td>
-                    <td>
-                        <div class="mod_version" id="mod_version_More-Crafting-Tables-lieonlion_1.20.1"></div>
-                        <a href="https://modrinth.com/mod/More-Crafting-Tables-lieonlion" target="_blank" id="dw_More-Crafting-Tables-lieonlion_1.20.1">1.20.1</a>
-                    </td>
-                    <td>
+                    <td colspan="2">
                         <div class="mod_version" id="mod_version_More-Crafting-Tables-lieonlion_1.20.4"></div>
-                        <a href="https://modrinth.com/mod/More-Crafting-Tables-lieonlion" target="_blank" id="dw_More-Crafting-Tables-lieonlion_1.20.4">1.20.4</a>
+                        <a href="https://modrinth.com/mod/More-Crafting-Tables-lieonlion" target="_blank" id="dw_More-Crafting-Tables-lieonlion_1.20.4">1.20-1.20.4</a>
                     </td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Crafting-Tables-lieonlion_1.20.6"></div>
@@ -737,13 +539,9 @@
                          <a class="mod_name" target="_blank" href="https://modrinth.com/mod/More-Furnace-Variants-lieonlion" style="position: relative;top: -10px;">More Furnace Variants</a>
                     </td>
                     <td><a href="https://modrinth.com/user/LieOnLion" target="_blank"><div class="author-icon_o"><img class="author-icon" src="https://cdn.modrinth.com/user/NJoexEIT/9e1e97d990581f7e372c5e8296aae7efd2f69ece.png"></div><span class="author-name">LieOnLion</span></a></td>
-                    <td>
-                        <div class="mod_version" id="mod_version_More-Furnace-Variants-lieonlion_1.20.1"></div>
-                        <a href="https://modrinth.com/mod/More-Furnace-Variants-lieonlion" target="_blank" id="dw_More-Furnace-Variants-lieonlion_1.20.1">1.20.1</a>
-                    </td>
-                    <td>
+                    <td colspan="2">
                         <div class="mod_version" id="mod_version_More-Furnace-Variants-lieonlion_1.20.4"></div>
-                        <a href="https://modrinth.com/mod/More-Furnace-Variants-lieonlion" target="_blank" id="dw_More-Furnace-Variants-lieonlion_1.20.4">1.20.4</a>
+                        <a href="https://modrinth.com/mod/More-Furnace-Variants-lieonlion" target="_blank" id="dw_More-Furnace-Variants-lieonlion_1.20.4">1.20-1.20.4</a>
                     </td>
                     <td>
                         <div class="mod_version" id="mod_version_More-Furnace-Variants-lieonlion_1.20.6"></div>
@@ -1377,187 +1175,6 @@
                 Contact me at <a href="mailto:contact@pnku.de">contact@pnku.de</a>
             </p>
         </footer>
-        <script type="module">
-            let isTableCompact = false;
-            let isAuto = true;
-            async function getversion(slug, mc_version) {
-                const mv_id = "mod_version_" + slug + "_" + mc_version;
-                const mv_dw = "dw_" + slug + "_" + mc_version;
-                var mod_version = "";
-                let headers = new Headers({
-                    "User-Agent": "pnk2u/pnk2u.github.io (contact@pnku.de)"
-                });
-                try {
-                    let api_url =
-                        "https://api.modrinth.com/v2/project/" +
-                        slug +
-                        "/version?game_versions=%5B%22" +
-                        mc_version +
-                        "%22%5D&loaders=%5B%22fabric%22%5D";
-                    const api_response = await fetch(api_url, {
-                        "Content-Type": "application/json",
-                        method: "GET",
-                        headers: headers
-                    });
-                    let api_json = await api_response.json();
-                    if (!api_json[0].loaders.includes("fabric")) {console.log("non-fabric-response")}
-                    const version_id = api_json[0].id;
-                    const mod_version_l = api_json[0].version_number.split('+');
-                    const mod_version_l2 = mod_version_l[0].split('-1');
-                    const mod_version = mod_version_l2[0];
-                    console.log(slug + "/" + mod_version + "/" + version_id);
-                    const dw_link = "https://modrinth.com/mod/" + slug + "/version/" + version_id;
-                    document.getElementById(mv_id).innerHTML = mod_version;
-                    document.getElementById(mv_dw).setAttribute("href", dw_link);
-                } catch (error) {
-                    console.error(error.message);
-                }
-            }
-            function scaleTableOnWidth(tableId, widthThreshold, scaleFactor) {
-                const table = document.getElementById(tableId);
-                
-                const compactS = document.getElementById("compactSwitch");
-                const bigS = document.getElementById("bigSwitch");
-                const autoS = document.getElementById("autoSwitch");
-
-                function applyScale() {
-                    if (((window.innerWidth < widthThreshold) & isAuto) || isTableCompact) {
-                        table.style.transform = `scale(${scaleFactor})`;
-                        table.style.marginTop = '0';
-                    } else {
-                        table.style.transform = 'scale(1.5)';
-                        table.style.marginTop = '496px'
-                    }
-                }
-                
-                applyScale();
-                
-                window.addEventListener("resize", applyScale);
-
-                compactS.addEventListener("click", () => {isTableCompact = true; isAuto = false; applyScale();  compactS.setAttribute("style", 'color: #fdee');bigS.setAttribute("style", 'color: #fdea');autoS.setAttribute("style", 'color: #fdea');});
-                bigS.addEventListener("click", () => {isTableCompact = false; isAuto = false; applyScale();     compactS.setAttribute("style", 'color: #fdea');bigS.setAttribute("style", 'color: #fdee');autoS.setAttribute("style", 'color: #fdea');});
-                autoS.addEventListener("click", () => {isAuto = true; isTableCompact = false; applyScale();     compactS.setAttribute("style", 'color: #fdea');bigS.setAttribute("style", 'color: #fdea');autoS.setAttribute("style", 'color: #fdee');});
-            }
-
-            getversion("Bake-Your-Bread", "1.20.1");
-            getversion("Bake-Your-Bread", "1.20.4");
-            getversion("Bake-Your-Bread", "1.20.6");
-            getversion("Bake-Your-Bread", "1.21");
-            getversion("hungrycows", "1.20.1");
-            getversion("hungrycows", "1.20.4");
-            getversion("hungrycows", "1.20.6");
-            getversion("hungrycows", "1.21");
-            getversion("More-Barrel-Variants", "1.20.1");
-            getversion("More-Barrel-Variants", "1.20.4");
-            getversion("More-Barrel-Variants", "1.20.6");
-            getversion("More-Barrel-Variants", "1.21");
-            getversion("More-Bed-Variants", "1.20.1");
-            getversion("More-Bed-Variants", "1.20.4");
-            getversion("More-Bed-Variants", "1.20.6");
-            getversion("More-Bed-Variants", "1.21");
-            getversion("More-Beehive-Variants", "1.20.1");
-            getversion("More-Beehive-Variants", "1.20.4");
-            getversion("More-Beehive-Variants", "1.20.6");
-            getversion("More-Beehive-Variants", "1.21");
-            getversion("More-Bookshelf-Variants-lieonlion", "1.20.1");
-            getversion("More-Bookshelf-Variants-lieonlion", "1.20.4");
-            getversion("More-Bookshelf-Variants-lieonlion", "1.20.6");
-            getversion("More-Bookshelf-Variants-lieonlion", "1.21");
-            getversion("More-Cartography-Tables", "1.20.1");
-            getversion("More-Cartography-Tables", "1.20.4");
-            getversion("More-Cartography-Tables", "1.20.6");
-            getversion("More-Cartography-Tables", "1.21");
-            getversion("More-Chest-Variants-lieonlion", "1.20.1");
-            getversion("More-Chest-Variants-lieonlion", "1.20.4");
-            getversion("More-Chest-Variants-lieonlion", "1.20.6");
-            getversion("More-Chest-Variants-lieonlion", "1.21");
-            getversion("More-Crafter-Variants", "1.21");
-            getversion("More-Crafting-Tables-lieonlion", "1.20.1");
-            getversion("More-Crafting-Tables-lieonlion", "1.20.4");
-            getversion("More-Crafting-Tables-lieonlion", "1.20.6");
-            getversion("More-Crafting-Tables-lieonlion", "1.21");
-            getversion("More-Chiseled-Bookshelf-Variants", "1.20.1");
-            getversion("More-Chiseled-Bookshelf-Variants", "1.20.4");
-            getversion("More-Chiseled-Bookshelf-Variants", "1.20.6");
-            getversion("More-Chiseled-Bookshelf-Variants", "1.21");
-            getversion("More-Chiseled-Bookshelf-Variants", "1.21.1");
-            getversion("More-Composter-Variants", "1.20.1");
-            getversion("More-Composter-Variants", "1.20.4");
-            getversion("More-Composter-Variants", "1.20.6");
-            getversion("More-Composter-Variants", "1.21");
-            getversion("More-Feeding-Trough-Variants", "1.20.1");
-            getversion("More-Feeding-Trough-Variants", "1.20.4");
-            getversion("More-Feeding-Trough-Variants", "1.20.6");
-            getversion("More-Feeding-Trough-Variants", "1.21");
-            getversion("More-Jukebox-Noteblock-Variants", "1.20.1");
-            getversion("More-Jukebox-Noteblock-Variants", "1.20.4");
-            getversion("More-Jukebox-Noteblock-Variants", "1.20.6");
-            getversion("More-Jukebox-Noteblock-Variants", "1.21");
-            getversion("More-Fletching-Tables", "1.20.1");
-            getversion("More-Fletching-Tables", "1.20.4");
-            getversion("More-Fletching-Tables", "1.20.6");
-            getversion("More-Fletching-Tables", "1.21");
-            getversion("More-Furnace-Variants-lieonlion", "1.20.1");
-            getversion("More-Furnace-Variants-lieonlion", "1.20.4");
-            getversion("More-Furnace-Variants-lieonlion", "1.20.6");
-            getversion("More-Furnace-Variants-lieonlion", "1.21");
-            getversion("More-Grindstone-Variants", "1.20.1");
-            getversion("More-Grindstone-Variants", "1.20.4");
-            getversion("More-Grindstone-Variants", "1.20.6");
-            getversion("More-Grindstone-Variants", "1.21");
-            getversion("More-Lectern-Variants", "1.20.1");
-            getversion("More-Lectern-Variants", "1.20.4");
-            getversion("More-Lectern-Variants", "1.20.6");
-            getversion("More-Lectern-Variants", "1.21");
-            getversion("More-Lectern-Variants", "1.21.1");
-            getversion("More-Loom-Variants", "1.20.1");
-            getversion("More-Loom-Variants", "1.20.4");
-            getversion("More-Loom-Variants", "1.20.6");
-            getversion("More-Loom-Variants", "1.21");
-            getversion("More-Nemos-Woodcutter-Variants", "1.20.1");
-            getversion("More-Nemos-Woodcutter-Variants", "1.20.4");
-            getversion("More-Nemos-Woodcutter-Variants", "1.20.6");
-            getversion("More-Nemos-Woodcutter-Variants", "1.21");
-            getversion("More-Shield-Variants", "1.20.1");
-            getversion("More-Shield-Variants", "1.20.4");
-            getversion("More-Shield-Variants", "1.20.6");
-            getversion("More-Shield-Variants", "1.21");
-            getversion("More-Smithing-Tables", "1.20.1");
-            getversion("More-Smithing-Tables", "1.20.4");
-            getversion("More-Smithing-Tables", "1.20.6");
-            getversion("More-Smithing-Tables", "1.21");
-            getversion("More-Smoker-Variants", "1.20.1");
-            getversion("More-Smoker-Variants", "1.20.4");
-            getversion("More-Smoker-Variants", "1.20.6");
-            getversion("More-Smoker-Variants", "1.21");
-            getversion("More-Stick-Variants", "1.20.1");
-            getversion("More-Stick-Variants", "1.20.4");
-            getversion("More-Stick-Variants", "1.20.6");
-            getversion("More-Stick-Variants", "1.21");
-            getversion("More-Armor-Stand-Variants", "1.20.1");
-            getversion("More-Armor-Stand-Variants", "1.20.4");
-            getversion("More-Armor-Stand-Variants", "1.20.6");
-            getversion("More-Armor-Stand-Variants", "1.21");
-            getversion("Nemos-More-Ladder-Variants", "1.20.1");
-            getversion("Nemos-More-Ladder-Variants", "1.20.4");
-            getversion("Nemos-More-Ladder-Variants", "1.20.6");
-            getversion("Nemos-More-Ladder-Variants", "1.21");
-            getversion("More-Fishing-Rod-Variants", "1.20.1");
-            getversion("More-Fishing-Rod-Variants", "1.20.4");
-            getversion("More-Fishing-Rod-Variants", "1.20.6");
-            getversion("More-Fishing-Rod-Variants", "1.21");
-            getversion("More-Torch-Variants", "1.20.1");
-            getversion("More-Torch-Variants", "1.20.4");
-            getversion("More-Torch-Variants", "1.20.6");
-            getversion("More-Torch-Variants", "1.21");
-            getversion("Nemos-Campfires", "1.20.1");
-            getversion("Nemos-Campfires", "1.20.4");
-            getversion("Nemos-Campfires", "1.20.6");
-            getversion("Nemos-Campfires", "1.21");
-            getversion("Quad", "1.20.4");
-            getversion("Quad", "1.20.6");
-            getversion("Quad", "1.21");
-            scaleTableOnWidth("mod-table", 1200, 1.0);
-        </script>
+        <script defer src="index.js"> </script>
     </body>
 </html>
