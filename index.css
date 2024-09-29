@@ -129,12 +129,23 @@
                 padding: 0;
                 vertical-align: top;
             }
+            .req-th, .rec-th{
+                background-color: #fdea;
+                color: #f06;
+                -webkit-text-stroke-color: #55001c45;;
+            }
+            .req-th:hover, .rec-th:hover{
+                background-color: #0f9d;
+            }
+            body:has(.req-th:hover) .req-icon,
+            body:has(.rec-th:hover) .rec-icon{
+                background-color: #0f9d;
+            }
             .mod-reqrec-container {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
                 width: 100%;
-                margin-top: -0.5px;
             }
             .req-icon_o {
                 filter: opacity(80%);
