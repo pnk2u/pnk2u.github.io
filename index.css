@@ -172,6 +172,20 @@
                 text-shadow: 0 0 1.5px #fde;
                 -webkit-text-stroke: 0.5px;
             }
+            .mod_version_4 {
+                text-align: left;
+                margin: -0.225vw;
+                font-size: 11px;
+                color: #0f9c;
+                text-shadow: 0 0 1.5px #fde;
+                -webkit-text-stroke: 0.5px;
+                position: relative;
+                top: -7px;
+            }
+            .mod_game_version_4{
+                position: relative;
+                top: 10px;
+            }
             .mod_name {
                 margin-left: auto;
                 position: relative;

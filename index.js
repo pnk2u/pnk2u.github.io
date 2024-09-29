@@ -6,7 +6,7 @@
                 const mv_id = "mod_version_" + slug + "_" + mc_version;
                 const mv_dw = "dw_" + slug + "_" + mc_version;
                 now = Date.now();
-                const sessionTTL = 62317;
+                const sessionTTL = 317237;
                 var dw_link = "";
                 var mod_version = "";
                 let headers = new Headers({
