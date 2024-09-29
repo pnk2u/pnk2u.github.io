@@ -1,8 +1,8 @@
             #header {
             }
             body {
-                background-color: #ff0066;
-                font-family: Rubik, Cabin, Ubuntu;
+                background-color: #f06;
+                font-family: Rubik, Cabin, Ubuntu, sans-serif;
             }
             h1 {
                 color: white;
@@ -40,7 +40,7 @@
             .th, .th-small {
                 background-color: white;
                 color: #ff0066;
-                -webkit-text-stroke: 0.005vw;
+                -webkit-text-stroke-width: 0.005vw;
             }
             .th {
                 padding: 0 0;
@@ -59,7 +59,7 @@
                 border-bottom: 1px #fdea !important;
                 font-family: monospace;
                 font-size: 10px;
-                -webkit-text-stroke: 0.034vw;
+                -webkit-text-stroke-width: 0.034vw;
                 -webkit-text-stroke-color: #0f94;
             }
             table.mod-info-table td,
@@ -97,8 +97,7 @@
             .mod-icon {
                 width: 44px;
                 height: auto;
-                margin: 0.175vw;
-                margin-bottom: 0.075vw;
+                margin: 0.175vw 0.175vw 0.075vw;
                 filter: contrast(107.5%) brightness(107.5%)
             }
             .author-icon {
@@ -126,44 +125,56 @@
                 top: 0;
                 left: 0;
             }
+            table.mod-info-table td:nth-child(2){
+                padding: 0;
+                vertical-align: top;
+            }
+            .mod-reqrec-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+                margin-top: -0.5px;
+            }
             .req-icon_o {
-                width: 18px;
-                height: 18px;
-                padding: 1px;
-                background-color: #fdea;
-                position: relative;
-                top: -7px;
-                left: 0;
                 filter: opacity(80%);
             }
             .rec-icon_o {
-                width: 18px;
-                height: 18px;
-                padding: 1px;
-                background-color: #fdea;
-                position: relative;
-                top: -0.5px;
-                right: -92%;
+                margin-left: auto;
                 filter: opacity(90%);
             }
-            .rec-icon_o:hover, .req-icon_o:hover {
+            .rec-icon:hover, .req-icon:hover {
                 background-color: #0f9d;
             }
             .rec-icon, .req-icon {
                 width: 16px;
                 height: 16px;
-                display: inline-grid;
+                display: grid;
+                padding: 1px;
+                background-color: #fdea;
             }
             .mod_version {
                 text-align: left;
                 margin: -0.225vw;
                 font-size: 11px;
-                color: #00ff99cc;
+                color: #0f9c;
                 text-shadow: 0 0 1.5px #fde;
                 -webkit-text-stroke: 0.5px;
             }
             .mod_name {
-                font-size: 17px
+                margin-left: auto;
+                position: relative;
+                top: 0;
+            }
+            .mod_name_0 {
+                margin-left: auto;
+                position: relative;
+                top: 16px;
+            }
+            .mod_name_2 {
+                margin-left: auto;
+                position: relative;
+                top: -18px;
             }
             .author-name {
                 font-size: 15px;
