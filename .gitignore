@@ -9,3 +9,5 @@
 /.idea/
 /res/test/
 /pnk2u.github.io.iml
+/res/img/pres/*
+!/res/img/pres/pres_1_634_comp.png
