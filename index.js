@@ -185,6 +185,10 @@
             getversion("More-Fishing-Rod-Variants", "1.20.4");
             getversion("More-Fishing-Rod-Variants", "1.20.6");
             getversion("More-Fishing-Rod-Variants", "1.21");
+            getversion("More-Tool-Variants", "1.20.1");
+            getversion("More-Tool-Variants", "1.20.4");
+            getversion("More-Tool-Variants", "1.20.6");
+            getversion("More-Tool-Variants", "1.21");
             getversion("More-Torch-Variants", "1.20.1");
             getversion("More-Torch-Variants", "1.20.4");
             getversion("More-Torch-Variants", "1.20.6");
