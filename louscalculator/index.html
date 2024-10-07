@@ -24,15 +24,15 @@
         #bfs-reader, #nfs-reader {
             top: 1ch;
         }
-        .reset-button-b, .reset-button-n{
+        #reset-button-b, #reset-button-n{
             height: 3ch;
             position: relative;
             top: 2.5ch;
         }
-        .reset-button-b {
+        #reset-button-b {
             left:6ch;
         }
-        .reset-button-n {
+        #reset-button-n {
             left: 11ch;
         }
         .color-line-n{
@@ -64,7 +64,7 @@
 </head>
 <body>
 <h2 style="text-align: center">Color Calc</h2>
-<div class="headline-slider_container"><h3>New Color: Between</h3>  <label for="between_factor_slider"></label><input type="range" min="-150" max="2000" value="100" class="slider" id="between_factor_slider"><span id="bfs-reader">??</span><button class="reset-button-b">Reset (100)</button>
+<div class="headline-slider_container"><h3>New Color: Between</h3>  <label for="between_factor_slider"></label><input type="range" min="-150" max="2000" value="100" class="slider" id="between_factor_slider"><span id="bfs-reader">??</span><button id="reset-button-b">Reset (100)</button>
 </div>
     <div class="color-line-n">
 <span>Original Color 1:</span>
@@ -116,7 +116,7 @@
 <label for="colorN2_r_hsl"></label><input id="colorN2_r_hsl" class="r_hsl" type="text">
 </div>
 <hr>
-<div class="headline-slider_container"><h3>New Color: Next</h3>  <label for="next_factor_slider"></label><input type="range" min="-150" max="2000" value="100" class="slider" id="next_factor_slider"><span id="nfs-reader">??</span><button class="reset-button-n">Reset (100)</button>
+<div class="headline-slider_container"><h3>New Color: Next</h3>  <label for="next_factor_slider"></label><input type="range" min="-150" max="2000" value="100" class="slider" id="next_factor_slider"><span id="nfs-reader">??</span><button id="reset-button-n">Reset (100)</button>
 </div>
 <div class="color-line-n">
     <span>Original Color 1:</span>
@@ -190,6 +190,8 @@
         let bfs_reader = document.getElementById("bfs-reader")
         let nfs = document.getElementById("next_factor_slider")
         let nfs_reader = document.getElementById("nfs-reader")
+        let reset_button_b = document.getElementById('reset-button-b');
+        let reset_button_n = document.getElementById('reset-button-n');
         let color1 = new Color();
         let color2 = new Color();
         let color3 = new Color();
@@ -320,6 +322,20 @@
         }
         colorReaderB();
         colorReaderN();
+
+        function resetButtonB() {
+            bfs.value = 1000;
+            colorReaderB();
+        }
+        function resetButtonN() {
+            nfs.value = 1000;
+            colorReaderN();
+        }
+        resetButtonB();
+        resetButtonN();
+        reset_button_b.addEventListener('click', resetButtonB);
+        reset_button_n.addEventListener('click', resetButtonN);
+
 
         bfs.addEventListener('input', colorReaderB);
         nfs.addEventListener('input', colorReaderN);
