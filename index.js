@@ -177,6 +177,10 @@
             getversion("More-Armor-Stand-Variants", "1.20.4");
             getversion("More-Armor-Stand-Variants", "1.20.6");
             getversion("More-Armor-Stand-Variants", "1.21");
+            getversion("More-Frame-Variants", "1.20.1");
+            getversion("More-Frame-Variants", "1.20.4");
+            getversion("More-Frame-Variants", "1.20.6");
+            getversion("More-Frame-Variants", "1.21");
             getversion("Nemos-More-Ladder-Variants", "1.20.1");
             getversion("Nemos-More-Ladder-Variants", "1.20.4");
             getversion("Nemos-More-Ladder-Variants", "1.20.6");
