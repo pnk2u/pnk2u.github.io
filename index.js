@@ -170,6 +170,7 @@
             getversion("More-Nemos-Woodcutter-Variants", "1.20.4");
             getversion("More-Nemos-Woodcutter-Variants", "1.20.6");
             getversion("More-Nemos-Woodcutter-Variants", "1.21");
+            getversion("More-Nemos-Woodcutter-Variants", "1.21.3");
             getversion("More-Shield-Variants", "1.20.1");
             getversion("More-Shield-Variants", "1.20.4");
             getversion("More-Shield-Variants", "1.20.6");
@@ -229,7 +230,7 @@
             getversion("Nemos-Campfires", "1.20.4");
             getversion("Nemos-Campfires", "1.20.6");
             getversion("Nemos-Campfires", "1.21");
-            getversion("Nemos-Campfires", "1.21.2");
+            getversion("Nemos-Campfires", "1.21.3");
             getversion("Quad", "1.20.4");
             getversion("Quad", "1.20.6");
             getversion("Quad", "1.21");
