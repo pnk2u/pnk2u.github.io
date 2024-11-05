@@ -137,6 +137,7 @@
             getversion("More-Feeding-Trough-Variants", "1.20.4");
             getversion("More-Feeding-Trough-Variants", "1.20.6");
             getversion("More-Feeding-Trough-Variants", "1.21");
+            getversion("More-Feeding-Trough-Variants", "1.21.3");
             getversion("More-Jukebox-Noteblock-Variants", "1.20.1");
             getversion("More-Jukebox-Noteblock-Variants", "1.20.4");
             getversion("More-Jukebox-Noteblock-Variants", "1.20.6");
