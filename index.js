@@ -238,6 +238,7 @@
             getversion("More-Compatibility-Variants-BoP", "1.20.4");
             getversion("More-Compatibility-Variants-BoP", "1.20.6");
             getversion("More-Compatibility-Variants-BoP", "1.21");
+            getversion("More-Compatibility-Variants-BoP", "1.21.3");
             getversion("More-Compatibility-Variants-NS", "1.20.4");
             getversion("More-Compatibility-Variants-NS", "1.20.6");
             getversion("More-Compatibility-Variants-NS", "1.21");
