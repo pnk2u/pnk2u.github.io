@@ -239,9 +239,11 @@
             getversion("More-Compatibility-Variants-BoP", "1.20.6");
             getversion("More-Compatibility-Variants-BoP", "1.21");
             getversion("More-Compatibility-Variants-BoP", "1.21.3");
+            getversion("More-Compatibility-Variants-OTBWG", "1.20.1");
+            getversion("More-Compatibility-Variants-OTBWG", "1.21.1");
+            getversion("More-Compatibility-Variants-lets-do", "1.20.1");
             getversion("More-Compatibility-Variants-NS", "1.20.4");
             getversion("More-Compatibility-Variants-NS", "1.20.6");
             getversion("More-Compatibility-Variants-NS", "1.21");
-            getversion("More-Compatibility-Variants-lets-do", "1.20.1");
             scaleTableOnWidth("mod-table", 1200, 1.0);
             console.log("TTL: " + (sessionStorage['sessionTime'] - now)/1000 + "s");
