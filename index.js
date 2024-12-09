@@ -262,6 +262,7 @@
             getversion("Quad", "1.20.4");
             getversion("Quad", "1.20.6");
             getversion("Quad", "1.21");
+            getversion("Quad", "1.21.4");
             getversion("More-Compatibility-Variants-BoP", "1.20.4");
             getversion("More-Compatibility-Variants-BoP", "1.20.6");
             getversion("More-Compatibility-Variants-BoP", "1.21");
