@@ -124,6 +124,7 @@
             getversion("More-Chest-Variants-lieonlion", "1.20.4");
             getversion("More-Chest-Variants-lieonlion", "1.20.6");
             getversion("More-Chest-Variants-lieonlion", "1.21");
+            getversion("More-Chest-Variants-lieonlion", "1.21.4");
             getversion("More-Crafter-Variants", "1.21");
             getversion("More-Crafting-Tables-lieonlion", "1.20.4");
             getversion("More-Crafting-Tables-lieonlion", "1.20.6");
@@ -205,6 +206,8 @@
             getversion("More-Smoker-Variants", "1.21");
             getversion("More-Smoker-Variants", "1.21.3");
             getversion("More-Smoker-Variants", "1.21.4");
+            getversion("More-Tide-Anglers-Variants", "1.20.1");
+            getversion("More-Tide-Anglers-Variants", "1.21");
             getversion("More-Stick-Variants", "1.20.1");
             getversion("More-Stick-Variants", "1.20.4");
             getversion("More-Stick-Variants", "1.20.6");
@@ -235,6 +238,9 @@
             getversion("More-Fishing-Rod-Variants", "1.21");
             getversion("More-Fishing-Rod-Variants", "1.21.3");
             getversion("More-Fishing-Rod-Variants", "1.21.4");
+            getversion("More-Rail-Variants", "1.20.1");
+            getversion("More-Rail-Variants", "1.21");
+            getversion("More-Rail-Variants", "1.21.4");
             getversion("More-Tool-Variants", "1.20.1");
             getversion("More-Tool-Variants", "1.20.4");
             getversion("More-Tool-Variants", "1.20.6");
