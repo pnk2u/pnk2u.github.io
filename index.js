@@ -218,6 +218,7 @@
             getversion("More-Smoker-Variants", "1.21");
             setDiscontinuedVersion("More-Smoker-Variants", "1.21.3", "1.3.1", "G0DyBK8u");
             getversion("More-Smoker-Variants", "1.21.4");
+            getversion("More-Extra-Shield-Variants", "1.21");
             getversion("More-Tide-Anglers-Variants", "1.20.1");
             getversion("More-Tide-Anglers-Variants", "1.21");
             getversion("More-Stick-Variants", "1.20.1");
