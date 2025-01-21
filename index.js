@@ -12,6 +12,7 @@
                     sessionStorage[`${mv_id}`] = `${mod_version}`;
                     sessionStorage[`${mv_dw}`] = `${dw_link}`;
                     document.getElementById(mv_id).innerHTML = mod_version;
+                    document.getElementById(mv_dw).setAttribute("href", dw_link);
                 }
             }
             async function getversion(slug, mc_version) {
