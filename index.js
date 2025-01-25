@@ -93,6 +93,35 @@
                 bigS.addEventListener("click", () => {isTableCompact = false; isTableAuto = false; applyScale();     compactS.setAttribute("style", 'color: #fdea');bigS.setAttribute("style", 'color: #fdee');autoS.setAttribute("style", 'color: #fdea');});
                 autoS.addEventListener("click", () => {isTableAuto = true; isTableCompact = false; applyScale();     compactS.setAttribute("style", 'color: #fdea');bigS.setAttribute("style", 'color: #fdea');autoS.setAttribute("style", 'color: #fdee');});
             }
+            function toggleDarkMode() {
+                const root = document.documentElement;
+
+                if (!(root.style.getPropertyValue('--background-color') === '#340819')) {
+                    // Switch to dark mode
+                    root.style.setProperty ('--background-color', '#340819');
+                    root.style.setProperty ('--background-color-highlighted', '#480f25');
+                    root.style.setProperty ('--background-color-vcontrast', '#6d0730');
+                    root.style.setProperty ('--border-b', '#f069')
+                    root.style.setProperty ('--primary-color', '#f06');
+                    root.style.setProperty ('--primary-color-del', '#340819');
+                    root.style.setProperty ('--primary-muted-1', '#f37');
+                    root.style.setProperty ('--primary-muted-2', '#f58');
+                    root.style.setProperty ('--primary-muted-2-a', '#7b4354ab');
+                    root.style.setProperty ('--s-i-icon-filter-gh', 'invert(50%) sepia(100%) saturate(200) hue-rotate(-5deg) brightness(5.625)');
+                } else {
+                    // Switch to light mode
+                    root.style.setProperty ('--background-color', '#f06');
+                    root.style.setProperty ('--background-color-highlighted', '#f37');
+                    root.style.setProperty ('--background-color-vcontrast', '#903a');
+                    root.style.setProperty ('--border-b', '#ff83c1')
+                    root.style.setProperty ('--primary-color', '#fff');
+                    root.style.setProperty ('--primary-color-del', '#fff');
+                    root.style.setProperty ('--primary-muted-1', '#fff7fb');
+                    root.style.setProperty ('--primary-muted-2', '#fde');
+                    root.style.setProperty ('--primary-muted-2-a', '#fdea');
+                    root.style.setProperty ('--s-i-icon-filter-gh', 'invert(1)');
+                }
+            }
 
             getversion("Bake-Your-Bread", "1.20.1");
             setDiscontinuedVersion("Bake-Your-Bread", "1.20.4", "1.1.2","W4k8u9yw");

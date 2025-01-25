@@ -1,22 +1,34 @@
+            :root {
+                --background-color: #f06;
+                --background-color-highlighted: #f37;
+                --background-color-vcontrast: #903a;
+                --border-b: #ff83c1;
+                --primary-color: #fff;
+                --primary-color-del: #fff;
+                --primary-muted-1: #fff7fb;
+                --primary-muted-2: #fde;
+                --primary-muted-2-a: #fdea;
+                --s-i-icon-filter-gh: invert(1);
+            }
             #header {
             }
             body {
-                background-color: #f06;
+                background-color: var(--background-color);
                 font-family: Rubik, Cabin, Ubuntu, sans-serif;
             }
             h1 {
-                color: white;
+                color: var(--primary-color);
             }
             p {
-                color: white;
+                color: var(--primary-color);
             }
             a {
-                color: #fff;
+                color: var(--primary-color);
                 text-shadow: 0 0 1px #0f99;
-                text-decoration-color: #fdea;
+                text-decoration-color: var(--primary-muted-2-a);
             }
             a:visited {
-                color: #fff7fb;
+                color: var(--primary-muted-1);
             }
             a:hover {
                 color: #0f9;
@@ -26,22 +38,28 @@
                 bottom: 1vw;
                 right: 0.75vw;
             }
+            #dark-mode_toggle_button {
+                right: 0.25vw;
+                position: absolute;
+                top: 0.2vw;
+                filter: var(--s-i-icon-filter-gh);
+            }
             .mod-info-table {
                 margin-left: auto;
                 margin-right: auto;
                 padding: 1px;
-                border: 1px solid #ffffff;
+                border: 1px solid var(--primary-color);
                 border-spacing: 0;
                 transform: scale(1.5);
                 margin-top: 496px;
-                color: #fff;
+                color: var(--primary-color);
                 position: relative;
                 top: 2.5rem;
             }
             table.mod-info-table th,
             .th, .th-small {
-                background-color: white;
-                color: #ff0066;
+                background-color: var(--primary-color);
+                color: var(--background-color);
                 -webkit-text-stroke-width: 0.005vw;
             }
             .th {
@@ -50,7 +68,7 @@
                 border: 0;
             }
             .th:hover, .th-small:hover {
-                background-color: #fde !important;
+                background-color: var(--background-color-highlighted) !important;
             }
             .th-small, .th-small-discon {
                 padding: 0;
@@ -58,26 +76,26 @@
                 border-top: 0 !important;
                 border-left: 0 !important;
                 border-right: 0 !important;
-                border-bottom: 1px #fdea !important;
+                border-bottom: 1px var(--primary-muted-2-a) !important;
                 font-family: monospace;
                 font-size: 10px;
                 -webkit-text-stroke-width: 0.034vw;
                 -webkit-text-stroke-color: #0f94;
             }
             .th-small-discon {
-                color: #effa;
+                color: var(--primary-muted-2-a);
             }
             table.mod-info-table td,
             table.mod-info-table th {
-                border: 1px solid rgba(255, 255, 255, 0.625);
+                border: 1px solid var(--primary-muted-2-a);
                 padding: 5px 10px;
             }
             table.mod-info-table td:nth-child(1) {
-                border: 1.25px solid #ff83c1ff;
+                border: 1.25px solid var(--border-b);
                 padding: 0;
             }
             table.mod-info-table td:hover {
-                background-color: #f37;
+                background-color: var(--background-color-highlighted);
             }
             table.mod-info-table thead {
                 font-size: larger;
@@ -89,15 +107,15 @@
             .empty_cell:hover {
                 padding: 0 0 !important;
                 margin: 0 0 !important;
-                background-color: #f06 !important;
-                color: white;
+                background-color: var(--background-color);
+                color: var(--primary-color);
             }
             .th-small,
             .th-small:hover {
                 padding: 0 0 !important;
                 margin: 0 0 !important;
-                background-color: #f06 !important;
-                color: white;
+                background-color: var(--background-color);
+                color: var(--primary-color);
             }
             .mod-icon {
                 width: 44px;
@@ -110,7 +128,7 @@
                 height: auto;
                 display: inline-block;
                 margin-bottom: -50%;
-                background-color: #fff;
+                background-color: var(--primary-color);
                 object-fit: cover;
                 border-radius: 50%;
                 padding: 2px;
@@ -135,8 +153,8 @@
                 vertical-align: top;
             }
             .req-th, .rec-th{
-                background-color: #fdea;
-                color: #f06;
+                background-color: var(--primary-muted-2-a);
+                color: var(--background-color);
                 -webkit-text-stroke-color: #55001c45;;
             }
             .req-th:hover, .rec-th:hover{
@@ -167,14 +185,14 @@
                 height: 16px;
                 display: grid;
                 padding: 1px;
-                background-color: #fdea;
+                background-color: var(--primary-muted-2-a);
             }
             .mod_version {
                 text-align: left;
                 margin: -0.225vw;
                 font-size: 11px;
                 color: #0f9c;
-                text-shadow: 0 0 1.5px #fde;
+                text-shadow: 0 0 1.5px var(--primary-muted-2);
                 -webkit-text-stroke: 0.5px;
             }
             .mod_version_4 {
@@ -182,14 +200,14 @@
                 margin: -0.225vw;
                 font-size: 11px;
                 color: #0f9c;
-                text-shadow: 0 0 1.5px #fde;
+                text-shadow: 0 0 1.5px var(--primary-muted-2);
                 -webkit-text-stroke: 0.5px;
                 position: relative;
                 top: -7px;
             }
             tr:not(:is(:first-child, :nth-child(4), :nth-child(10), :nth-child(12), :nth-child(13), :nth-child(15), :nth-child(16), :nth-child(18), :nth-child(21), :nth-child(27), :nth-child(29), :nth-child(32), :nth-child(34), :nth-child(41), :nth-child(48), :nth-child(50), :nth-child(52), :nth-child(54), :nth-child(56), :nth-child(57), :nth-child(58), :nth-child(59))) td:is(:nth-child(5), :nth-child(6), :nth-child(8)),
             tr:is(:nth-child(12), :nth-child(21)) td:is(:nth-child(5), :nth-child(6), :nth-child(9)) {
-                opacity: 72%;
+                opacity: 60%;
                 padding: 0.1rem 0.33rem !important;
                 margin: 0 0 !important;
             }
@@ -224,31 +242,34 @@
             #s-i_modrinth_o:hover #s-i_modrinth {
                 fill: #0f9;
             }
+            #s-i_modrinth {
+                fill: var(--primary-color);
+            }
             #s-i_curseforge {
-                background-color: #fff;
+                background-color: var(--primary-color-del);
             }
             #s-i_curseforge_o:hover > #s-i_curseforge {
                 background-color: #0f9;
             }
             #s-i_github {
-                filter: invert(1);
+                filter: var(--s-i-icon-filter-gh);
             }
             #s-i_github_o:hover > #s-i_github {
                 filter: invert(50%) sepia(100%) saturate(200) hue-rotate(159deg) brightness(5);
             }
             .sizeSwitch {
-               background-color: #f06;
-               color: #fdea;
+               background-color: var(--background-color);
+               color: var(--primary-muted-2-a);
                text-shadow: 1px 1px #5027;
                font-size: 7px;
                padding: 1px;
-               border-color: #fdea;
+               border-color: var(--primary-muted-2-a);
             }
             .sizeSwitch:hover {
-	           background-color: #fdea;
+	           background-color: var(--primary-muted-2-a);
 	           text-shadow: 1px 1px #f069;
             }
             .sizeSwitch:active {
-                background-color: #903a;
+                background-color: var(--background-color-vcontrast);
 	            text-shadow: 1px 1px #fde3;
             }
