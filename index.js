@@ -67,6 +67,7 @@
             }
             function scaleTableOnWidth(tableId, widthThreshold, scaleFactor) {
                 const table = document.getElementById(tableId);
+                const top = document.getElementById("findme");
                 const bottom = document.getElementById("footer");
                 
                 const compactS = document.getElementById("compactSwitch");
@@ -74,6 +75,11 @@
                 const autoS = document.getElementById("autoSwitch");
 
                 function applyScale() {
+                    if ((window.innerWidth < 831) && (isTableAuto || isTableCompact)) {
+                        top.style.display = 'none';
+                    } else {
+                        top.style.display = 'block';
+                    }
                     if (((window.innerWidth < widthThreshold) & isTableAuto) || isTableCompact) {
                         table.style.transform = `scale(${scaleFactor})`;
                         table.style.marginTop = '0';
@@ -323,5 +329,5 @@
             getversion("More-Compatibility-Variants-NS", "1.20.6");
             getversion("More-Compatibility-Variants-NS", "1.21");
             setDiscontinuedVersion("stop","","","")
-            scaleTableOnWidth("mod-table", 1200, 1.0);
+            scaleTableOnWidth("mod-table", 1525, 1.0);
             console.log("TTL: " + (sessionStorage['sessionTime'] - now)/1000 + "s");
