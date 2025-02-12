@@ -162,6 +162,7 @@
             getversion("More-Bookshelf-Variants-lieonlion", "1.20.4");
             getversion("More-Bookshelf-Variants-lieonlion", "1.20.6");
             getversion("More-Bookshelf-Variants-lieonlion", "1.21");
+            getversion("More-Bookshelf-Variants-lieonlion", "1.21.4");
             getversion("More-Cartography-Tables", "1.20.1");
             setDiscontinuedVersion("More-Cartography-Tables", "1.20.4", "1.7.1", "A4MFt2yu");
             setDiscontinuedVersion("More-Cartography-Tables", "1.20.6", "1.7.1", "ym7tXTlY");
@@ -177,6 +178,7 @@
             getversion("More-Crafting-Tables-lieonlion", "1.20.4");
             getversion("More-Crafting-Tables-lieonlion", "1.20.6");
             getversion("More-Crafting-Tables-lieonlion", "1.21");
+            getversion("More-Crafting-Tables-lieonlion", "1.21.4");
             getversion("More-Chiseled-Bookshelf-Variants", "1.20.1");
             setDiscontinuedVersion("More-Chiseled-Bookshelf-Variants", "1.20.4", "1.6.1", "vmRC2eBm");
             setDiscontinuedVersion("More-Chiseled-Bookshelf-Variants", "1.20.6", "1.6.1", "x36NpgHP");
