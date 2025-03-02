@@ -8,7 +8,7 @@
                 --primary-muted-1: #fff7fb;
                 --primary-muted-2: #fde;
                 --primary-muted-2-a: #fdea;
-                --s-i-icon-filter-gh: invert(1);
+                --contrast-accent: #0f9;
             }
             #header {
             }
@@ -31,7 +31,7 @@
                 color: var(--primary-muted-1);
             }
             a:hover {
-                color: #0f9;
+                color: var(--contrast-accent);
             }
             #footer {
                 position: relative;
@@ -42,7 +42,11 @@
                 right: 0.25vw;
                 position: absolute;
                 top: 0.2vw;
-                filter: var(--s-i-icon-filter-gh);
+                background-color: #480f25;
+                color: #f06;
+            }
+            #dark-mode_toggle_button:hover {
+                color: var(--contrast-accent) !important;
             }
             .mod-info-table {
                 margin-left: auto;
@@ -69,6 +73,7 @@
             }
             .th:hover, .th-small:hover {
                 background-color: var(--background-color-highlighted) !important;
+                color: var(--primary-muted-1);
             }
             .th-small, .th-small-discon {
                 padding: 0;
@@ -234,13 +239,13 @@
                 font-size: 15px;
             }
             .author-link:hover .author-icon {
-                background-color: #0f9;
+                background-color: var(--contrast-accent);
             }
             .social-icon {
                 width: 16px;
             }
             #s-i_modrinth_o:hover #s-i_modrinth {
-                fill: #0f9;
+                fill: var(--contrast-accent);
             }
             #s-i_modrinth {
                 fill: var(--primary-color);
@@ -249,7 +254,7 @@
                 background-color: var(--primary-color-del);
             }
             #s-i_curseforge_o:hover > #s-i_curseforge {
-                background-color: #0f9;
+                background-color: var(--contrast-accent);
             }
             #s-i_github {
                 filter: var(--s-i-icon-filter-gh);

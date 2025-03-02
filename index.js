@@ -101,6 +101,7 @@
             }
             function toggleDarkMode() {
                 const root = document.documentElement;
+                const toggleButton = document.getElementById("dark-mode_toggle_button")
 
                 if (!(root.style.getPropertyValue('--background-color') === '#340819')) {
                     // Switch to dark mode
@@ -113,7 +114,9 @@
                     root.style.setProperty ('--primary-muted-1', '#f37');
                     root.style.setProperty ('--primary-muted-2', '#f58');
                     root.style.setProperty ('--primary-muted-2-a', '#7b4354ab');
-                    root.style.setProperty ('--s-i-icon-filter-gh', 'invert(50%) sepia(100%) saturate(200) hue-rotate(-5deg) brightness(5.625)');
+                    toggleButton.innerHTML = "Light Mode";
+                    toggleButton.style.setProperty('background-color', '#f06');
+                    toggleButton.style.setProperty('color', '#fff');
                 } else {
                     // Switch to light mode
                     root.style.setProperty ('--background-color', '#f06');
@@ -125,7 +128,9 @@
                     root.style.setProperty ('--primary-muted-1', '#fff7fb');
                     root.style.setProperty ('--primary-muted-2', '#fde');
                     root.style.setProperty ('--primary-muted-2-a', '#fdea');
-                    root.style.setProperty ('--s-i-icon-filter-gh', 'invert(1)');
+                    toggleButton.innerHTML = "Dark Mode";
+                    toggleButton.style.setProperty('background-color', '#480f25');
+                    toggleButton.style.setProperty('color', '#f06');
                 }
             }
 
