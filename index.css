@@ -256,11 +256,11 @@
             #s-i_curseforge_o:hover > #s-i_curseforge {
                 background-color: var(--contrast-accent);
             }
-            #s-i_github {
-                filter: var(--s-i-icon-filter-gh);
+            #s-i_github_p {
+                fill: var(--primary-color);
             }
-            #s-i_github_o:hover > #s-i_github {
-                filter: invert(50%) sepia(100%) saturate(200) hue-rotate(159deg) brightness(5);
+            #s-i_github_o:hover > #s-i_github_p {
+                fill: var(--contrast-accent);
             }
             .sizeSwitch {
                background-color: var(--background-color);
