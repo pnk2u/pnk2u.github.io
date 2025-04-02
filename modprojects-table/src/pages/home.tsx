@@ -22,17 +22,28 @@ const Home: Component = () => {
                             class="flex w-24 aspect-square bg-gray-700"
                             src={mod.image}
                           />
-                          <div class="flex w-[calc(var(--spacing)_*_128)] justify-center items-center font-semibold text-lg text-gray-200 bg-gray-700">
-                            {mod.name}
+                          <div class="flex w-[calc(var(--spacing)_*_156)] justify-center items-center font-semibold text-lg text-gray-200 bg-gray-700">
+                            <a
+                              href={"https://modrinth.com/mod/" + mod.id}
+                              class="hover:underline"
+                            >
+                              {mod.name}
+                            </a>
                           </div>
                           <div class="flex w-48 justify-center items-center gap-2 bg-gray-700">
                             <For each={mod.authors}>
                               {(author) => {
                                 return (
-                                  <img
-                                    class="w-10 aspect-square rounded-full border-4 border-gray-900"
-                                    src={author.image}
-                                  />
+                                  <a
+                                    title={author.name}
+                                    href={author.link}
+                                    target="_blank"
+                                  >
+                                    <img
+                                      class="w-10 aspect-square rounded-full border-4 border-gray-900 hover:border-green-700/80"
+                                      src={author.image}
+                                    />
+                                  </a>
                                 );
                               }}
                             </For>
@@ -49,7 +60,7 @@ const Home: Component = () => {
 
                                 return (
                                   <div
-                                    class="flex justify-center items-center font-semibold text-lg text-gray-200 bg-gray-700"
+                                    class="flex justify-center items-center font-semibold text-xl text-gray-200 bg-gray-700"
                                     style={
                                       version.span
                                         ? `grid-column: ${offset} / ${
@@ -58,7 +69,9 @@ const Home: Component = () => {
                                         : undefined
                                     }
                                   >
-                                    {version.display}
+                                    <a href="" class="hover:underline">
+                                      {version.display}
+                                    </a>
                                   </div>
                                 );
                               }}
