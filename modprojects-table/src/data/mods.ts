@@ -1,4 +1,6 @@
 import { Author } from "./authors";
+import addons from "./mods/addons";
+import library from "./mods/library";
 import variants from "./mods/variants";
 
 interface Category {
@@ -24,5 +26,13 @@ export default <Category[]>[
   {
     name: "More Mod Variants",
     mods: variants,
+  },
+  {
+    name: "Add-ons",
+    mods: addons,
+  },
+  {
+    name: "Library",
+    mods: library,
   },
 ];
