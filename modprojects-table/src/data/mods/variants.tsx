@@ -1,4 +1,5 @@
 import authors from "../authors";
+import dependencies from "./dependencies";
 
 export default [
   {
@@ -15,10 +16,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -27,6 +30,7 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
@@ -52,10 +56,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -64,6 +70,7 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
@@ -89,10 +96,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -101,11 +110,12 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4(5)",
         api: "1.21.4",
-        span: 2
+        span: 2,
       },
     ],
   },
@@ -151,10 +161,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -163,11 +175,12 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4(5)",
         api: "1.21.4",
-        span: 2
+        span: 2,
       },
     ],
   },
@@ -185,10 +198,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -197,6 +212,7 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
@@ -213,6 +229,7 @@ export default [
     name: "More Chest Variants",
     image:
       "https://raw.githubusercontent.com/LieOnLion/More-Chest-Variants/refs/heads/fabric+1.21/src/main/resources/logo.png",
+    requirements: [dependencies.quad],
     authors: [authors.lieonlion],
     versions: [
       {
@@ -254,10 +271,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -266,6 +285,7 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
@@ -338,10 +358,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -350,11 +372,12 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4(5)",
         api: "1.21.4",
-        span: 2
+        span: 2,
       },
     ],
   },
@@ -397,10 +420,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -409,6 +434,7 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
@@ -434,10 +460,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -446,6 +474,7 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
@@ -471,10 +500,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       /* No One Cares about 1.21
         {
@@ -489,6 +520,7 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
@@ -514,10 +546,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -526,11 +560,12 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4(5)",
         api: "1.21.4",
-        span: 2
+        span: 2,
       },
     ],
   },
@@ -548,10 +583,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -560,6 +597,7 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
@@ -585,10 +623,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -597,11 +637,12 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4(5)",
         api: "1.21.4",
-        span: 2
+        span: 2,
       },
     ],
   },
@@ -619,10 +660,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -631,11 +674,13 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
         api: "1.21.4",
       },
+      {},
     ],
   },
 ];

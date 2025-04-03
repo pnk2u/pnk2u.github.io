@@ -16,7 +16,7 @@ export default [
         api: "1.21.1",
       },
       {
-        span: 2,
+        span: 3,
       },
     ],
   },
@@ -34,10 +34,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -46,11 +48,13 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
         api: "1.21.4",
       },
+      {},
     ],
   },
   {
@@ -67,10 +71,12 @@ export default [
       {
         display: "1.20.4",
         api: "1.20.4",
+        unsupported: true,
       },
       {
         display: "1.20.6",
         api: "1.20.6",
+        unsupported: true,
       },
       {
         display: "1.21.1",
@@ -79,11 +85,13 @@ export default [
       {
         display: "1.21.3",
         api: "1.21.3",
+        unsupported: true,
       },
       {
         display: "1.21.4",
         api: "1.21.4",
       },
+      {},
     ],
   },
   {
@@ -105,7 +113,7 @@ export default [
         api: "1.21.1",
       },
       {
-        span: 2,
+        span: 3,
       },
     ],
   },
