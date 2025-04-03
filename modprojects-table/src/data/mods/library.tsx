@@ -26,6 +26,7 @@ export default [
         display: "1.21.4",
         api: "1.21.4",
       },
+      {},
     ],
   },
 ];

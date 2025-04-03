@@ -1,4 +1,4 @@
-import { Component, createSignal, For } from "solid-js";
+import { Component, createSignal, For, Show } from "solid-js";
 import categories from "../data/mods";
 
 const Home: Component = () => {
@@ -22,8 +22,44 @@ const Home: Component = () => {
                             class="flex w-24 aspect-square bg-base-500"
                             src={mod.image}
                           />
-                          <div class="flex w-[calc(var(--spacing)_*_156)] justify-center items-center font-semibold text-xl text-fore-200 bg-base-500">
+                          <div class="flex w-[calc(var(--spacing)_*_149.5)] justify-center items-center font-semibold text-xl text-fore-200 bg-base-500 relative">
+                            <Show when={mod.requirements}>
+                              <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute left-0">
+                                <For each={mod.requirements}>
+                                  {(dependency) => {
+                                    return (
+                                      <a
+                                        href={dependency.link}
+                                        class="p-0.5 bg-base-300 hover:bg-acct-300"
+                                      >
+                                        <img src={dependency.image} />
+                                      </a>
+                                    );
+                                  }}
+                                </For>
+                              </div>
+                            </Show>
+                            <Show when={mod.recommended}>
+                              <div
+                                class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute right-0"
+                                dir="rtl"
+                              >
+                                <For each={mod.recommended}>
+                                  {(dependency) => {
+                                    return (
+                                      <a
+                                        href={dependency.link}
+                                        class="p-0.5 bg-base-300 hover:bg-acct-300"
+                                      >
+                                        <img src={dependency.image} />
+                                      </a>
+                                    );
+                                  }}
+                                </For>
+                              </div>
+                            </Show>
                             <a
+                              id={mod.name.toLowerCase().split(" ").join("_")}
                               href={"https://modrinth.com/mod/" + mod.id}
                               class="hover:underline hover:text-acct-300"
                             >
@@ -48,7 +84,7 @@ const Home: Component = () => {
                               }}
                             </For>
                           </div>
-                          <div class="grid grid-cols-7 w-[calc(var(--spacing)_*_149)] gap-1">
+                          <div class="grid grid-cols-7 w-[calc(var(--spacing)_*_174)] gap-1">
                             <For each={mod.versions}>
                               {(version, i) => {
                                 const offset = currentCol() + i() + 1;
@@ -60,7 +96,11 @@ const Home: Component = () => {
 
                                 return (
                                   <div
-                                    class="flex justify-center items-center font-semibold text-xl text-fore-200 bg-base-500"
+                                    class={`flex justify-center items-center font-semibold text-xl ${
+                                      version.unsupported
+                                        ? "text-fore-500"
+                                        : "text-fore-200"
+                                    } bg-base-500`}
                                     style={
                                       version.span
                                         ? `grid-column: ${offset} / ${
@@ -69,7 +109,14 @@ const Home: Component = () => {
                                         : undefined
                                     }
                                   >
-                                    <a href="" class="hover:underline hover:text-acct-300">
+                                    <a
+                                      href=""
+                                      class={`hover:underline ${
+                                        version.unsupported
+                                          ? "hover:text-acct-500/75"
+                                          : "hover:text-acct-300"
+                                      }`}
+                                    >
                                       {version.display}
                                     </a>
                                   </div>

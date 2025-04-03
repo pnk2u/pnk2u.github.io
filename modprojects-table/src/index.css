@@ -36,9 +36,36 @@
 
 /* Chaging the colours for Dark Theme */
 @utility theme-dark {
-    --color-base-100: #fff;
-    --color-base-200: #f8f7ff;
-    --color-base-300: #0c0923;
+    /*b*/
+    --color-base-100: #fee3eb;
+    --color-base-200: #fcb4c6;
+    --color-base-300: #f8859e;
+    --color-base-400: #f45e7a;
+    --color-base-500: #f06;
+    --color-base-600: #c40548;
+    --color-base-700: #920436;
+    --color-base-800: #620224;
+    --color-base-900: #320112;
+    /*f*/
+    --color-fore-100: #ffffff;
+    --color-fore-200: #fdf2f6;
+    --color-fore-300: #f9dbe5;
+    --color-fore-400: #f4c3d4;
+    --color-fore-500: #efaac3;
+    --color-fore-600: #db8ea6;
+    --color-fore-700: #b86989;
+    --color-fore-800: #925166;
+    --color-fore-900: #6d3c4b;
+    /*a*/
+    --color-acct-100: #e0fff2;
+    --color-acct-200: #b0ffd9;
+    --color-acct-300: #80ffbf;
+    --color-acct-400: #4dffa5;
+    --color-acct-500: #0f9;
+    --color-acct-600: #0cb573;
+    --color-acct-700: #099056;
+    --color-acct-800: #06693c;
+    --color-acct-900: #044325;
 }
 
 /*
@@ -46,11 +73,11 @@
   if the user's device is set to light mode, this does nothing,
   if the user's device is set to dark mode, this will apply the Dark Theme colours.
 */
-#root[data-theme="system"] {
+body[data-theme="system"] {
     @apply dark:theme-dark;
 }
 
 /* When the Theme is set to "dark", this will apply the Dark Theme colours */
-#root[data-theme="dark"] {
+body[data-theme="dark"] {
     @apply theme-dark;
 }
