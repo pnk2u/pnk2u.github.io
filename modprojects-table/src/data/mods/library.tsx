@@ -6,7 +6,7 @@ export default [
     name: "Quad",
     image:
       "https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png",
-    authors: [authors.pnku],
+    authors: [authors.lieonlion],
     versions: [
       {
         display: "1.20.1 - 1.20.4",

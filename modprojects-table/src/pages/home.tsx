@@ -8,8 +8,8 @@ const Home: Component = () => {
         <For each={categories}>
           {(category) => {
             return (
-              <div class="flex flex-col justify-center items-center p-1 gap-1 bg-gray-800">
-                <div class="flex justify-center items-center h-12 font-semibold text-lg text-gray-200 bg-gray-800">
+              <div class="flex flex-col justify-center items-center p-1 gap-1 bg-fore-300">
+                <div class="flex justify-center items-center h-12 font-bold text-2xl text-base-500 hover:text-shadow-xs hover:text-shadow-acct-400">
                   {category.name}
                 </div>
                 <For each={category.mods}>
@@ -19,18 +19,18 @@ const Home: Component = () => {
                       <>
                         <div class="flex gap-1">
                           <img
-                            class="flex w-24 aspect-square bg-gray-700"
+                            class="flex w-24 aspect-square bg-base-500"
                             src={mod.image}
                           />
-                          <div class="flex w-[calc(var(--spacing)_*_156)] justify-center items-center font-semibold text-lg text-gray-200 bg-gray-700">
+                          <div class="flex w-[calc(var(--spacing)_*_156)] justify-center items-center font-semibold text-xl text-fore-200 bg-base-500">
                             <a
                               href={"https://modrinth.com/mod/" + mod.id}
-                              class="hover:underline"
+                              class="hover:underline hover:text-acct-300"
                             >
                               {mod.name}
                             </a>
                           </div>
-                          <div class="flex w-48 justify-center items-center gap-2 bg-gray-700">
+                          <div class="flex w-48 justify-center items-center gap-2 bg-base-500">
                             <For each={mod.authors}>
                               {(author) => {
                                 return (
@@ -40,7 +40,7 @@ const Home: Component = () => {
                                     target="_blank"
                                   >
                                     <img
-                                      class="w-10 aspect-square rounded-full border-4 border-gray-900 hover:border-green-700/80"
+                                      class="w-10 aspect-square rounded-full border-3 border-base-700 hover:border-acct-400"
                                       src={author.image}
                                     />
                                   </a>
@@ -48,7 +48,7 @@ const Home: Component = () => {
                               }}
                             </For>
                           </div>
-                          <div class="grid grid-cols-6 w-[calc(var(--spacing)_*_149)] gap-1">
+                          <div class="grid grid-cols-7 w-[calc(var(--spacing)_*_149)] gap-1">
                             <For each={mod.versions}>
                               {(version, i) => {
                                 const offset = currentCol() + i() + 1;
@@ -60,7 +60,7 @@ const Home: Component = () => {
 
                                 return (
                                   <div
-                                    class="flex justify-center items-center font-semibold text-xl text-gray-200 bg-gray-700"
+                                    class="flex justify-center items-center font-semibold text-xl text-fore-200 bg-base-500"
                                     style={
                                       version.span
                                         ? `grid-column: ${offset} / ${
@@ -69,7 +69,7 @@ const Home: Component = () => {
                                         : undefined
                                     }
                                   >
-                                    <a href="" class="hover:underline">
+                                    <a href="" class="hover:underline hover:text-acct-300">
                                       {version.display}
                                     </a>
                                   </div>

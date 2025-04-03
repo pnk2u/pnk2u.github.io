@@ -2,7 +2,7 @@ import authors from "../authors";
 
 export default [
   {
-    id: "<mod-id>",
+    id: "more-extra-shield-variants",
     name: "More Extra Shield Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/More-Extra-Shield-Variants/refs/heads/1.21(.1)/src/main/resources/icon.png",
@@ -21,7 +21,7 @@ export default [
     ],
   },
   {
-    id: "<mod-id>",
+    id: "more-feeding-trough-variants",
     name: "More Feeding Trough Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/More-Composter-Variants-AFT/refs/heads/1.21.4/src/main/resources/logo.png",
@@ -54,7 +54,7 @@ export default [
     ],
   },
   {
-    id: "<mod-id>",
+    id: "more-nemos-woodcutter-variants",
     name: "More Nemo's Woodcutter Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/More-NemosWoodcutter-Variants/refs/heads/1.21/src/main/resources/assets/morenemoswoodcuttervariants/icon.png",
@@ -87,7 +87,7 @@ export default [
     ],
   },
   {
-    id: "<mod-id>",
+    id: "more-tide-anglers-variants",
     name: "More (Tide) Angler's Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tide-Anglers-Variants/pres/logo/logo.png",
