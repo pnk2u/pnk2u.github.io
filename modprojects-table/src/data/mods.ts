@@ -3,6 +3,8 @@ import addons from "./mods/addons";
 import { Dependency } from "./mods/dependencies";
 import library from "./mods/library";
 import variants from "./mods/variants";
+import mstv from "./mods/mstv";
+import misc from "./mods/misc";
 
 interface Category {
   name: string;
@@ -32,11 +34,18 @@ export default <Category[]>[
     mods: variants,
   },
   {
+    name: "More Stick Variants",
+    mods: mstv
+  },
+  {
     name: "Add-ons",
     mods: addons,
+  },
+  { name: "Miscellaneous",
+    mods: misc
   },
   {
     name: "Library",
     mods: library,
-  },
+  }
 ];

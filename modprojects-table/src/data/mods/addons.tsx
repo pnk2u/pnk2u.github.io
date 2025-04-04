@@ -1,4 +1,5 @@
 import authors from "../authors";
+import dependencies from "./dependencies.ts";
 
 export default [
   {
@@ -25,6 +26,7 @@ export default [
     name: "More Feeding Trough Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/More-Composter-Variants-AFT/refs/heads/1.21.4/src/main/resources/logo.png",
+    recommended: [dependencies.mComposterV],
     authors: [authors.pnku],
     versions: [
       {
@@ -51,17 +53,17 @@ export default [
         unsupported: true,
       },
       {
-        display: "1.21.4",
+        display: "1.21.4(5)",
         api: "1.21.4",
+        span: 2
       },
-      {},
     ],
   },
   {
     id: "more-nemos-woodcutter-variants",
     name: "More Nemo's Woodcutter Variants",
     image:
-      "https://raw.githubusercontent.com/pnk2u/More-NemosWoodcutter-Variants/refs/heads/1.21/src/main/resources/assets/morenemoswoodcuttervariants/icon.png",
+      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-NemosWoodcutter-Variants/pres/logo/logo.png",
     authors: [authors.pnku, authors.nemonotfound],
     versions: [
       {
@@ -88,10 +90,10 @@ export default [
         unsupported: true,
       },
       {
-        display: "1.21.4",
+        display: "1.21.4(5)",
         api: "1.21.4",
+        span: 2
       },
-      {},
     ],
   },
   {

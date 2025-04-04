@@ -6,6 +6,7 @@ export interface Dependency {
 
 export interface Dependencies {
   quad: Dependency;
+  mComposterV: Dependency;
 }
 
 export default <Dependencies>{
@@ -15,4 +16,9 @@ export default <Dependencies>{
       "https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png",
     link: "/#quad",
   },
+  mComposterV: {
+    name: "More Composter Variants",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Composter-Variants/pres/logo/logo_c.png",
+    link: "/#More-Composter-Variants",
+  }
 };
