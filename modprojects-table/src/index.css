@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
-/* Setting the base (light) Theme */
+/* Base (light) Theme */
 @theme {
     /*b*/
     --color-base-100: #fee3eb;
-    --color-base-200: #fcb4c6;
-    --color-base-300: #f8859e;
-    --color-base-400: #f45e7a;
+    --color-base-200: #fcb4d1;
+    --color-base-300: #f885ab;
+    --color-base-400: #f45e9a;
+    --color-base-450: #ff297c;
+    --color-base-475: #ff156e;
     --color-base-500: #f06;
     --color-base-600: #c40548;
     --color-base-700: #920436;
@@ -16,12 +18,13 @@
     --color-fore-100: #ffffff;
     --color-fore-200: #fdf2f6;
     --color-fore-300: #f9dbe5;
+    --color-fore-350: #f8d7e2;
     --color-fore-400: #f4c3d4;
     --color-fore-500: #efaac3;
     --color-fore-600: #db8ea6;
     --color-fore-700: #b86989;
-    --color-fore-800: #925166;
-    --color-fore-900: #6d3c4b;
+    --color-fore-800: #944c63;
+    --color-fore-900: #7d3c4f;
     /*a*/
     --color-acct-100: #e0fff2;
     --color-acct-200: #b0ffd9;
@@ -34,13 +37,14 @@
     --color-acct-900: #044325;
 }
 
-/* Chaging the colours for Dark Theme */
 @utility theme-dark {
     /*b*/
     --color-base-100: #fee3eb;
-    --color-base-200: #fcb4c6;
-    --color-base-300: #f8859e;
-    --color-base-400: #f45e7a;
+    --color-base-200: #fcb4d1;
+    --color-base-300: #f885ab;
+    --color-base-400: #f45e9a;
+    --color-base-450: #ff297c;
+    --color-base-475: #ff156e;
     --color-base-500: #f06;
     --color-base-600: #c40548;
     --color-base-700: #920436;
@@ -50,12 +54,13 @@
     --color-fore-100: #ffffff;
     --color-fore-200: #fdf2f6;
     --color-fore-300: #f9dbe5;
+    --color-fore-350: #f8d7e2;
     --color-fore-400: #f4c3d4;
     --color-fore-500: #efaac3;
     --color-fore-600: #db8ea6;
     --color-fore-700: #b86989;
-    --color-fore-800: #925166;
-    --color-fore-900: #6d3c4b;
+    --color-fore-800: #944c63;
+    --color-fore-900: #7d3c4f;
     /*a*/
     --color-acct-100: #e0fff2;
     --color-acct-200: #b0ffd9;
@@ -66,6 +71,11 @@
     --color-acct-700: #099056;
     --color-acct-800: #06693c;
     --color-acct-900: #044325;
+}
+
+#more_stick_variants {
+    font-weight: bold;
+    font-size: 16pt;
 }
 
 /*

@@ -15,7 +15,7 @@ export interface Authors {
 
 export default <Authors>{
   pnku: {
-    name: "Pnku",
+    name: "pnku",
     image:
       "https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg",
     link: "https://modrinth.com/user/pnku",

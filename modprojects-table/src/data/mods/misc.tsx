@@ -1,4 +1,5 @@
 import authors from "../authors";
+import dependencies from "./dependencies.ts";
 
 export default [
   {
@@ -41,8 +42,8 @@ export default [
   {
     id: "hungrycows",
     name: "Hungry Cows",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/hungrycows/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/hungrycows/pres/logo/logo.png",
+    requirements: [dependencies.owolib],
     authors: [authors.pnku],
     versions: [
       {

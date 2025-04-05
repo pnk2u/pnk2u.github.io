@@ -26,7 +26,7 @@ export default [
     name: "More Feeding Trough Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/More-Composter-Variants-AFT/refs/heads/1.21.4/src/main/resources/logo.png",
-    recommended: [dependencies.mComposterV],
+    requirements: [dependencies.mComposterV],
     authors: [authors.pnku],
     versions: [
       {
@@ -101,6 +101,8 @@ export default [
     name: "More (Tide) Angler's Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tide-Anglers-Variants/pres/logo/logo.png",
+    requirements: [dependencies.Tide],
+    recommended: [dependencies.mFRodV, dependencies.Tide],
     authors: [authors.pnku],
     versions: [
       {
