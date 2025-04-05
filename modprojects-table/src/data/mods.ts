@@ -42,7 +42,7 @@ export default <Category[]>[
     mods: addons,
   },
   { name: "Miscellaneous",
-    mods: misc
+    mods: misc,
   },
   {
     name: "Library",

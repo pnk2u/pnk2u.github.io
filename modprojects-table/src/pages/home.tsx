@@ -15,19 +15,23 @@ const Home: Component = () => {
                 <For each={category.mods}>
                   {(mod) => {
                     const [currentCol, setCurrentCol] = createSignal<number>(0);
+                    const elementModId = mod.name
+                      .toLowerCase()
+                      .replace(/[^a-z-A-Z ]/g, "")
+                      .replace(/[ ]/g, "_");
+
                     return (
                       <>
-                        <div
-                          class="flex gap-0.5 bg-fore-350">
+                        <div class="flex gap-0.5 bg-fore-350">
                           <img
-                            id={mod.id.toLowerCase() + "."}
+                            id={elementModId + "_icon"}
                             class="flex w-24 aspect-square bg-base-500"
                             src={mod.image}
                             alt={mod.name + " Icon"}
                           />
-                          <div class="flex w-[calc(var(--spacing)_*_149.5)] justify-center items-center font-semibold text-xl text-fore-200 bg-base-500 hover:bg-base-450 relative">
+                          <div class="flex w-[calc(var(--spacing)_*_146.5)] justify-center items-center font-semibold text-xl text-fore-200 bg-base-500 hover:bg-base-450 relative">
                             <Show when={mod.requirements}>
-                              <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-27 aspect-square absolute left-0 top-0">
+                              <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute left-0 top-0">
                                 <For each={mod.requirements}>
                                   {(dependency) => {
                                     return (
@@ -37,8 +41,8 @@ const Home: Component = () => {
                                         class="p-0.5 bg-base-300 hover:bg-acct-300"
                                       >
                                         <img
-                                              src={dependency.image}
-                                              alt={dependency.name + " Icon"}
+                                          src={dependency.image}
+                                          alt={dependency.name + " Icon"}
                                         />
                                       </a>
                                     );
@@ -48,20 +52,22 @@ const Home: Component = () => {
                             </Show>
                             <Show when={mod.recommended}>
                               <div
-                                class="grid grid-cols-3 grid-rows-3 grid-flow-col w-27 aspect-square absolute right-0 top-0"
+                                class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute right-0 top-0"
                                 dir="rtl"
                               >
                                 <For each={mod.recommended}>
                                   {(dependency) => {
                                     return (
                                       <a
-                                        title={dependency.name + " (recommended)"}
+                                        title={
+                                          dependency.name + " (recommended)"
+                                        }
                                         href={dependency.link}
                                         class="p-0.5 bg-base-300 hover:bg-acct-300"
                                       >
                                         <img
-                                            src={dependency.image}
-                                            alt={dependency.name + " Icon"}
+                                          src={dependency.image}
+                                          alt={dependency.name + " Icon"}
                                         />
                                       </a>
                                     );
@@ -70,7 +76,7 @@ const Home: Component = () => {
                               </div>
                             </Show>
                             <a
-                              id={mod.name.toLowerCase().split(" ").join("_")}
+                              id={elementModId}
                               href={"https://modrinth.com/mod/" + mod.id}
                               class="hover:underline hover:text-acct-300"
                             >
@@ -96,7 +102,7 @@ const Home: Component = () => {
                               }}
                             </For>
                           </div>
-                          <div class="grid grid-cols-7 w-[calc(var(--spacing)_*_174)] gap-0.5">
+                          <div class="grid grid-cols-7 w-[calc(var(--spacing)_*_171)] gap-0.5">
                             <For each={mod.versions}>
                               {(version, i) => {
                                 const offset = currentCol() + i() + 1;
@@ -109,11 +115,11 @@ const Home: Component = () => {
                                 return (
                                   <div
                                     class={`flex justify-center items-center font-semibold text-xl ${
-                                        version.display == null ?
-                                            "" :
-                                          version.unsupported
-                                            ? "text-fore-500 hover:bg-base-475"
-                                            : "text-fore-200 hover:bg-base-450"
+                                      (version.display || version.api) == null
+                                        ? ""
+                                        : version.unsupported
+                                        ? "text-fore-500 hover:bg-base-475"
+                                        : "text-fore-200 hover:bg-base-450"
                                     } bg-base-500`}
                                     style={
                                       version.span
@@ -131,7 +137,7 @@ const Home: Component = () => {
                                           : "hover:text-acct-300"
                                       }`}
                                     >
-                                      {version.display}
+                                      {version.display || version.api}
                                     </a>
                                   </div>
                                 );
