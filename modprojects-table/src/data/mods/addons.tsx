@@ -102,7 +102,7 @@ export default [
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tide-Anglers-Variants/pres/logo/logo.png",
     requirements: [dependencies.Tide],
-    recommended: [dependencies.mFRodV, dependencies.Tide],
+    recommended: [dependencies.mFRodV, dependencies.mWeaponV],
     authors: [authors.pnku],
     versions: [
       {

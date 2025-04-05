@@ -14,6 +14,7 @@ export interface Dependencies {
   MStV: Dependency;
   mFRodV: Dependency;
   mTorchV: Dependency;
+  mWeaponV: Dependency;
   Tide: Dependency;
 }
 
@@ -53,18 +54,23 @@ export default <Dependencies>{
   },
   MStV: {
     name: "More Stick Variants",
-    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png",
     link: "/#more-stick-variants.",
   },
   mFRodV: {
     name: "More (Fishing) Rod Variants",
-    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo_c.png",
     link: "/#more-fishing-rod-variants.",
   },
   mTorchV: {
     name: "More Torch Variants",
-    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Torch-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Torch-Variants/pres/logo/logo_c.png",
     link: "/#more-torch-variants.",
+  },
+  mWeaponV: {
+    name: "More Weapon Variants",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo_c.png",
+    link: "/#more-weapon-variants.",
   },
 
     /* External*/
