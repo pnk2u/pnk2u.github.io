@@ -1,5 +1,6 @@
-import { Component, createSignal, For, Show } from "solid-js";
+import {Component, createSignal, For, Show} from "solid-js";
 import categories from "../data/mods";
+import {getColorAtTopLeft} from "../util/color.ts";
 
 const Home: Component = () => {
   return (
@@ -20,12 +21,17 @@ const Home: Component = () => {
                       .replace(/[^a-z-A-Z ]/g, "")
                       .replace(/[ ]/g, "_");
 
+                    const [bgColor, setBgColor] = createSignal<string>("");
+
+                    getColorAtTopLeft(mod.image).then(setBgColor).catch(console.error);
+
                     return (
                       <>
                         <div class="flex gap-0.5 bg-fore-350">
                           <img
                             id={elementModId + "_icon"}
-                            class="flex w-24 aspect-square bg-base-500"
+                            class="flex w-24 p-1.5 aspect-square bg-base-500"
+                            style={'background-color: ' + ((bgColor() == "rgb(0, 0, 0)") ? "var(--color-base-500)" : bgColor())}
                             src={mod.image}
                             alt={mod.name + " Icon"}
                           />

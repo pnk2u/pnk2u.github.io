@@ -5,8 +5,7 @@ export default [
   {
     id: "more-stick-variants",
     name: "More Stick Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo.png",
     authors: [authors.pnku],
     versions: [
       {
@@ -38,8 +37,7 @@ export default [
   {
     id: "more-armor-stand-variants",
     name: "More Armor Stand Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Armor-Stand-Variants/pres/logo/logo_c.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Armor-Stand-Variants/pres/logo/logo_c.png",
     requirements: [dependencies.more_stick_variants],
     authors: [authors.pnku],
     versions: [
@@ -72,8 +70,7 @@ export default [
   {
     id: "more-frame-variants",
     name: "More (Item/Painting) Frame Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Frame-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Frame-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
     authors: [authors.pnku],
     versions: [
@@ -106,8 +103,7 @@ export default [
   {
     id: "nemos-more-ladder-variants",
     name: "Nemo's More Ladder Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/Nemos-More-Ladder-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/Nemos-More-Ladder-Variants/pres/logo/logo_c.png",
     requirements: [dependencies.more_stick_variants],
     recommended: [dependencies.quad],
     authors: [authors.pnku],
@@ -140,10 +136,9 @@ export default [
   {
     id: "more-rail-variants",
     name: "More Rail Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Rail-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Rail-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
-    recommended: [dependencies.quad, dependencies.more_torch_Variants],
+    recommended: [dependencies.quad, dependencies.more_torch_variants],
     authors: [authors.pnku],
     versions: [
       {
@@ -166,9 +161,9 @@ export default [
   {
     id: "more-fishing-rod-variants",
     name: "More (Fishing) Rod Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
+    recommended: [dependencies.quad, dependencies.more_torch_variants],
     authors: [authors.pnku],
     versions: [
       {
@@ -199,8 +194,7 @@ export default [
   {
     id: "more-tool-variants",
     name: "More Tool Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tool-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tool-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
     authors: [authors.pnku],
     versions: [
@@ -233,8 +227,7 @@ export default [
   {
     id: "more-torch-variants",
     name: "More Torch Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Torch-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Torch-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
     recommended: [dependencies.quad],
     authors: [authors.pnku],
@@ -267,9 +260,9 @@ export default [
   {
     id: "more-weapon-variants",
     name: "More Weapon Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
+    recommended: [dependencies.quad],
     authors: [authors.pnku],
     versions: [
       {
