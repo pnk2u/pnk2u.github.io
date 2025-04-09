@@ -80,7 +80,7 @@ export async function fetchVersionsAndWriteToTable(){
             if (version_element) {
                 version_element.setAttribute("href", `https://modrinth.com/mod/${mod_id}/version/${version.version_id}`);
                 let version_number = version.mod_version.match(/^\d+\.\d+\.\d+/)?.[0] || "?.?.?";
-                version_element.setAttribute("title", version_number);
+                version_element.setAttribute("title", version_element.getAttribute("title") + ": " + version_number + " + " + version.mc_version);
                 if (version_number_element) {
                     version_number_element.innerHTML = version_number;
                     version_number_element.classList.add("text-acct-400");

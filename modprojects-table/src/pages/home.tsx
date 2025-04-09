@@ -143,7 +143,7 @@ const Home: Component = () => {
                                       <a
                                           id={mod.id + "_" + version.api}
                                           href=""
-                                          title=""
+                                          title={mod.name}
                                           target="_blank"
                                           class={`hover:underline relative ${
                                               version.unsupported
