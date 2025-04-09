@@ -1,4 +1,3 @@
-// src/utils/colorUtils.ts
 export const getColorAtTopLeft = (imageSrc: string): Promise<string> => {
     return new Promise((resolve, reject) => {
         const img = new Image();

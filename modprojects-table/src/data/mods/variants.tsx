@@ -11,8 +11,7 @@ export default [
     authors: [authors.pnku, authors.hunnycakehorse],
     versions: [
       {
-        display: "1.20.1",
-        api: "1.20.2",
+        api: "1.20.1",
       },
       {
         api: "1.20.4",
@@ -46,8 +45,7 @@ export default [
     authors: [authors.pnku],
     versions: [
       {
-        display: "1.20.1",
-        api: "1.20.2",
+        api: "1.20.1",
       },
       {
         api: "1.20.4",
@@ -75,14 +73,12 @@ export default [
   {
     id: "more-beehive-variants",
     name: "More Beehive Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Beehive-Variants/pres/logo/logo.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Beehive-Variants/pres/logo/logo.png",
     requirements: [dependencies.quad],
     authors: [authors.pnku],
     versions: [
       {
-        display: "1.20.1",
-        api: "1.20.2",
+        api: "1.20.1",
       },
       {
         api: "1.20.4",
@@ -109,8 +105,7 @@ export default [
   {
     id: "more-bookshelf-variants-lieonlion",
     name: "More Bookshelf Variants",
-    image:
-      "https://raw.githubusercontent.com/LieOnLion/More-Bookshelf-Variants/refs/heads/fabric+1.21/src/main/resources/logo.png",
+    image: "https://raw.githubusercontent.com/LieOnLion/More-Bookshelf-Variants/refs/heads/fabric+1.21/src/main/resources/logo.png",
     requirements: [dependencies.quad],
     authors: [authors.lieonlion],
     versions: [
@@ -141,8 +136,7 @@ export default [
     authors: [authors.pnku],
     versions: [
       {
-        display: "1.20.1",
-        api: "1.20.2",
+        api: "1.20.1",
       },
       {
         api: "1.20.4",
@@ -209,8 +203,7 @@ export default [
     authors: [authors.lieonlion],
     versions: [
       {
-        display: "1.20.1",
-        api: "1.20.2",
+        api: "1.20.1",
       },
       {
         api: "1.20.4",

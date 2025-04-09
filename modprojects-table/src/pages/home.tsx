@@ -1,9 +1,14 @@
-import {Component, createSignal, For, Show} from "solid-js";
+import {Component, createSignal, For, onMount, Show} from "solid-js";
 import categories from "../data/mods";
 import {getColorAtTopLeft} from "../util/color.ts";
+import {fetchVersionsAndWriteToTable} from "../util/versions.ts";
 
 const Home: Component = () => {
-  return (
+    onMount(() => {
+        fetchVersionsAndWriteToTable().catch(console.error);
+    });
+
+    return (
     <>
       <div class="flex flex-col justify-center items-center min-h-svh py-12">
         <For each={categories}>
@@ -135,16 +140,23 @@ const Home: Component = () => {
                                         : undefined
                                     }
                                   >
-                                    <a
-                                      href=""
-                                      class={`hover:underline ${
-                                        version.unsupported
-                                          ? "hover:text-acct-500/75"
-                                          : "hover:text-acct-300"
-                                      }`}
-                                    >
-                                      {version.display || version.api}
-                                    </a>
+                                      <a
+                                          id={mod.id + "_" + version.api}
+                                          href=""
+                                          title=""
+                                          target="_blank"
+                                          class={`hover:underline relative ${
+                                              version.unsupported
+                                                  ? "hover:text-acct-500/75"
+                                                  : "hover:text-acct-300"
+                                          }`}
+                                      ><div
+                                          id={mod.id + "_" + version.api + "_version_number"}
+                                          class="text-xs absolute -top-1/4 transform -translate-x-1/2">
+                                          ?.?.?
+                                      </div>
+                                          {version.display || version.api}
+                                      </a>
                                   </div>
                                 );
                               }}
