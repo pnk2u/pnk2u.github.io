@@ -145,14 +145,15 @@ const Home: Component = () => {
                                           href=""
                                           title={mod.name}
                                           target="_blank"
-                                          class={`hover:underline relative ${
+                                          class={`group hover:underline relative ${
                                               version.unsupported
-                                                  ? "hover:text-acct-500/75"
-                                                  : "hover:text-acct-300"
+                                                  ? "hover:text-acct-500/75 hover:decoration-acct-500/30"
+                                                  : "hover:text-acct-300 hover:decoration-acct-300/75"
                                           }`}
                                       ><div
                                           id={mod.id + "_" + version.api + "_version_number"}
-                                          class="text-xs absolute -top-1/4 transform -translate-x-1/2">
+                                          class={'text-xs absolute -top-1/4 transform -translate-x-1/2' + (version.unsupported ? " unsupported" : "")}
+                                          >
                                           {version.api ? "?.?.?" : ""}
                                       </div>
                                           {version.display || version.api}

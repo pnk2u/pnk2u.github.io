@@ -20,6 +20,7 @@ export interface Dependencies {
     appleskin: Dependency;
     extra_shields: Dependency;
     jade: Dependency;
+    nemos_woodcutter: Dependency;
     tide: Dependency;
 }
 
@@ -102,9 +103,14 @@ export default <Dependencies>{
         image: "https://raw.githubusercontent.com/Snownee/Jade/docs/docs/images/site_icon.png",
         link: "https://modrinth.com/mod/jade"
     },
+    nemos_woodcutter: {
+        name: "Nemo's Woodcutter",
+        image: "https://raw.githubusercontent.com/NemoNotFound/NemosWoodcutter/master/fabric/src/main/resources/icon.png",
+        link: "https://modrinth.com/mod/nemos-woodcutter",
+    },
     tide: {
         name: "Tide",
         image: "https://raw.githubusercontent.com/Lightning-64/Tide/1.21.4/fabric/src/main/resources/tide.png",
         link: "https://modrinth.com/mod/tide",
-  },
+    },
 };

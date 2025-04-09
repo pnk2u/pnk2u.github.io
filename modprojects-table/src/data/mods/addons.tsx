@@ -58,6 +58,7 @@ export default [
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-NemosWoodcutter-Variants/pres/logo/logo.png",
     authors: [authors.pnku, authors.nemonotfound],
+    requirements: [dependencies.nemos_woodcutter],
     versions: [
       {
         api: "1.20.1",
@@ -105,9 +106,11 @@ export default [
       {
         api: "1.21.1",
       },
+      {},
       {
-        span: 3,
+        api: "1.21.4",
       },
+      {},
     ],
   },
 ];

@@ -218,7 +218,9 @@ export default [
       {
         api: "1.21.4",
       },
-      {},
+      {
+        api: "1.21.5",
+      },
     ],
   },
 
@@ -588,9 +590,10 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21.4(5)",
         api: "1.21.4",
+        span: 2,
       },
-      {},
     ],
   },
 ];

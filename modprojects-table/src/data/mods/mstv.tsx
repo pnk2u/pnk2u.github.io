@@ -39,6 +39,7 @@ export default [
     name: "More Armor Stand Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Armor-Stand-Variants/pres/logo/logo_c.png",
     requirements: [dependencies.more_stick_variants],
+    recommended: [dependencies.quad],
     authors: [authors.pnku],
     versions: [
       {
@@ -163,7 +164,6 @@ export default [
     name: "More (Fishing) Rod Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
-    recommended: [dependencies.quad, dependencies.more_torch_variants],
     authors: [authors.pnku],
     versions: [
       {
