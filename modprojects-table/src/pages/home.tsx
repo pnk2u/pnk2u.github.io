@@ -153,7 +153,7 @@ const Home: Component = () => {
                                       ><div
                                           id={mod.id + "_" + version.api + "_version_number"}
                                           class="text-xs absolute -top-1/4 transform -translate-x-1/2">
-                                          ?.?.?
+                                          {version.api ? "?.?.?" : ""}
                                       </div>
                                           {version.display || version.api}
                                       </a>
