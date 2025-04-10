@@ -4,4 +4,9 @@ import solid from 'vite-plugin-solid'
 
 export default defineConfig({
   plugins: [solid(), tailwindcss()],
+  base: "./",
+  build: {
+    outDir: "../../pnk2u.github.io/",
+    emptyOutDir: false,
+  }
 })

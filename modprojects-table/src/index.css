@@ -38,11 +38,11 @@
   /*t1: dark theme button*/
   --color-themet1-base: #340017;
   --color-themet1-fore: #f05;
-  --color-themet1-acct: #0f9;
+  --color-themet1-acct: #0cb573;
   /*t2: lieon theme button*/
-  --color-themet2-base: #0f0622;
+  --color-themet2-base: #140a37;
   --color-themet2-fore: #b9b9c3;
-  --color-themet2-acct: #1c0d42;
+  --color-themet2-acct: #5c27ce;
 }
 
 @utility theme-dark {
@@ -123,11 +123,11 @@
   --color-acct-700: #501dbf;
   --color-acct-800: #4413ae;
   --color-acct-900: #39099f;
-  /*t1: pink theme button*/
+  /*t1: dark theme button*/
   --color-themet1-base: #340017;
   --color-themet1-fore: #f05;
-  --color-themet1-acct: #0f9;
-  /*t2: lieon theme button*/
+  --color-themet1-acct: #0cb573;
+  /*t2: pink theme button*/
   --color-themet2-base: #f06;
   --color-themet2-fore: #fdf2f6;
   --color-themet2-acct: #0f9;

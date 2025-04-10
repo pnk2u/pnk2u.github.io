@@ -1,12 +1,13 @@
 import {Component, createSignal, For, onMount, Show} from "solid-js";
 import categories from "../data/mods";
-import {getColorAtTopLeft, activateThemeToggleButton} from "../util/color.ts";
+import {getColorAtTopLeft, activateThemeToggleButton, getThemeUrlParam} from "../util/color.ts";
 import {fetchVersionsAndWriteToTable} from "../util/versions.ts";
 
 const Home: Component = () => {
     onMount(() => {
         fetchVersionsAndWriteToTable().catch(console.error);
         activateThemeToggleButton();
+        getThemeUrlParam();
     });
 
     return (

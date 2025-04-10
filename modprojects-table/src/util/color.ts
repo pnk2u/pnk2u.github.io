@@ -64,3 +64,10 @@ export function activateThemeToggleButton() {
         })
     }
 }
+
+export function getThemeUrlParam(){
+    const theme = new URLSearchParams(window.location.search).get("theme");
+    if (theme) {
+        document.body.setAttribute("data-theme", theme);
+    }
+}
