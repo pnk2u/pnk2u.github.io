@@ -24,3 +24,43 @@ export const getColorAtTopLeft = (imageSrc: string): Promise<string> => {
         };
     });
 };
+
+export function activateThemeToggleButton() {
+    /* dark/pink theme toggle */
+    const toggleButton1 = document.getElementById("theme-toggle-1");
+    const toggleButton2 = document.getElementById("theme-toggle-2");
+    if (toggleButton1 && toggleButton2) {
+        toggleButton1.addEventListener("click", () => {
+            const body = document.body;
+            const currentTheme = body.getAttribute("data-theme");
+
+            if (currentTheme === "dark") {
+                body.setAttribute("data-theme", "light");
+                toggleButton1.innerHTML = "Dark Mode";
+                toggleButton2.innerHTML = "LieOnMode";
+            } else {
+                body.setAttribute("data-theme", "dark");
+                toggleButton1.innerHTML = "Pink Mode";
+                toggleButton2.innerHTML = "LieOnMode";
+            }
+        })
+
+
+    /* lieon theme toggle */
+
+        toggleButton2.addEventListener("click", () => {
+            const body = document.body;
+            const currentTheme = body.getAttribute("data-theme");
+
+            if (currentTheme !== "lieon") {
+                body.setAttribute("data-theme", "lieon");
+                toggleButton1.innerHTML = "Dark Mode";
+                toggleButton2.innerHTML = "Pink Mode";
+            } else {
+                body.setAttribute("data-theme", "light");
+                toggleButton1.innerHTML = "Dark Mode";
+                toggleButton2.innerHTML = "LieOnMode";
+            }
+        })
+    }
+}

@@ -22,6 +22,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -56,6 +57,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -89,6 +91,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -147,6 +150,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -180,6 +184,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -244,6 +249,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -270,6 +276,7 @@ export default [
         span: 3,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -323,6 +330,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -380,6 +388,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -414,6 +423,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -448,6 +458,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -482,6 +493,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -516,6 +528,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -550,6 +563,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {
@@ -583,6 +597,7 @@ export default [
         unsupported: true,
       },
       {
+        display: "1.21(.1)",
         api: "1.21.1",
       },
       {

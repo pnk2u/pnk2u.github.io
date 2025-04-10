@@ -83,16 +83,15 @@ export async function fetchVersionsAndWriteToTable(){
             const version_number_element = document.getElementById(`${mod_id}_${version.mc_version}_version_number`);
             let version_number = version.mod_version.match(/^\d+\.\d+\.\d+/)?.[0] || "?.?.?";
 
-            if (version_element) {
+            if (version_element && version_number_element) {
+                let list = version_number_element.classList;
+                let isUnsupported = list.contains("unsupported");
                 version_element.setAttribute("href", `https://modrinth.com/mod/${mod_id}/version/${version.version_id}`);
-                version_element.setAttribute("title", version_element.getAttribute("title") + ": " + version_number + " + " + version.mc_version);
-                if (version_number_element) {
-                    version_number_element.innerHTML = version_number;
-                    let list = version_number_element.classList;
-                    list.add("group-hover:underline");
-                    if (list.contains("unsupported")) {list.add("text-acct-600/80"); list.add("group-hover:text-acct-500/75"); list.add("group-hover:decoration-acct-500/30")}
-                    else {list.add("text-acct-400"); list.add("group-hover:text-acct-300"); list.add("group-hover:decoration-acct-300/75")}
-                }
+                version_element.setAttribute("title", version_element.getAttribute("title") + ": " + version_number + " + " + version.mc_version + (isUnsupported ? " (inactive)" : ""));
+                version_number_element.innerHTML = version_number;
+                list.add("group-hover:underline");
+                if (isUnsupported) {list.add("text-acct-600/80"); list.add("group-hover:text-acct-500/75"); list.add("group-hover:decoration-acct-500/30")}
+                else {list.add("text-acct-400"); list.add("group-hover:text-acct-300"); list.add("group-hover:decoration-acct-300/75")}
             } else {
                 console.log(`Missing element: ${mod_id}_${version.mc_version}`);
             }

@@ -35,32 +35,40 @@
   --color-acct-700: #099056;
   --color-acct-800: #06693c;
   --color-acct-900: #044325;
+  /*t1: dark theme button*/
+  --color-themet1-base: #340017;
+  --color-themet1-fore: #f05;
+  --color-themet1-acct: #0f9;
+  /*t2: lieon theme button*/
+  --color-themet2-base: #0f0622;
+  --color-themet2-fore: #b9b9c3;
+  --color-themet2-acct: #1c0d42;
 }
 
 @utility theme-dark {
   /*b*/
-  --color-base-100: #fee3eb;
-  --color-base-200: #fcb4d1;
-  --color-base-300: #f885ab;
-  --color-base-400: #f45e9a;
-  --color-base-450: #ff297c;
-  --color-base-475: #ff156e;
-  --color-base-500: #f06;
-  --color-base-600: #c40548;
-  --color-base-700: #920436;
-  --color-base-800: #620224;
-  --color-base-900: #320112;
+  --color-base-100: #cd0061;
+  --color-base-200: #a3004c;
+  --color-base-300: #80003b;
+  --color-base-400: #660030;
+  --color-base-450: #550028;
+  --color-base-475: #40001d;
+  --color-base-500: #340017;
+  --color-base-600: #280012;
+  --color-base-700: #1a000c;
+  --color-base-800: #140009;
+  --color-base-900: #0f0004;
   /*f*/
-  --color-fore-100: #ffffff;
-  --color-fore-200: #fdf2f6;
-  --color-fore-300: #f9dbe5;
-  --color-fore-350: #f8d7e2;
-  --color-fore-400: #f4c3d4;
-  --color-fore-500: #efaac3;
-  --color-fore-600: #db8ea6;
-  --color-fore-700: #b86989;
-  --color-fore-800: #944c63;
-  --color-fore-900: #7d3c4f;
+  --color-fore-100: #ff4684;
+  --color-fore-200: #ff3177;
+  --color-fore-300: #ff226d;
+  --color-fore-350: #ff1363;
+  --color-fore-400: #f05;
+  --color-fore-500: #d70048;
+  --color-fore-600: #c40548;
+  --color-fore-700: #920436;
+  --color-fore-800: #620224;
+  --color-fore-900: #320112;
   /*a*/
   --color-acct-100: #e0fff2;
   --color-acct-200: #b0ffd9;
@@ -71,6 +79,62 @@
   --color-acct-700: #099056;
   --color-acct-800: #06693c;
   --color-acct-900: #044325;
+  /*t1: pink theme button*/
+  --color-themet1-base: #f06;
+  --color-themet1-fore: #fdf2f6;
+  --color-themet1-acct: #0f9;
+  /*t2: lieon theme button*/
+  --color-themet2-base: #140a37;
+  --color-themet2-fore: #b9b9c3;
+  --color-themet2-acct: #5c27ce;
+}
+
+@utility theme-lieon {
+  /*b*/
+  --color-base-100: #29175b;
+  --color-base-200: #261555;
+  --color-base-300: #21114b;
+  --color-base-400: #1f0f47;
+  --color-base-450: #1c0d42;
+  --color-base-475: #190d40;
+  --color-base-500: #140a37;
+  --color-base-600: #120832;
+  --color-base-700: #100831;
+  --color-base-800: #0f0622;
+  --color-base-900: #080311;
+  /*f*/
+  --color-fore-100: #ffffff;
+  --color-fore-200: #efeff4;
+  --color-fore-300: #e1e1e6;
+  --color-fore-350: #cfcfd7;
+  --color-fore-400: #cacad4;
+  --color-fore-500: #b9b9c3;
+  --color-fore-600: #adadb9;
+  --color-fore-700: #a8a8b7;
+  --color-fore-800: #9696a7;
+  --color-fore-900: #8d8d9d;
+  /*a*/
+  --color-acct-100: #aa81fe;
+  --color-acct-200: #905dff;
+  --color-acct-300: #834cf9;
+  --color-acct-400: #753eeb;
+  --color-acct-500: #6630db;
+  --color-acct-600: #5c27ce;
+  --color-acct-700: #501dbf;
+  --color-acct-800: #4413ae;
+  --color-acct-900: #39099f;
+  /*t1: pink theme button*/
+  --color-themet1-base: #340017;
+  --color-themet1-fore: #f05;
+  --color-themet1-acct: #0f9;
+  /*t2: lieon theme button*/
+  --color-themet2-base: #f06;
+  --color-themet2-fore: #fdf2f6;
+  --color-themet2-acct: #0f9;
+}
+
+body[data-theme="lieon"] {
+  @apply theme-lieon;
 }
 
 #more_stick_variants {
