@@ -99,6 +99,8 @@ const Home: Component = () => {
                                                                           <a
                                                                               title={dependency.name + " (required)"}
                                                                               href={dependency.link}
+
+                                                                              target={dependency.link?.startsWith("http") ? "_blank" : undefined}
                                                                               class="p-0.5 bg-base-300 hover:bg-acct-300"
                                                                           >
                                                                               <img
@@ -124,6 +126,7 @@ const Home: Component = () => {
                                                                                   dependency.name + " (recommended)"
                                                                               }
                                                                               href={dependency.link}
+                                                                              target={dependency.link?.startsWith("http") ? "_blank" : undefined}
                                                                               class="p-0.5 bg-base-300 hover:bg-acct-300"
                                                                           >
                                                                               <img

@@ -53,38 +53,38 @@ export default <Dependencies>{
   more_bed_variants: {
         name: "More Bed Variants",
         image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Bed-Variants/pres/logo/logo_c.png",
-        link: "/#more-bed-variants.",
+        link: "/#more-bed-variants_icon",
   },
   more_composter_variants: {
     name: "More Composter Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Composter-Variants/pres/logo/logo_c.png",
-    link: "/#more_composter_variants.",
+    link: "/#more_composter_variants_icon",
   },
   more_shield_variants: {
     name: "More Shield Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Shield-Variants/pres/logo/logo_c.png",
-    link: "/#more-shield-variants.",
+    link: "/#more_shield_variants_icon",
   },
   more_stick_variants: {
     name: "More Stick Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png",
-    link: "/#more_stick_variants.",
+    link: "/#more_stick_variants_icon",
   },
   more_fishing_rod_variants: {
     name: "More (Fishing) Rod Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo_c.png",
-    link: "/#more_fishing_rod_variants.",
+    link: "/#more_fishing_rod_variants_icon",
   },
   more_torch_variants: {
     name: "More Torch Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Torch-Variants/pres/logo/logo_c.png",
-    link: "/#more_torch_variants.",
+    link: "/#more_torch_variants_icon",
   },
   more_weapon_variants: {
     name: "More Weapon Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo_c.png",
-    link: "/#more_weapon_variants.",
+    link: "/#more_weapon_variants_icon",
   },
 
   /* external mods */
