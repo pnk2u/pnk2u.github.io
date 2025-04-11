@@ -161,3 +161,11 @@ body[data-theme="system"] {
 body[data-theme="dark"] {
   @apply theme-dark;
 }
+
+body {
+  font-family: Cabin, Rubik, Ubuntu, sans-serif;
+}
+
+.version {
+  font-family: Rubik, Ubuntu, sans-serif;
+}

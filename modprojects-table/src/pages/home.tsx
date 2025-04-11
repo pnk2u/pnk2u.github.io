@@ -16,7 +16,7 @@ const Home: Component = () => {
       <>
           <div class="absolute fill-fore-300 text-fore-300">
               <a href="" title="pnku">
-                  <div class="absolute p-0.5 font-bold hover:text-acct-500">pnku</div>
+                  <div class="absolute p-1 font-bold hover:text-acct-500">pnku</div>
               </a>
               <div class="border-fore-300">
                   <a href="https://modrinth.com/user/pnku" title="pnku's projects on Modrinth">
@@ -42,7 +42,7 @@ const Home: Component = () => {
               </div>
               <div>
                   <a href="https://lieonlion.dev" title="LieOnLion.dev">
-                      <div class="absolute p-0.5 pt-1 ml-0.5 font-bold text-fore-300 hover:text-acct-500">LieOnStudios</div>
+                      <div class="absolute p-1 pt-1.5 ml-1 font-bold text-fore-300 hover:text-acct-500">LieOnStudios</div>
                   </a>
                   <a href="https://dsc.lieonlion.dev" title="LoL Community Server invite">
                       <SiDiscord class="w-8 h-8 border-l-1 p-1 pb-0 inline ml-27 border-fore-300 hover:text-acct-500"></SiDiscord>
@@ -180,7 +180,7 @@ const Home: Component = () => {
 
                                                               return (
                                                                   <div
-                                                                       class={`flex justify-center items-center font-semibold text-xl ${
+                                                                       class={`version flex justify-center items-center font-semibold text-xl ${
                                                                           (version.display || version.api) == null
                                                                               ? ""
                                                                               : version.unsupported
