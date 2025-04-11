@@ -1,5 +1,5 @@
 import { Component, createEffect, createSignal } from "solid-js";
-import { FiMonitor, FiMoon, FiSun } from "solid-icons/fi";
+import { FiMonitor, FiMoon, FiSun, FiBookOpen } from "solid-icons/fi";
 import Select, { option } from "./select";
 import { SiArchlinux } from "solid-icons/si";
 
@@ -20,6 +20,10 @@ const themes: option[] = [
     display: () => <SiArchlinux />,
     value: "lieon",
   },
+  {
+    display: () => <FiBookOpen />,
+    value: "book",
+  }
 ];
 
 const NavBar: Component = () => {

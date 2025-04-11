@@ -158,7 +158,7 @@ const Home: Component = () => {
                                                                       target="_blank"
                                                                   >
                                                                       <img
-                                                                          class="w-10 aspect-square rounded-full border-3 bg-fore-200/70 border-fore-100/80 hover:border-acct-400"
+                                                                          class="w-10 aspect-square rounded-full border-3 bg-fore-200 border-fore-200 hover:bg-acct-400 hover:border-acct-400"
                                                                           src={author.image}
                                                                           alt={author.name + " Icon"}
                                                                       />
@@ -180,12 +180,12 @@ const Home: Component = () => {
 
                                                               return (
                                                                   <div
-                                                                       class={`version flex justify-center items-center font-semibold text-xl ${
+                                                                       class={`version flex justify-center items-center text-xl ${
                                                                           (version.display || version.api) == null
                                                                               ? ""
                                                                               : version.unsupported
-                                                                                  ? "text-fore-200/50 hover:bg-base-475"
-                                                                                  : "text-fore-200 hover:bg-base-450"
+                                                                                  ? "text-fore-200/50 hover:bg-base-475 font-normal"
+                                                                                  : "text-fore-200 hover:bg-base-450 font-semibold"
                                                                       } bg-base-500`}
                                                                       style={
                                                                           version.span

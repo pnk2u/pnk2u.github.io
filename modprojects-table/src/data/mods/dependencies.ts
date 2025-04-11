@@ -82,8 +82,7 @@ export default <Dependencies>{
   },
   more_weapon_variants: {
     name: "More Weapon Variants",
-    image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo_c.png",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo_c.png",
     link: "/#more_weapon_variants_icon",
   },
 

@@ -3,17 +3,17 @@
 /* Base (light) Theme */
 @theme {
   /*b*/
-  --color-base-100: #fee3eb;
-  --color-base-200: #fcb4d1;
-  --color-base-300: #f885ab;
+  --color-base-100: #f4bfcf;
+  --color-base-200: #f7a0c3;
+  --color-base-300: #ed6d97;
   --color-base-400: #f45e9a;
   --color-base-450: #ff297c;
   --color-base-475: #ff156e;
   --color-base-500: #f06;
-  --color-base-600: #c40548;
-  --color-base-700: #920436;
-  --color-base-800: #620224;
-  --color-base-900: #320112;
+  --color-base-600: #c4055b;
+  --color-base-700: #92043d;
+  --color-base-800: #62022c;
+  --color-base-900: #320115;
   /*f*/
   --color-fore-100: #ffffff;
   --color-fore-200: #fdf2f6;
@@ -45,6 +45,9 @@
   --color-themet3-base: #140a37;
   --color-themet3-fore: #b9b9c3;
   --color-themet3-acct: #5c27ce;
+  --color-themet4-base: #fccbdb;
+  --color-themet4-fore: #0b0408;
+  --color-themet4-acct: #f06;
 }
 
 @utility theme-dark {
@@ -81,35 +84,25 @@
   --color-acct-700: #099056;
   --color-acct-800: #06693c;
   --color-acct-900: #044325;
-
-  --color-themet1-base: #f06;
-  --color-themet1-fore: #fdf2f6;
-  --color-themet1-acct: #0f9;
-  --color-themet2-base: #340017;
-  --color-themet2-fore: #f05;
-  --color-themet2-acct: #0cb573;
-  --color-themet3-base: #140a37;
-  --color-themet3-fore: #b9b9c3;
-  --color-themet3-acct: #5c27ce;
 }
 
 @utility theme-lieon {
   /*b*/
-  --color-base-100: #29175b;
-  --color-base-200: #261555;
-  --color-base-300: #21114b;
-  --color-base-400: #1f0f47;
-  --color-base-450: #1c0d42;
-  --color-base-475: #190d40;
+  --color-base-100: #7a56f7;
+  --color-base-200: #6e4be3;
+  --color-base-300: #593bc0;
+  --color-base-400: #442c99;
+  --color-base-450: #2c1b67;
+  --color-base-475: #1f124e;
   --color-base-500: #140a37;
-  --color-base-600: #120832;
-  --color-base-700: #100831;
-  --color-base-800: #0f0622;
-  --color-base-900: #080311;
+  --color-base-600: #12082e;
+  --color-base-700: #0e0726;
+  --color-base-800: #0c0519;
+  --color-base-900: #090412;
   /*f*/
-  --color-fore-100: #ffffff;
-  --color-fore-200: #efeff4;
-  --color-fore-300: #e1e1e6;
+  --color-fore-100: #dedee6;
+  --color-fore-200: #d6d6df;
+  --color-fore-300: #ceced7;
   --color-fore-350: #cfcfd7;
   --color-fore-400: #cacad4;
   --color-fore-500: #b9b9c3;
@@ -118,29 +111,59 @@
   --color-fore-800: #9696a7;
   --color-fore-900: #8d8d9d;
   /*a*/
-  --color-acct-100: #aa81fe;
-  --color-acct-200: #905dff;
-  --color-acct-300: #834cf9;
-  --color-acct-400: #753eeb;
-  --color-acct-500: #6630db;
+  --color-acct-100: #a074ff;
+  --color-acct-200: #7c3dff;
+  --color-acct-300: #7739fb;
+  --color-acct-400: #6b30ed;
+  --color-acct-500: #662de0;
   --color-acct-600: #5c27ce;
-  --color-acct-700: #501dbf;
-  --color-acct-800: #4413ae;
-  --color-acct-900: #39099f;
+  --color-acct-700: #4717b1;
+  --color-acct-800: #3f149f;
+  --color-acct-900: #370e90;
+}
 
-  --color-themet1-base: #f06;
-  --color-themet1-fore: #fdf2f6;
-  --color-themet1-acct: #0f9;
-  --color-themet2-base: #340017;
-  --color-themet2-fore: #f05;
-  --color-themet2-acct: #0cb573;
-  --color-themet3-base: #140a37;
-  --color-themet3-fore: #b9b9c3;
-  --color-themet3-acct: #5c27ce;
+@utility theme-book {
+  /*b*/
+  --color-base-900: #fceef3;
+  --color-base-800: #feecf2;
+  --color-base-700: #fbe4ec;
+  --color-base-600: #fbdde7;
+  --color-base-500: #fccbdb;
+  --color-base-475: #fec6d8;
+  --color-base-450: #fbbacf;
+  --color-base-400: #fbb4cb;
+  --color-base-300: #fcaec7;
+  --color-base-200: #fea8c4;
+  --color-base-100: #fe9fbe;
+  /*f*/
+  --color-fore-900: #4a2b37;
+  --color-fore-800: #412530;
+  --color-fore-700: #3c212c;
+  --color-fore-600: #3b1f2a;
+  --color-fore-500: #351a25;
+  --color-fore-400: #2b141d;
+  --color-fore-350: #2b141e;
+  --color-fore-300: #241018;
+  --color-fore-200: #1c0c13;
+  --color-fore-100: #0b0408;
+  /*a*/
+  --color-acct-100: #ff458f;
+  --color-acct-200: #ff2e82;
+  --color-acct-300: #fc237c;
+  --color-acct-400: #ff1171;
+  --color-acct-500: #f06;
+  --color-acct-600: #c40548;
+  --color-acct-700: #920436;
+  --color-acct-800: #620224;
+  --color-acct-900: #320112;
 }
 
 body[data-theme="lieon"] {
   @apply theme-lieon;
+}
+
+body[data-theme="book"] {
+  @apply theme-book;
 }
 
 #more_stick_variants {
