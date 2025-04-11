@@ -24,3 +24,10 @@ export const getColorAtTopLeft = (imageSrc: string): Promise<string> => {
     };
   });
 };
+
+export function getThemeUrlParam() {
+  const theme = new URLSearchParams(window.location.search).get("theme");
+  if (theme) {
+    document.body.setAttribute("data-theme", theme);
+  }
+}
