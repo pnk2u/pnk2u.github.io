@@ -14,32 +14,39 @@ const Home: Component = () => {
 
   return (
       <>
-          <div class="absolute text-fore-300">
-              <div class="absolute p-0.5 font-bold">pnku</div>
-              <div class="fill-fore-300 border-fore-300">
-                  <svg class="w-8 h-8 border-l-1 p-1 pb-0.5 inline ml-11" xmlns="http://www.w3.org/2000/svg"
-                       clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-                       xml-space="preserve" viewBox="275 -60 50 675">
-                        <g>
-                            <path
-                                d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28 19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95 34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"></path>
-                            <path
-                                d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24 171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28 244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"></path>
-                            <path
-                                d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05 1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77 148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"></path>
-                        </g>
-                    </svg>
-                  <svg class="w-8 h-8 border-l-1 p-1 pb-1 inline" xmlns="http://www.w3.org/2000/svg"
-                       viewBox="0 0 114 56">
-                      <path
-                          d="M86.9804 22.9535C86.9804 22.9535 110.238 19.2696 113.911 8.52538H78.2827V0H0L9.64353 11.2401V22.7565C9.64353 22.7565 33.9764 21.4856 43.3888 28.655C56.2728 40.6503 28.898 56.8651 28.898 56.8651L24.2038 72.4678C31.5443 65.4472 45.5345 56.365 71.1848 56.8028C61.4236 59.9015 51.6085 64.7416 43.9674 72.4678H95.8198L90.937 56.8651C90.937 56.8651 53.3556 34.6059 86.9804 22.9549V22.9535Z"></path>
-                  </svg>
-                  <SiGithub class="w-8 h-8 border-l-1 p-1 pb-0.5 inline"></SiGithub>
-                  <TbMail class="w-8 h-8 border-l-1 p-1 pb-0 inline"></TbMail>
+          <div class="absolute fill-fore-300 text-fore-300">
+              <a href="" title="pnku">
+                  <div class="absolute p-0.5 font-bold hover:text-acct-500">pnku</div>
+              </a>
+              <div class="border-fore-300">
+                  <a href="https://modrinth.com/user/pnku" title="pnku's projects on Modrinth">
+                      <svg class="w-8 h-8 border-l-1 p-1 pb-0.5 inline ml-11 hover:fill-acct-500" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" xml-space="preserve" viewBox="275 -60 50 675">
+                            <g>
+                                <path d="m29 424.4 188.2-112.95-17.15-45.48 53.75-55.21 67.93-14.64 19.67 24.21-31.32 31.72-27.3 8.6-19.52 20.05 9.56 26.6 19.4 20.6 27.36-7.28 19.47-21.38 42.51-13.47 12.67 28.5-43.87 53.78-73.5 23.27-32.97-36.7L55.06 467.94C46.1 456.41 35.67 440.08 29 424.4Zm543.03-230.25-149.5 40.32c8.24 21.92 10.95 34.8 13.23 49l149.23-40.26c-2.38-15.94-6.65-32.17-12.96-49.06Z"></path>
+                                <path d="M51.28 316.13c10.59 125 115.54 223.3 243.27 223.3 96.51 0 180.02-56.12 219.63-137.46l48.61 16.83c-46.78 101.34-149.35 171.75-268.24 171.75C138.6 590.55 10.71 469.38 0 316.13h51.28ZM.78 265.24C15.86 116.36 141.73 0 294.56 0c162.97 0 295.28 132.31 295.28 295.28 0 26.14-3.4 51.49-9.8 75.63l-48.48-16.78a244.28 244.28 0 0 0 7.15-58.85c0-134.75-109.4-244.15-244.15-244.15-124.58 0-227.49 93.5-242.32 214.11H.8Z"></path>
+                                <path d="M293.77 153.17c-78.49.07-142.2 63.83-142.2 142.34 0 78.56 63.79 142.34 142.35 142.34 3.98 0 7.93-.16 11.83-.49l14.22 49.76a194.65 194.65 0 0 1-26.05 1.74c-106.72 0-193.36-86.64-193.36-193.35 0-106.72 86.64-193.35 193.36-193.35 2.64 0 5.28.05 7.9.16l-8.05 50.85Zm58.2-42.13c78.39 24.67 135.3 97.98 135.3 184.47 0 80.07-48.77 148.83-118.2 178.18l-14.17-49.55c48.08-22.85 81.36-71.89 81.36-128.63 0-60.99-38.44-113.07-92.39-133.32l8.1-51.15Z"></path>
+                            </g>
+                      </svg>
+                  </a>
+                  <a href="https://www.curseforge.com/members/pnku" title="pnku's projects on CurseForge">
+                      <svg class="w-8 h-8 border-l-1 p-1 pb-1 inline hover:fill-acct-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 56">
+                          <path d="M86.9804 22.9535C86.9804 22.9535 110.238 19.2696 113.911 8.52538H78.2827V0H0L9.64353 11.2401V22.7565C9.64353 22.7565 33.9764 21.4856 43.3888 28.655C56.2728 40.6503 28.898 56.8651 28.898 56.8651L24.2038 72.4678C31.5443 65.4472 45.5345 56.365 71.1848 56.8028C61.4236 59.9015 51.6085 64.7416 43.9674 72.4678H95.8198L90.937 56.8651C90.937 56.8651 53.3556 34.6059 86.9804 22.9549V22.9535Z"></path>
+                      </svg>
+                  </a>
+                  <a href="https://www.github.com/pnk2u/repositories" title="pnku's projects on Github">
+                      <SiGithub class="w-8 h-8 border-l-1 p-1 pb-0.5 inline border-fore-300 hover:text-acct-500"></SiGithub>
+                  </a>
+                  <a href="mailto:contact@pnku.de" target="_blank" title="Write an e-mail to contact@pnku.de">
+                      <TbMail class="w-8 h-8 border-l-1 p-1 pb-0 inline border-fore-300 hover:text-acct-500"></TbMail>
+                  </a>
               </div>
               <div>
-                  <div class="absolute p-0.5 pt-1 ml-0.5 font-bold text-fore-300">LieOnStudios</div>
-                  <SiDiscord class="w-8 h-8 border-l-1 p-1 pb-0 inline ml-27"></SiDiscord>
+                  <a href="https://lieonlion.dev" title="LieOnLion.dev">
+                      <div class="absolute p-0.5 pt-1 ml-0.5 font-bold text-fore-300 hover:text-acct-500">LieOnStudios</div>
+                  </a>
+                  <a href="https://dsc.lieonlion.dev" title="LoL Community Server invite">
+                      <SiDiscord class="w-8 h-8 border-l-1 p-1 pb-0 inline ml-27 border-fore-300 hover:text-acct-500"></SiDiscord>
+                  </a>
               </div>
           </div>
           <NavBar/>

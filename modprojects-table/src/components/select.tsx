@@ -42,7 +42,7 @@ const Select: Component<props> = (props) => {
                   setOpen((prev) => !prev);
                 }}
                 class={
-                  "hover:bg-base-700/85 hover:text-fore-300 p-2 cursor-pointer rounded-sm " +
+                  "hover:bg-base-700/25 hover:text-fore-400 p-2 cursor-pointer rounded-sm " +
                   (isTheme(props.value()) ? "bg-base-500" :
                       isTheme("lieon") ? "bg-themet3-base/75 text-themet3-fore hover:bg-themet3-base hover:text-themet3-acct" :
                           isTheme("dark") ? "bg-themet2-base/75 text-themet2-fore hover:bg-themet2-base hover:text-themet2-acct":
