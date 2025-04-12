@@ -48,6 +48,9 @@
   --color-themet4-base: #fccbdb;
   --color-themet4-fore: #0b0408;
   --color-themet4-acct: #f06;
+  --color-themet5-base: #0a0a18;
+  --color-themet5-fore: #c1beff;
+  --color-themet5-acct: #a096ff;
 }
 
 @utility theme-dark {
@@ -158,12 +161,52 @@
   --color-acct-900: #320112;
 }
 
+@utility theme-hunnycakehorse {
+  /*b*/
+  --color-base-100: #a096ff;
+  --color-base-200: #675fb4;
+  --color-base-300: #38336b;
+  --color-base-400: #232046;
+  --color-base-450: #15132b;
+  --color-base-475: #0e0d1d;
+  --color-base-500: #0a0a18;
+  --color-base-600: #05050d;
+  --color-base-700: #000000;
+  --color-base-800: #000000;
+  --color-base-900: #000000;
+  /*f*/
+  --color-fore-100: #ffffff;
+  --color-fore-200: #f2f2ff;
+  --color-fore-300: #f1f1ff;
+  --color-fore-350: #eae9ff;
+  --color-fore-400: #e5e3ff;
+  --color-fore-500: #d6d3ff;
+  --color-fore-600: #cecbff;
+  --color-fore-700: #c1beff;
+  --color-fore-800: #aba4ff;
+  --color-fore-900: #a096ff;
+  /*a*/
+  --color-acct-100: #e4e1ff;
+  --color-acct-200: #cdc9ff;
+  --color-acct-300: #b3acfe;
+  --color-acct-400: #a89fff;
+  --color-acct-500: #a096ff;
+  --color-acct-600: #978cfb;
+  --color-acct-700: #877bed;
+  --color-acct-800: #7468de;
+  --color-acct-900: #5e52c6;
+}
+
 body[data-theme="lieon"] {
   @apply theme-lieon;
 }
 
 body[data-theme="book"] {
   @apply theme-book;
+}
+
+body[data-theme="hunnycakehorse"] {
+  @apply theme-hunnycakehorse;
 }
 
 #more_stick_variants {

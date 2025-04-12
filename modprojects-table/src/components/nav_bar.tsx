@@ -1,5 +1,6 @@
 import { Component, createEffect, createSignal } from "solid-js";
 import { FiMonitor, FiMoon, FiSun, FiBookOpen } from "solid-icons/fi";
+import { TbMoonStars } from "solid-icons/tb"
 import Select, { option } from "./select";
 import { SiArchlinux } from "solid-icons/si";
 
@@ -23,6 +24,10 @@ const themes: option[] = [
   {
     display: () => <FiBookOpen />,
     value: "book",
+  },
+  {
+    display: () => <TbMoonStars />,
+    value: "hunnycakehorse"
   }
 ];
 
