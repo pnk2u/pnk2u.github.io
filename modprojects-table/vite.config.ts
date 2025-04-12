@@ -6,7 +6,12 @@ export default defineConfig({
   plugins: [solid(), tailwindcss()],
   base: "./",
   build: {
-    outDir: "../../pnk2u.github.io/",
-    emptyOutDir: false,
+    outDir: "../../pnk2u.github.io/docs",
+    rollupOptions: {
+      output: {
+        entryFileNames: "index.js",
+        assetFileNames: "[name][extname]"
+      }
+    }
   }
 })
