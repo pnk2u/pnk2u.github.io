@@ -1,7 +1,8 @@
 import authors from "../authors";
 import dependencies from "./dependencies";
+import { Mod } from "../mods.ts";
 
-export default [
+const variants: Mod[] = [
   {
     id: "more-barrel-variants",
     name: "More Barrel Variants",
@@ -75,7 +76,8 @@ export default [
   {
     id: "more-beehive-variants",
     name: "More Beehive Variants",
-    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Beehive-Variants/pres/logo/logo.png",
+    image:
+      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Beehive-Variants/pres/logo/logo.png",
     requirements: [dependencies.quad],
     authors: [authors.pnku],
     versions: [
@@ -108,7 +110,8 @@ export default [
   {
     id: "more-bookshelf-variants-lieonlion",
     name: "More Bookshelf Variants",
-    image: "https://raw.githubusercontent.com/LieOnLion/More-Bookshelf-Variants/refs/heads/fabric+1.21/src/main/resources/logo.png",
+    image:
+      "https://raw.githubusercontent.com/LieOnLion/More-Bookshelf-Variants/refs/heads/fabric+1.21/src/main/resources/logo.png",
     requirements: [dependencies.quad],
     authors: [authors.lieonlion],
     versions: [
@@ -125,9 +128,10 @@ export default [
       },
       {},
       {
+        display: "1.21.4(5)",
         api: "1.21.4",
+        span: 2,
       },
-      {},
     ],
   },
   {
@@ -305,9 +309,10 @@ export default [
       },
       {},
       {
+        display: "1.21.4(5)",
         api: "1.21.4",
+        span: 2,
       },
-      {},
     ],
   },
   {
@@ -612,3 +617,5 @@ export default [
     ],
   },
 ];
+
+export default variants;

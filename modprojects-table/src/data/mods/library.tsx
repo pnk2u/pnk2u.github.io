@@ -1,6 +1,7 @@
 import authors from "../authors";
+import { Mod } from "../mods.ts";
 
-export default [
+const library: Mod[] = [
   {
     id: "7jzrCiK0",
     name: "Quad",
@@ -29,3 +30,5 @@ export default [
     ],
   },
 ];
+
+export default library;

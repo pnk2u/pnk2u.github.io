@@ -1,7 +1,8 @@
 import authors from "../authors";
 import dependencies from "./dependencies.ts";
+import { Mod } from "../mods.ts";
 
-export default [
+const misc: Mod[] = [
   {
     id: "Bake-Your-Bread",
     name: "Bake Your Bread",
@@ -74,3 +75,5 @@ export default [
     ],
   },
 ];
+
+export default misc;
