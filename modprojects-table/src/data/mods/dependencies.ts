@@ -6,9 +6,9 @@ export interface Dependency {
 
 export interface Dependencies {
   quad: Dependency;
-    cloth_config: Dependency;
-    modmenu: Dependency;
-    owo_lib: Dependency;
+  cloth_config: Dependency;
+  modmenu: Dependency;
+  owo_lib: Dependency;
 
   more_bed_variants: Dependency;
   more_composter_variants: Dependency;
@@ -17,11 +17,11 @@ export interface Dependencies {
   more_fishing_rod_variants: Dependency;
   more_torch_variants: Dependency;
   more_weapon_variants: Dependency;
-    appleskin: Dependency;
-    extra_shields: Dependency;
-    jade: Dependency;
-    nemos_woodcutter: Dependency;
-    tide: Dependency;
+  appleskin: Dependency;
+  extra_shields: Dependency;
+  jade: Dependency;
+  nemos_woodcutter: Dependency;
+  tide: Dependency;
 }
 
 export default <Dependencies>{
@@ -51,9 +51,9 @@ export default <Dependencies>{
 
   /* mods */
   more_bed_variants: {
-        name: "More Bed Variants",
-        image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Bed-Variants/pres/logo/logo_c.png",
-        link: "/#more-bed-variants_icon",
+    name: "More Bed Variants",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Bed-Variants/pres/logo/logo_c.png",
+    link: "/#more-bed-variants_icon",
   },
   more_composter_variants: {
     name: "More Composter Variants",
@@ -87,29 +87,29 @@ export default <Dependencies>{
   },
 
   /* external mods */
-    appleskin: {
-        name: "Appleskin",
-        image: "https://www.ryanliptak.com/images/appleskin.png",
-        link: "https://modrinth.com/mod/appleskin",
-    },
-    extra_shields: {
-        name: "Extra Shields",
-        image: "https://raw.githubusercontent.com/IMB11/ExtraShields/main/src/main/resources/assets/shields/icon.png",
-        link: "https://modrinth.com/mod/extra-shields",
-    },
-    jade: {
-        name: "Jade",
-        image: "https://raw.githubusercontent.com/Snownee/Jade/docs/docs/images/site_icon.png",
-        link: "https://modrinth.com/mod/jade"
-    },
-    nemos_woodcutter: {
-        name: "Nemo's Woodcutter",
-        image: "https://raw.githubusercontent.com/NemoNotFound/NemosWoodcutter/master/fabric/src/main/resources/icon.png",
-        link: "https://modrinth.com/mod/nemos-woodcutter",
-    },
-    tide: {
-        name: "Tide",
-        image: "https://raw.githubusercontent.com/Lightning-64/Tide/1.21.4/fabric/src/main/resources/tide.png",
-        link: "https://modrinth.com/mod/tide",
-    },
+  appleskin: {
+    name: "Appleskin",
+    image: "https://www.ryanliptak.com/images/appleskin.png",
+    link: "https://modrinth.com/mod/appleskin",
+  },
+  extra_shields: {
+    name: "Extra Shields",
+    image: "https://raw.githubusercontent.com/IMB11/ExtraShields/main/src/main/resources/assets/shields/icon.png",
+    link: "https://modrinth.com/mod/extra-shields",
+  },
+  jade: {
+    name: "Jade",
+    image: "https://raw.githubusercontent.com/Snownee/Jade/docs/docs/images/site_icon.png",
+    link: "https://modrinth.com/mod/jade",
+  },
+  nemos_woodcutter: {
+    name: "Nemo's Woodcutter",
+    image: "https://raw.githubusercontent.com/NemoNotFound/NemosWoodcutter/master/fabric/src/main/resources/icon.png",
+    link: "https://modrinth.com/mod/nemos-woodcutter",
+  },
+  tide: {
+    name: "Tide",
+    image: "https://raw.githubusercontent.com/Lightning-64/Tide/1.21.4/fabric/src/main/resources/tide.png",
+    link: "https://modrinth.com/mod/tide",
+  },
 };
