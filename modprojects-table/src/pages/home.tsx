@@ -53,7 +53,7 @@ const Home: Component = () => {
             </svg>
           </a>
           <a
-            href="https://www.github.com/pnk2u/repositories"
+            href="https://www.github.com/pnk2u/?tab=repositories"
             title="pnku's projects on Github"
           >
             <SiGithub class="w-8 h-8 border-l-1 p-1 pb-0.5 inline border-fore-300 hover:text-acct-500"></SiGithub>
