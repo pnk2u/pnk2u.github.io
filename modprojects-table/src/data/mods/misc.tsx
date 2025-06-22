@@ -30,9 +30,9 @@ const misc: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(5)",
+        display: "1.21.4(-6)",
         api: "1.21.4",
-        span: 2,
+        span: 3,
       },
     ],
   },
@@ -71,7 +71,9 @@ const misc: Mod[] = [
       {
         api: "1.21.4",
       },
-      {},
+      {
+        span: 2,
+      },
     ],
   },
 ];

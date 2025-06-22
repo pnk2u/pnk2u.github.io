@@ -21,7 +21,7 @@ const addons: Mod[] = [
         api: "1.21.1",
       },
       {
-        span: 3,
+        span: 4,
       },
     ],
   },
@@ -57,6 +57,7 @@ const addons: Mod[] = [
         api: "1.21.4",
         span: 2,
       },
+      {},
     ],
   },
   {
@@ -91,6 +92,7 @@ const addons: Mod[] = [
         api: "1.21.4",
         span: 2,
       },
+      {},
     ],
   },
   {
@@ -118,7 +120,9 @@ const addons: Mod[] = [
       {
         api: "1.21.4",
       },
-      {},
+      {
+        span: 2,
+      },
     ],
   },
 ];

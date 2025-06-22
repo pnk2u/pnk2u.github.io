@@ -201,7 +201,7 @@ const Home: Component = () => {
                               }}
                             </For>
                           </div>
-                          <div class="grid grid-cols-7 w-[calc(var(--spacing)_*_171)] gap-0.5">
+                          <div class="grid grid-cols-8 w-[calc(var(--spacing)_*_171)] gap-0.5">
                             <For each={mod.versions}>
                               {(version, i) => {
                                 const offset = currentCol() + i() + 1;
