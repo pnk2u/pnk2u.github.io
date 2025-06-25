@@ -10,12 +10,15 @@ const library: Mod[] = [
     authors: [authors.lieonlion],
     versions: [
       {
-        display: "1.20.1 - 1.20.4",
+        api: "1.20.1",
+      },
+      {
         api: "1.20.4",
-        span: 2,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
+        combines: ["bottom", "1.20.4"],
       },
       {
         api: "1.21.1",

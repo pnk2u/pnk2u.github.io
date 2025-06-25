@@ -235,3 +235,59 @@ body {
 .version {
   font-family: Rubik, Ubuntu, sans-serif;
 }
+
+.combined_cell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.combined_top, .combined_bottom {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7.5%;
+  width: 100%;
+}
+
+.combined_top:not(:hover), .combined_bottom:not(:hover) {
+  background-color: var(--color-base-500);
+}
+
+.combined_top {
+  border-bottom: 1px solid var(--color-fore-300);
+}
+
+.combined_bottom {
+  border-top: 1px solid var(--color-fore-300);
+}
+
+.mod_version_number, .unsupported {
+  font-family: "Departure Mono", mono;
+  font-size: 11px;
+}
+
+.single_cell .mod_version_number {
+  top: -25%;
+}
+
+.combined_cell .unsupported.mod_version_number {
+  top: 20%;
+  left: 20%;
+}
+
+.combined_cell .supported.mod_version_number {
+  top: 10%;
+  left: 16.5%;
+}
+
+.unsupported.single_cell {
+  line-height: 36px;
+}
+
+@font-face {
+  font-family: "Departure Mono";
+  src: url('./res/fnt/DepartureMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

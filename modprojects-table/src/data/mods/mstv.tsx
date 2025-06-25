@@ -16,10 +16,12 @@ const mstv: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -54,10 +56,12 @@ const mstv: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -92,10 +96,12 @@ const mstv: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -123,7 +129,7 @@ const mstv: Mod[] = [
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/Nemos-More-Ladder-Variants/pres/logo/logo_c.png",
     requirements: [dependencies.more_stick_variants],
     recommended: [dependencies.quad],
-    authors: [authors.pnku],
+    authors: [authors.nemonotfound, authors.pnku],
     versions: [
       {
         api: "1.20.1",
@@ -131,10 +137,12 @@ const mstv: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -167,7 +175,7 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        span: 2,
+        span: 1,
       },
       {
         display: "1.21(.1)",
@@ -198,10 +206,12 @@ const mstv: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -232,10 +242,12 @@ const mstv: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -270,10 +282,12 @@ const mstv: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -308,10 +322,12 @@ const mstv: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",

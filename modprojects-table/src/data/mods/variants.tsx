@@ -17,10 +17,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -54,10 +56,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -91,10 +95,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -120,12 +126,15 @@ const variants: Mod[] = [
     authors: [authors.lieonlion],
     versions: [
       {
-        display: "1.20.1 - 1.20.4",
+        api: "1.20.1",
+      },
+      {
         api: "1.20.4",
-        span: 2,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
+        combines: ["bottom", "1.20.4"],
       },
       {
         api: "1.21.1",
@@ -152,10 +161,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -186,10 +197,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -219,9 +232,11 @@ const variants: Mod[] = [
       },
       {
         api: "1.20.4",
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
+        combines: ["bottom", "1.20.4"],
       },
       {
         api: "1.21.1",
@@ -252,10 +267,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -281,7 +298,7 @@ const variants: Mod[] = [
     authors: [authors.pnku],
     versions: [
       {
-        span: 3,
+        span: 2,
       },
       {
         display: "1.21(.1)",
@@ -301,12 +318,15 @@ const variants: Mod[] = [
     authors: [authors.lieonlion],
     versions: [
       {
-        display: "1.20.1 - 1.20.4",
+        api: "1.20.1",
+      },
+      {
         api: "1.20.4",
-        span: 2,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
+        combines: ["bottom", "1.20.4"],
       },
       {
         api: "1.21.1",
@@ -333,10 +353,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -362,12 +384,15 @@ const variants: Mod[] = [
     authors: [authors.lieonlion],
     versions: [
       {
-        display: "1.20.1 - 1.20.4",
+        api: "1.20.1",
+      },
+      {
         api: "1.20.4",
-        span: 2,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
+        combines: ["bottom", "1.20.4"],
       },
       {
         api: "1.21.1",
@@ -391,10 +416,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -425,10 +452,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -462,10 +491,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -499,10 +530,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -534,10 +567,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -571,10 +606,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -605,10 +642,12 @@ const variants: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",

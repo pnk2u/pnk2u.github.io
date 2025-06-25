@@ -15,7 +15,7 @@ const addons: Mod[] = [
     authors: [authors.pnku],
     versions: [
       {
-        span: 3,
+        span: 2,
       },
       {
         api: "1.21.1",
@@ -39,10 +39,12 @@ const addons: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -57,7 +59,9 @@ const addons: Mod[] = [
         api: "1.21.4",
         span: 2,
       },
-      {},
+      {
+        api: "1.21.6",
+      },
     ],
   },
   {
@@ -74,10 +78,12 @@ const addons: Mod[] = [
       {
         api: "1.20.4",
         unsupported: true,
+        combines: ["top", "1.20.6"],
       },
       {
         api: "1.20.6",
         unsupported: true,
+        combines: ["bottom", "1.20.4"],
       },
       {
         display: "1.21(.1)",
@@ -110,9 +116,7 @@ const addons: Mod[] = [
       {
         api: "1.20.1",
       },
-      {
-        span: 2,
-      },
+      {},
       {
         api: "1.21.1",
       },

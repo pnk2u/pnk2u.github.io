@@ -22,6 +22,7 @@ export interface Mod {
 }
 
 interface Version {
+  combines?: Array<string>;
   display?: string;
   api?: string;
   span?: number;
