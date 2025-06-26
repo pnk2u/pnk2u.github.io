@@ -68,7 +68,8 @@ const Home: Component = () => {
                     {category.name}
                   </div>
                   <For each={category.mods}>
-                    {(mod) => {
+                    {(mod, index) => {
+                      const isEvenRow = index() % 2 === 0;
                       let skippedApis = new Set<string>();
                       const [currentCol, setCurrentCol] = createSignal<number>(0);
                       const elementModId = mod.name
@@ -82,7 +83,7 @@ const Home: Component = () => {
 
                       return (
                         <>
-                          <div class="flex gap-0.5 bg-fore-350">
+                          <div class={`flex gap-0.5 bg-fore-350 ${isEvenRow ? "even_row" : "odd_row"}`}>
                             <img
                               id={elementModId + "_icon"}
                               class="flex w-24 p-1.5 aspect-square bg-base-500"
@@ -90,7 +91,7 @@ const Home: Component = () => {
                               src={mod.image}
                               alt={mod.name + " Icon"}
                             />
-                            <div class="flex max-w-146.5 w-[25vw] min-w-50 justify-center items-center font-semibold text-xl text-fore-200 bg-base-500 hover:bg-base-450 relative">
+                            <div class={`flex max-w-146.5 w-[25vw] min-w-50 justify-center items-center font-semibold text-xl text-fore-200 relative ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
                               <Show when={mod.requirements}>
                                 <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute left-0 top-0">
                                   <For each={mod.requirements}>
@@ -132,7 +133,7 @@ const Home: Component = () => {
                                 {mod.name}
                               </a>
                             </div>
-                            <div class="flex max-w-48 w-[10vw] min-w-26 justify-center items-center gap-[0.5vw] min-gap-1 bg-base-500 hover:bg-base-450">
+                            <div class={`flex max-w-48 w-[10vw] min-w-26 justify-center items-center gap-[0.5vw] min-gap-1 ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
                               <For each={mod.authors}>
                                 {(author) => {
                                   return (
@@ -161,7 +162,8 @@ const Home: Component = () => {
                                   return (
                                     <div
                                       class={`version ${version.combines && version.combines[0] == "top" ? "grid grid-rows-2 combined_cell" : "flex single_cell"}
-                                                                             justify-center items-center text-xl ${(version.display || version.api) == null ? "" : version.unsupported ? "text-fore-200/50 hover:bg-base-475 line-through decoration-fore-200/10 decoration-2 unsupported" : "text-fore-200 hover:bg-base-450 font-semibold supported"} bg-base-500`}
+                                                                             justify-center items-center text-xl ${(version.display || version.api) == null ? "empty_cell" : version.unsupported ? "text-fore-200/50 line-through decoration-fore-200/10 decoration-2 unsupported" : "text-fore-200 font-semibold supported"}
+                                                                             ${isEvenRow && !version.unsupported ? "bg-base-500 hover:bg-base-450" : isEvenRow && version.unsupported ? "bg-base-500 hover:bg-base-475" : !isEvenRow && !version.unsupported ? "bg-base-475 hover:bg-base-425" : "bg-base-475 hover:bg-base-450"}`}
                                       style={version.span ? `grid-column: ${offset} / ${offset + version.span};` : undefined}>
                                       <For
                                         each={[
@@ -177,7 +179,9 @@ const Home: Component = () => {
                                               href=""
                                               title={mod.name}
                                               target="_blank"
-                                              class={`group relative ${Array.isArray(version.combines) ? "combined_" + version.combines[0] + " " : ""}${version.unsupported ? "hover:text-acct-300/50 hover:decoration-acct-500/5" : "hover:text-acct-300 hover:decoration-acct-300/75 hover:underline"}`}>
+                                              class={`group relative ${Array.isArray(version.combines) ? "combined_" + version.combines[0] + " " : ""}
+                                              ${Array.isArray(version.combines) ? isEvenRow ? "not-hover:bg-base-500" : "not-hover:bg-base-475" : ""}
+                                              ${version.unsupported ? "hover:text-acct-300/50 hover:decoration-acct-500/5" : "hover:text-acct-300 hover:decoration-acct-300/75 hover:underline"}`}>
                                               <div
                                                 id={mod.id + "_" + (version.api ?? "unknown") + "_version_number"}
                                                 class={

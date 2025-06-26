@@ -7,6 +7,7 @@
   --color-base-200: #f7a0c3;
   --color-base-300: #ed6d97;
   --color-base-400: #f45e9a;
+  --color-base-425: #fa4a8b;
   --color-base-450: #ff297c;
   --color-base-475: #ff156e;
   --color-base-500: #f06;
@@ -59,6 +60,7 @@
   --color-base-200: #a3004c;
   --color-base-300: #80003b;
   --color-base-400: #660030;
+  --color-base-425: #5a0029;
   --color-base-450: #550028;
   --color-base-475: #40001d;
   --color-base-500: #340017;
@@ -95,6 +97,7 @@
   --color-base-200: #6e4be3;
   --color-base-300: #593bc0;
   --color-base-400: #442c99;
+  --color-base-425: #382480;
   --color-base-450: #2c1b67;
   --color-base-475: #1f124e;
   --color-base-500: #140a37;
@@ -134,6 +137,7 @@
   --color-base-500: #fccbdb;
   --color-base-475: #fec6d8;
   --color-base-450: #fbbacf;
+  --color-base-425: #fbb7cd;
   --color-base-400: #fbb4cb;
   --color-base-300: #fcaec7;
   --color-base-200: #fea8c4;
@@ -164,11 +168,12 @@
 @utility theme-hunnycakehorse {
   /*b*/
   --color-base-100: #a096ff;
-  --color-base-200: #675fb4;
-  --color-base-300: #38336b;
-  --color-base-400: #232046;
-  --color-base-450: #15132b;
-  --color-base-475: #0e0d1d;
+  --color-base-200: #7B73C5;
+  --color-base-300: #55508C;
+  --color-base-400: #302D52;
+  --color-base-425: #272444;
+  --color-base-450: #1D1C35;
+  --color-base-475: #141327;
   --color-base-500: #0a0a18;
   --color-base-600: #05050d;
   --color-base-700: #000000;
@@ -248,10 +253,6 @@ body {
   justify-content: center;
   padding-top: 7.5%;
   width: 100%;
-}
-
-.combined_top:not(:hover), .combined_bottom:not(:hover) {
-  background-color: var(--color-base-500);
 }
 
 .combined_top {
