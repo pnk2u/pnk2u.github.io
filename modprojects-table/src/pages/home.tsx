@@ -158,12 +158,13 @@ const Home: Component = () => {
                                   }
                                   const skippedBefore = mod.versions.slice(0, i()).filter((v) => v && v.api && skippedApis.has(v.api)).length;
                                   const offset = currentCol() + i() + 1 - skippedBefore;
+                                  const empty = version.display == null && version.api == null;
                                   setCurrentCol((prev) => (version.span ? prev + (version.span - 1) : prev));
                                   return (
                                     <div
                                       class={`version ${version.combines && version.combines[0] == "top" ? "grid grid-rows-2 combined_cell" : "flex single_cell"}
-                                                                             justify-center items-center text-xl ${(version.display || version.api) == null ? "empty_cell" : version.unsupported ? "text-fore-200/50 line-through decoration-fore-200/10 decoration-2 unsupported" : "text-fore-200 font-semibold supported"}
-                                                                             ${isEvenRow && !version.unsupported ? "bg-base-500 hover:bg-base-450" : isEvenRow && version.unsupported ? "bg-base-500 hover:bg-base-475" : !isEvenRow && !version.unsupported ? "bg-base-475 hover:bg-base-425" : "bg-base-475 hover:bg-base-450"}`}
+                                                                             justify-center items-center text-xl ${empty ? "empty_cell" : version.unsupported ? "text-fore-200/50 line-through decoration-fore-200/10 decoration-2 unsupported" : "text-fore-200 font-semibold supported"}
+                                                                             ${empty ? (isEvenRow ? "bg-base-500" : "bg-base-475") : isEvenRow && !version.unsupported ? "bg-base-500 hover:bg-base-450" : isEvenRow && version.unsupported ? "bg-base-500 hover:bg-base-475" : !isEvenRow && !version.unsupported ? "bg-base-475 hover:bg-base-425" : "bg-base-475 hover:bg-base-450"}`}
                                       style={version.span ? `grid-column: ${offset} / ${offset + version.span};` : undefined}>
                                       <For
                                         each={[

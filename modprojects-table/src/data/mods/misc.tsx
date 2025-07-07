@@ -32,7 +32,7 @@ const misc: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-6)",
+        display: "1.21.4(-7)",
         api: "1.21.4",
         span: 3,
       },
