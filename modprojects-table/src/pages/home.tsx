@@ -5,11 +5,13 @@ import categories from "../data/mods";
 import { getColorAtTopLeft, getThemeUrlParam } from "../util/color.ts";
 import { fetchVersionsAndWriteToTable } from "../util/versions.ts";
 import NavBar from "../components/nav_bar.tsx";
+import {fetchAuthorsAndWriteToTable} from "../util/authors.ts";
 
 const Home: Component = () => {
   onMount(() => {
     fetchVersionsAndWriteToTable().catch(console.error);
     getThemeUrlParam();
+    fetchAuthorsAndWriteToTable().catch(console.error);
   });
 
   return (
@@ -137,11 +139,12 @@ const Home: Component = () => {
                               <For each={mod.authors}>
                                 {(author) => {
                                   return (
-                                    <a title={author.name} href={author.link} target="_blank">
+                                    <a title={author.name} href={author.link} id={author.name + "_profile_" + mod.id} target="_blank">
                                       <img
                                         class="w-10 aspect-square rounded-full border-3 bg-fore-200 border-fore-200 hover:bg-acct-400 hover:border-acct-400"
                                         src={author.image}
                                         alt={author.name + " Icon"}
+                                        id={author.name + "_image_" + mod.id}
                                       />
                                     </a>
                                   );
