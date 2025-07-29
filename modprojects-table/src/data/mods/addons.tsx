@@ -61,7 +61,7 @@ const addons: Mod[] = [
       },
       {
         api: "1.21.6",
-        display: "1.21.6(7)",
+        display: "1.21.6(-8)",
       },
     ],
   },
