@@ -432,7 +432,7 @@ function buildColorSelectors() {
     // Clear existing dynamically created selectors
     const colorForm = document.getElementById("color-form");
     // Remove all existing color lines and color count lines
-    const existingSelectors = document.querySelectorAll(".color-line-oklab, .color-count-line, .group-divider, .color-divider");
+    const existingSelectors = document.querySelectorAll(".color-line-oklab, .color-count-line, .group-divider, .color-divider, .count-divider");
     existingSelectors.forEach(selector => selector.remove());
 
     // Add selectors dynamically based on the updated palette count
