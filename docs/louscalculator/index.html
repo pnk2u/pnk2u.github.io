@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./index.css">
+    <title>Color Calc</title>
+</head>
+<body>
+<h2 style="text-align: center">Color Calc</h2>
+<div class="headline-slider_container"><h3>New Color: Between</h3>  <label for="between_factor_slider"></label><input type="range" min="-150" max="2000" value="100" class="slider" id="between_factor_slider"><span id="betweenFactorSlider-reader">??</span><button id="reset-button-b">Reset (100)</button>
+</div>
+    <div class="color-line-n">
+<span>Original Color 1:</span>
+<label>
+    <input id="color1slctr_rgb" class="slctr_rgb" type="color">
+</label>
+<label for="color1RWHex"></label><input id="color1RWHex" class="rw_hex" type="text">
+<label for="color1_r_hsl"></label><input id="color1_r_hsl" class="r_hsl" type="text">
+</div>
+<div class="color-line-b">
+<span>Original Color Between:</span>
+<label>
+    <input id="color3slctr_rgb" class="slctr_rgb" type="color">
+</label>
+<label for="color3RWHex"></label><input id="color3RWHex" class="rw_hex" type="text">
+<label for="color3_r_hsl"></label><input id="color3_r_hsl" class="r_hsl" type="text">
+</div>
+<div class="color-line-n">
+<span>Original Color 2:</span>
+<label>
+    <input id="color2slctr_rgb" class="slctr_rgb" type="color">
+</label>
+<label for="color2RWHex"></label><input id="color2RWHex" class="rw_hex" type="text">
+<label for="color2_r_hsl"></label><input id="color2_r_hsl" class="r_hsl" type="text">
+</div>
+    <hr>
+<div class="color-line-n">
+<span>New Color 1:</span>
+<label>
+    <input id="colorN1slctr_rgb" class="slctr_rgb" type="color">
+</label>
+<label for="colorN1RWHex"></label><input id="colorN1RWHex" class="rw_hex" type="text">
+<label for="colorN1_r_hsl"></label><input id="colorN1_r_hsl" class="r_hsl" type="text">
+</div>
+<div class="color-line-b">
+<span>New Color Between:</span>
+<label>
+    <input id="colorN3slctr_rgb" class="slctr_rgb" type="color" disabled>
+</label>
+<label for="colorN3RWHex"></label><input id="colorN3RWHex" class="rw_hex" type="text" disabled>
+<label for="colorN3_r_hsl"></label><input id="colorN3_r_hsl" class="r_hsl" type="text" disabled>
+</div>
+<div class="color-line-n">
+<span>New Color 2:</span>
+<label>
+    <input id="colorN2slctr_rgb" class="slctr_rgb" type="color">
+</label>
+<label for="colorN2RWHex"></label><input id="colorN2RWHex" class="rw_hex" type="text">
+<label for="colorN2_r_hsl"></label><input id="colorN2_r_hsl" class="r_hsl" type="text">
+</div>
+<hr>
+<div class="headline-slider_container"><h3>New Color: Next</h3>  <label for="next_factor_slider"></label><input type="range" min="-150" max="2000" value="100" class="slider" id="next_factor_slider"><span id="nextFactorSlider-reader">??</span><button id="reset-button-n">Reset (100)</button>
+</div>
+<div class="color-line-n">
+    <span>Original Color 1:</span>
+    <label>
+        <input id="color1slctr_rgb_nxt" class="slctr_rgb" type="color">
+    </label>
+    <label for="color1RWHex"></label><input id="color1RWHex_nxt" class="rw_hex" type="text">
+    <label for="color1_r_hsl"></label><input id="color1_r_hsl_nxt" class="r_hsl" type="text">
+</div>
+<div class="color-line-nxt">
+    <span>Original Color Next:</span>
+    <label>
+        <input id="color3slctr_rgb_nxt" class="slctr_rgb" type="color">
+    </label>
+    <label for="color3RWHex"></label><input id="color3RWHex_nxt" class="rw_hex" type="text">
+    <label for="color3_r_hsl"></label><input id="color3_r_hsl_nxt" class="r_hsl" type="text">
+</div>
+<hr>
+<div class="color-line-n">
+    <span>New Color 1:</span>
+    <label>
+        <input id="colorN1slctr_rgb_nxt" class="slctr_rgb" type="color">
+    </label>
+    <label for="colorN1RWHex"></label><input id="colorN1RWHex_nxt" class="rw_hex" type="text">
+    <label for="colorN1_r_hsl"></label><input id="colorN1_r_hsl_nxt" class="r_hsl" type="text">
+</div>
+<div class="color-line-nxt">
+    <span>New Color Next:</span>
+    <label>
+        <input id="colorN3slctr_rgb_nxt" class="slctr_rgb" type="color" disabled>
+    </label>
+    <label for="colorN3RWHex"></label><input id="colorN3RWHex_nxt" class="rw_hex" type="text" disabled>
+    <label for="colorN3_r_hsl"></label><input id="colorN3_r_hsl_nxt" class="r_hsl" type="text" disabled>
+</div>
+<hr>
+<h1>Lou's color palette calculator</h1>
+<form id="color-form">
+    <p>From A to B, <span style="color: #ff0066;">I</span> love <span style="color: #a096ff;">thee</span></p>
+    <label for="palette-count">Palette count:</label>
+    <input id="palette-count" name="palette-count" type="number" min="1" max="317" value="1" />
+    <br><br>
+    <input id="generate_button" type="submit" value="Generate" />
+</form>
+<p id="click-instructions">click a color to see hex + rgb</p>
+<div id="result">
+    <div id="palettes"></div>
+    <div id="details">
+        <div id="details-color"></div>
+        <span id="details-hex"></span>
+        <span id="details-rgb"></span>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/ac-colors@1/dist/ac-colors.min.js"></script>
+<script src="./index.js"></script>
+
+</body>
+</html>

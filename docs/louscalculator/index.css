@@ -1,0 +1,106 @@
+:root {
+/*b*/
+    --color-base-100: #a096ff;
+    --color-base-200: #7B73C5;
+    --color-base-300: #55508C;
+    --color-base-400: #302D52;
+    --color-base-425: #272444;
+    --color-base-450: #1D1C35;
+    --color-base-475: #141327;
+    --color-base-500: #0a0a18;
+    --color-base-600: #05050d;
+    --color-base-700: #000000;
+    --color-base-800: #000000;
+    --color-base-900: #000000;
+/*f*/
+    --color-fore-100: #ffffff;
+    --color-fore-200: #f2f2ff;
+    --color-fore-300: #f1f1ff;
+    --color-fore-350: #eae9ff;
+    --color-fore-400: #e5e3ff;
+    --color-fore-500: #d6d3ff;
+    --color-fore-600: #cecbff;
+    --color-fore-700: #c1beff;
+    --color-fore-800: #aba4ff;
+    --color-fore-900: #a096ff;
+/*a*/
+    --color-acct-100: #e4e1ff;
+    --color-acct-200: #cdc9ff;
+    --color-acct-300: #b3acfe;
+    --color-acct-400: #a89fff;
+    --color-acct-500: #a096ff;
+    --color-acct-600: #978cfb;
+    --color-acct-700: #877bed;
+    --color-acct-800: #7468de;
+    --color-acct-900: #5e52c6;
+}
+body {
+    background-color: var(--color-base-500);
+    font-family: "Figtree", sans-serif;
+    color: var(--color-fore-100);
+    font-size: large;
+}
+.headline-slider_container{
+    display: inline-flex;
+}
+#between_factor_slider, #betweenFactorSlider-reader{
+    position: relative;
+    left: 4ch;
+}
+#next_factor_slider, #nextFactorSlider-reader{
+    position: relative;
+    left: 8ch;
+}
+#betweenFactorSlider-reader, #nextFactorSlider-reader {
+    top: 1ch;
+}
+#reset-button-b, #reset-button-n{
+    height: 3ch;
+    position: relative;
+    top: 2.5ch;
+}
+#reset-button-b {
+    left:8ch;
+}
+#reset-button-n {
+    left: 14ch;
+}
+.color-line-n{
+    position: relative;
+    left: 6ch;
+}
+.color-line-b{
+    position: relative;
+}
+.color-line-nxt{
+    position: relative;
+    left:3ch;
+}
+.rw_hex{
+    position: relative;
+    width: 10ch;
+    top: -2px;
+}
+.r_hsl{
+    position: relative;
+    width: 22.5ch;
+    top: -2px;
+}
+.slctr_rgb{
+    width: 4ch;
+}
+.oklabColorRgbRectR, .oklabColorRgbRectG, .oklabColorRgbRectB, .oklabColorRgbRects {
+    position: absolute;
+    margin-top: 2.5px;
+    width: 100px;
+    height: 5px;
+}
+.oklabColorRgbRectR {
+   background-color: #f00;
+}
+.oklabColorRgbRectG {
+    background-color: #0f0;
+}
+.oklabColorRgbRectB {
+    background-color: #00f;
+}
