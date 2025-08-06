@@ -321,18 +321,19 @@ function colorABSelector(paletteIndex) {
     oklabColorA.hex = oklabColorA_field.value;
     oklabColorA.precision = 2;
     oklabColorARgbP.value = ((oklabColorA.rgb[0] / 255) * 100).toFixed(1) + "%, " + ((oklabColorA.rgb[1] / 255) * 100).toFixed(1) + "%, " + ((oklabColorA.rgb[2] / 255) * 100).toFixed(1) + "%";
-    const a_r = Number((oklabColorA.rgb[0] / 255 * 100).toFixed(0));
-    const a_g = Number((oklabColorA.rgb[1] / 255 * 100).toFixed(0));
-    const a_b = Number((oklabColorA.rgb[2] / 255 * 100).toFixed(0));
+    const a_r = Number((oklabColorA.rgb[0] / 255 * 100).toFixed(1));
+    const a_g = Number((oklabColorA.rgb[1] / 255 * 100).toFixed(1));
+    const a_b = Number((oklabColorA.rgb[2] / 255 * 100).toFixed(1));
     const a_rgb = a_r + a_g + a_b;
     const a_w = Math.pow(a_rgb*3.17 + 237, 0.731) ; // Full width for the rectangles
-    oklabColorARgbRectR.style.width = (a_r / a_rgb) * a_w + "px";
+    const a_x = (a_rgb === 0) ? 1 : 0;
+    oklabColorARgbRectR.style.width = ((a_r + a_x) / a_rgb) * a_w + "px";
     oklabColorARgbRectR.style.height = "5px";
-    oklabColorARgbRectG.style.marginLeft = (a_r / a_rgb) * a_w + "px";
-    oklabColorARgbRectG.style.width = (a_g / a_rgb) * a_w + "px";
+    oklabColorARgbRectG.style.marginLeft = ((a_r + a_x) / a_rgb) * a_w + "px";
+    oklabColorARgbRectG.style.width = ((a_g + a_x) / a_rgb) * a_w + "px";
     oklabColorARgbRectG.style.height = "5px";
-    oklabColorARgbRectB.style.marginLeft = ((a_r + a_g) / a_rgb) * a_w + "px";
-    oklabColorARgbRectB.style.width = (a_b / a_rgb) * a_w + "px";
+    oklabColorARgbRectB.style.marginLeft = (((a_r + a_x) + a_g) / a_rgb) * a_w + "px";
+    oklabColorARgbRectB.style.width = ((a_b + a_x) / a_rgb) * a_w + "px";
     oklabColorARgbRectB.style.height = "5px";
 
     // Color B
@@ -340,18 +341,19 @@ function colorABSelector(paletteIndex) {
     oklabColorB.hex = oklabColorB_field.value;
     oklabColorB.precision = 2;
     oklabColorBRgbP.value = ((oklabColorB.rgb[0] / 255) * 100).toFixed(1) + "%, " + ((oklabColorB.rgb[1] / 255) * 100).toFixed(1) + "%, " + ((oklabColorB.rgb[2] / 255) * 100).toFixed(1) + "%";
-    const b_r = Number(((oklabColorB.rgb[0] / 255) * 100).toFixed(0)) + 1;
-    const b_g = Number(((oklabColorB.rgb[1] / 255) * 100).toFixed(0)) + 1;
-    const b_b = Number(((oklabColorB.rgb[2] / 255) * 100).toFixed(0)) + 1;
+    const b_r = Number(((oklabColorB.rgb[0] / 255) * 100).toFixed(1)) ;
+    const b_g = Number(((oklabColorB.rgb[1] / 255) * 100).toFixed(1));
+    const b_b = Number(((oklabColorB.rgb[2] / 255) * 100).toFixed(1));
     const b_rgb = b_r + b_g + b_b;
+    const b_x = (b_rgb === 0) ? 1 : 0;
     const b_w = Math.pow(b_rgb*3.17 + 237, 0.731); // Full width for the rectangles
-    oklabColorBRgbRectR.style.width = (b_r / b_rgb) * b_w + "px";
+    oklabColorBRgbRectR.style.width = ((b_r + b_x) / b_rgb) * b_w + "px";
     oklabColorBRgbRectR.style.height = "5px";
-    oklabColorBRgbRectG.style.marginLeft = (b_r / b_rgb) * b_w + "px";
-    oklabColorBRgbRectG.style.width = (b_g / b_rgb) * b_w + "px";
+    oklabColorBRgbRectG.style.marginLeft = ((b_r + b_x) / b_rgb) * b_w + "px";
+    oklabColorBRgbRectG.style.width = ((b_g + b_x) / b_rgb) * b_w + "px";
     oklabColorBRgbRectG.style.height = "5px";
-    oklabColorBRgbRectB.style.marginLeft = ((b_r + b_g) / b_rgb) * b_w + "px";
-    oklabColorBRgbRectB.style.width = (b_b / b_rgb) * b_w + "px";
+    oklabColorBRgbRectB.style.marginLeft = (((b_r + b_x + b_g)) / b_rgb) * b_w + "px";
+    oklabColorBRgbRectB.style.width = ((b_b + b_x) / b_rgb) * b_w + "px";
     oklabColorBRgbRectB.style.height = "5px";
 }
 
