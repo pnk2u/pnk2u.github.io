@@ -40,6 +40,20 @@ body {
     color: var(--color-fore-100);
     font-size: large;
 }
+@font-face{
+    font-family: Departure Mono;
+    src: url(../res/fnt/DepartureMono-Regular.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+code, input {
+    font-family: Departure Mono, monospace;
+    font-size: 11px;
+}
+code {
+    background-color: var(--color-base-400);
+    -webkit-font-smoothing: none;
+}
 .headline-slider_container{
     display: inline-flex;
 }
@@ -79,7 +93,7 @@ body {
 .rw_hex{
     position: relative;
     width: 10ch;
-    margin-left: 32px;
+    margin-left: 33px;
     margin-right: 2px;
 }
 .r_hsl{
@@ -89,18 +103,15 @@ body {
 }
 .slctr_rgb {
     position: absolute;
-    width: 31px;
-    height: 31px;
+    width: 28px;
+    height: 28px;
     background-color: transparent;
     border: none;
-}
-.slctr_rgb_a {
-    margin-top: -4px;
-}
-.slctr_rgb_b {
-    margin-top: -2px;
+    margin-top: -0.5px;
+    margin-left: -3px;
 }
 .r_rgbP {
+    margin-left: 7px;
     top: -4px;
 }
 .color-divider {

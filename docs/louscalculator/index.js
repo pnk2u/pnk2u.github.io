@@ -332,14 +332,14 @@ function colorABSelector(paletteIndex) {
     if (isBarAbove) {oklabColorARgbRectG.style.marginLeft = (a_r / a_rgb) * a_w + "px";}
             else    {oklabColorARgbRectR.style.marginLeft = "-1px";
                     oklabColorARgbRectG.style.marginLeft = "-1px";
-                    oklabColorARgbRectR.style.marginTop = "4px";
-                    oklabColorARgbRectG.style.marginTop = "9px";}
+                    oklabColorARgbRectR.style.marginTop = "5px";
+                    oklabColorARgbRectG.style.marginTop = "11px";}
     oklabColorARgbRectG.style.width = ((a_g / a_rgb) * a_w).toFixed(0) + "px";
     oklabColorARgbRectG.style.height = "5px";
     if (isBarAbove) {oklabColorARgbRectB.style.marginLeft = ((a_r + a_g) / a_rgb) * a_w + "px";
                     oklabColorARgbRectG.style.marginTop = "-1px";}
             else    {oklabColorARgbRectB.style.marginLeft = "-1px";
-                    oklabColorARgbRectB.style.marginTop = "14px";}
+                    oklabColorARgbRectB.style.marginTop = "17px";}
     oklabColorARgbRectB.style.width = ((a_b / a_rgb) * a_w).toFixed(0) + "px";
     oklabColorARgbRectB.style.height = "5px";
 
@@ -358,14 +358,14 @@ function colorABSelector(paletteIndex) {
     if (isBarAbove) {oklabColorBRgbRectG.style.marginLeft = (b_r / b_rgb) * b_w + "px";}
             else    {oklabColorBRgbRectR.style.marginLeft = "-1px";
                     oklabColorBRgbRectG.style.marginLeft = "-1px";
-                    oklabColorBRgbRectR.style.marginTop = "3px";
-                    oklabColorBRgbRectG.style.marginTop = "8px";}
+                    oklabColorBRgbRectR.style.marginTop = "4px";
+                    oklabColorBRgbRectG.style.marginTop = "10px";}
     oklabColorBRgbRectG.style.width = ((b_g / b_rgb) * b_w).toFixed(0) + "px";
     oklabColorBRgbRectG.style.height = "5px";
     if (isBarAbove) {oklabColorBRgbRectB.style.marginLeft = ((b_r + b_g) / b_rgb) * b_w + "px";
                     oklabColorBRgbRectG.style.marginTop = "-1px";}
             else    {oklabColorBRgbRectB.style.marginLeft = "-1px";
-                    oklabColorBRgbRectB.style.marginTop = "13px";}
+                    oklabColorBRgbRectB.style.marginTop = "15px";}
     oklabColorBRgbRectB.style.width = ((b_b / b_rgb) * b_w).toFixed(0) + "px";
     oklabColorBRgbRectB.style.height = "5px";
 }
@@ -460,7 +460,7 @@ function buildColorSelectors() {
         colorLineA.className = "color-line-oklab";
 
         const labelA = document.createElement("span");
-        labelA.innerHTML = `Color <code>A</code> ${i + 1}:&nbsp;&nbsp;`;
+        labelA.innerHTML = `Color <code>A ${i + 1}</code>:&nbsp;&nbsp;`;
 
         const inputA = document.createElement("input");
         inputA.id = `oklabColor${i + 1}ARgbSelector`;
@@ -503,7 +503,7 @@ function buildColorSelectors() {
         colorLineB.className = "color-line-oklab";
 
         const labelB = document.createElement("span");
-        labelB.innerHTML = `Color <code>B</code> ${i + 1}:&nbsp;&nbsp;`;
+        labelB.innerHTML = `Color <code>B ${i + 1}</code>:&nbsp;&nbsp;`;
 
         const inputB = document.createElement("input");
         inputB.id = `oklabColor${i + 1}BRgbSelector`;
@@ -548,12 +548,13 @@ function buildColorSelectors() {
 
         const colorCountLabel = document.createElement("label");
         colorCountLabel.setAttribute("for", `color-count_${i + 1}`);
-        colorCountLabel.innerText = `Color count for Palette ${i + 1}: `;
+        colorCountLabel.innerHTML = `Color count for Palette <code>${i + 1}</code>: `;
 
         const colorCountInput = document.createElement("input");
         colorCountInput.id = `color-count_${i + 1}`;
         colorCountInput.name = `color-count_${i + 1}`;
         colorCountInput.type = "number";
+        colorCountInput.style.marginLeft = "-2px";
         colorCountInput.style.width = "3em";
         colorCountInput.min = "3";
         colorCountInput.max = "317";
