@@ -321,9 +321,9 @@ function colorABSelector(paletteIndex) {
     oklabColorA.hex = oklabColorA_field.value;
     oklabColorA.precision = 2;
     oklabColorARgbP.value = ((oklabColorA.rgb[0] / 255) * 100).toFixed(1) + "%, " + ((oklabColorA.rgb[1] / 255) * 100).toFixed(1) + "%, " + ((oklabColorA.rgb[2] / 255) * 100).toFixed(1) + "%";
-    const a_r = Number((oklabColorA.rgb[0] / 255 * 100).toFixed(0)) + 1;
-    const a_g = Number((oklabColorA.rgb[1] / 255 * 100).toFixed(0)) + 1;
-    const a_b = Number((oklabColorA.rgb[2] / 255 * 100).toFixed(0)) + 1;
+    const a_r = Number((oklabColorA.rgb[0] / 255 * 100).toFixed(0));
+    const a_g = Number((oklabColorA.rgb[1] / 255 * 100).toFixed(0));
+    const a_b = Number((oklabColorA.rgb[2] / 255 * 100).toFixed(0));
     const a_rgb = a_r + a_g + a_b;
     const a_w = Math.pow(a_rgb*3.17 + 237, 0.731) ; // Full width for the rectangles
     oklabColorARgbRectR.style.width = (a_r / a_rgb) * a_w + "px";
@@ -628,7 +628,7 @@ document.getElementById("color-form").addEventListener("submit", (e) => {
         const colorB = colorB_rgb.match(/\w\w/g).map(x => parseInt(x, 16));
 
         // Generate palette
-        result.push(interpolateOklabHSL(colorA, colorB, colorCount));
+        result.push(interpolateOklabHSL(colorA, colorB, colorCount - 1));
     }
     handleResult(result);
     document.getElementById("click-instructions").style.display = "block";
