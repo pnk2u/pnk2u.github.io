@@ -136,7 +136,7 @@ function initColorRW() {
         // NC 3 (Next)
         let C_N3_H_1 = ((colorN1_nxt.hsl[0] + color3_nxt.hsl[0] - color1_nxt.hsl[0]));
         if ((180-C_N3_H_1)<=0) {C_N3_H_1 = C_N3_H_1 - 360;}
-        let C_N3_H = (C_N3_H_1)/1;
+        let C_N3_H = (C_N3_H_1);
         if (!isFinite(C_N3_H)) {C_N3_H = 0;}
         if (Math.sign(C_N3_H)===-1) {C_N3_H = 360 + C_N3_H;}
         C_N3_H = C_N3_H.toFixed(2);
@@ -279,6 +279,7 @@ const paletteCountInput = document.getElementById("palette-count");
 function setPaletteCount(count) {
     paletteCount = count;
 }
+let isBarAbove = false; // Default value for bar position
 
 paletteCountInput.addEventListener('input', () => {
     setPaletteCount(paletteCountInput.value);
@@ -324,16 +325,22 @@ function colorABSelector(paletteIndex) {
     const a_r = Number((oklabColorA.rgb[0] / 255 * 100).toFixed(1));
     const a_g = Number((oklabColorA.rgb[1] / 255 * 100).toFixed(1));
     const a_b = Number((oklabColorA.rgb[2] / 255 * 100).toFixed(1));
-    const a_rgb = a_r + a_g + a_b;
+    const a_rgb = a_r + a_g + a_b + 1; // Adding 1 to avoid division by zero
     const a_w = Math.pow(a_rgb*3.17 + 237, 0.731) ; // Full width for the rectangles
-    const a_x = (a_rgb === 0) ? 1 : 0;
-    oklabColorARgbRectR.style.width = ((a_r + a_x) / a_rgb) * a_w + "px";
+    oklabColorARgbRectR.style.width = (a_r / a_rgb) * a_w + "px";
     oklabColorARgbRectR.style.height = "5px";
-    oklabColorARgbRectG.style.marginLeft = ((a_r + a_x) / a_rgb) * a_w + "px";
-    oklabColorARgbRectG.style.width = ((a_g + a_x) / a_rgb) * a_w + "px";
+    if (isBarAbove) {oklabColorARgbRectG.style.marginLeft = (a_r / a_rgb) * a_w + "px";}
+            else    {oklabColorARgbRectR.style.marginLeft = "-0.5px";
+                    oklabColorARgbRectG.style.marginLeft = "-1px";
+                    oklabColorARgbRectR.style.marginTop = "4px";
+                    oklabColorARgbRectG.style.marginTop = "9px";}
+    oklabColorARgbRectG.style.width = (a_g / a_rgb) * a_w + "px";
     oklabColorARgbRectG.style.height = "5px";
-    oklabColorARgbRectB.style.marginLeft = (((a_r + a_x) + a_g) / a_rgb) * a_w + "px";
-    oklabColorARgbRectB.style.width = ((a_b + a_x) / a_rgb) * a_w + "px";
+    if (isBarAbove) {oklabColorARgbRectB.style.marginLeft = ((a_r + a_g) / a_rgb) * a_w + "px";
+                    oklabColorARgbRectG.style.marginTop = "-1px";}
+            else    {oklabColorARgbRectB.style.marginLeft = "-1px";
+                    oklabColorARgbRectB.style.marginTop = "14px";}
+    oklabColorARgbRectB.style.width = (a_b / a_rgb) * a_w + "px";
     oklabColorARgbRectB.style.height = "5px";
 
     // Color B
@@ -344,16 +351,22 @@ function colorABSelector(paletteIndex) {
     const b_r = Number(((oklabColorB.rgb[0] / 255) * 100).toFixed(1)) ;
     const b_g = Number(((oklabColorB.rgb[1] / 255) * 100).toFixed(1));
     const b_b = Number(((oklabColorB.rgb[2] / 255) * 100).toFixed(1));
-    const b_rgb = b_r + b_g + b_b;
-    const b_x = (b_rgb === 0) ? 1 : 0;
+    const b_rgb = b_r + b_g + b_b + 1; // Adding 1 to avoid division by zero
     const b_w = Math.pow(b_rgb*3.17 + 237, 0.731); // Full width for the rectangles
-    oklabColorBRgbRectR.style.width = ((b_r + b_x) / b_rgb) * b_w + "px";
+    oklabColorBRgbRectR.style.width = (b_r / b_rgb) * b_w + "px";
     oklabColorBRgbRectR.style.height = "5px";
-    oklabColorBRgbRectG.style.marginLeft = ((b_r + b_x) / b_rgb) * b_w + "px";
-    oklabColorBRgbRectG.style.width = ((b_g + b_x) / b_rgb) * b_w + "px";
+    if (isBarAbove) {oklabColorBRgbRectG.style.marginLeft = (b_r / b_rgb) * b_w + "px";}
+            else    {oklabColorBRgbRectR.style.marginLeft = "-0.5px";
+                    oklabColorBRgbRectG.style.marginLeft = "-1px";
+                    oklabColorBRgbRectR.style.marginTop = "3px";
+                    oklabColorBRgbRectG.style.marginTop = "8px";}
+    oklabColorBRgbRectG.style.width = (b_g / b_rgb) * b_w + "px";
     oklabColorBRgbRectG.style.height = "5px";
-    oklabColorBRgbRectB.style.marginLeft = (((b_r + b_x + b_g)) / b_rgb) * b_w + "px";
-    oklabColorBRgbRectB.style.width = ((b_b + b_x) / b_rgb) * b_w + "px";
+    if (isBarAbove) {oklabColorBRgbRectB.style.marginLeft = ((b_r + b_g) / b_rgb) * b_w + "px";
+                    oklabColorBRgbRectG.style.marginTop = "-1px";}
+            else    {oklabColorBRgbRectB.style.marginLeft = "-1px";
+                    oklabColorBRgbRectB.style.marginTop = "13px";}
+    oklabColorBRgbRectB.style.width = (b_b / b_rgb) * b_w + "px";
     oklabColorBRgbRectB.style.height = "5px";
 }
 
@@ -425,6 +438,10 @@ function attachInputListeners() {
 document.addEventListener("keydown", (event) => {
     if (event.ctrlKey && event.shiftKey && event.key === "R") {
         sessionStorage.clear();
+    }
+    if (event.code === "Space" || event.key === " ") {
+        isBarAbove = !isBarAbove; // Toggle bar position
+        buildColorSelectors();
     }
 });
 
@@ -556,15 +573,17 @@ function buildColorSelectors() {
         colorLineA.appendChild(labelA);
         colorLineA.appendChild(inputA);
         colorLineA.appendChild(hexInputA);
-        colorLineA.appendChild(rectLineA);
+        if (isBarAbove) {colorLineA.appendChild(rectLineA);}
         colorLineA.appendChild(rgbPA);
+        if (!isBarAbove) {colorLineA.appendChild(rectLineA);}
 
         // Append elements for Color B
         colorLineB.appendChild(labelB);
         colorLineB.appendChild(inputB);
         colorLineB.appendChild(hexInputB);
-        colorLineB.appendChild(rectLineB);
+        if (isBarAbove) {colorLineB.appendChild(rectLineB);}
         colorLineB.appendChild(rgbPB);
+        if (!isBarAbove) {colorLineB.appendChild(rectLineB);}
 
         const tail = document.getElementById("generate_button");
 
