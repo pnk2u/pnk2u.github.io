@@ -106,6 +106,9 @@ body {
 .color-divider {
     height: 4px;
 }
+.count-divider {
+    height: 3px;
+}
 .group-divider {
     height: 16px;
 }

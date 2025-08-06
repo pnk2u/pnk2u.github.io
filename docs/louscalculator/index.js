@@ -545,6 +545,8 @@ function buildColorSelectors() {
 
         const divider_color = document.createElement("div");
         divider_color.className = "color-divider";
+        const divider_count = document.createElement("div");
+        divider_count.className = "count-divider";
         const divider_group = document.createElement("div");
         divider_group.className = "group-divider";
 
@@ -568,6 +570,7 @@ function buildColorSelectors() {
         colorForm.insertBefore(colorLineA, tail);
         colorForm.insertBefore(divider_color, tail);
         colorForm.insertBefore(colorLineB, tail);
+        colorForm.insertBefore(divider_count, tail);
         colorForm.insertBefore(colorCountLine, tail);
         colorForm.insertBefore(divider_group, tail);
     }
