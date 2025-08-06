@@ -432,7 +432,7 @@ function buildColorSelectors() {
     // Clear existing dynamically created selectors
     const colorForm = document.getElementById("color-form");
     // Remove all existing color lines and color count lines
-    const existingSelectors = document.querySelectorAll(".color-line-oklab, .color-count-line, .group-divider");
+    const existingSelectors = document.querySelectorAll(".color-line-oklab, .color-count-line, .group-divider, .color-divider");
     existingSelectors.forEach(selector => selector.remove());
 
     // Add selectors dynamically based on the updated palette count
@@ -445,7 +445,7 @@ function buildColorSelectors() {
 
         const inputA = document.createElement("input");
         inputA.id = `oklabColor${i + 1}ARgbSelector`;
-        inputA.className = "slctr_rgb";
+        inputA.className = "slctr_rgb slctr_rgb_a";
         inputA.type = "color";
 
         const hexInputA = document.createElement("input");
@@ -455,7 +455,7 @@ function buildColorSelectors() {
 
         // Envelope the span elements in another span to ensure proper layout
         const rectLineA = document.createElement("span");
-        rectLineA.className = "oklabColorRgbRects";
+        rectLineA.className = "oklabColorRgbRectsA";
 
         const rectRA = document.createElement("span");
         rectRA.id = `oklabColor${i + 1}ARgbRectR`;
@@ -488,7 +488,7 @@ function buildColorSelectors() {
 
         const inputB = document.createElement("input");
         inputB.id = `oklabColor${i + 1}BRgbSelector`;
-        inputB.className = "slctr_rgb";
+        inputB.className = "slctr_rgb slctr_rgb_b";
         inputB.type = "color";
 
         const hexInputB = document.createElement("input");
@@ -498,7 +498,7 @@ function buildColorSelectors() {
 
         // Envelope the span elements in another span to ensure proper layout
         const rectLineB = document.createElement("span");
-        rectLineB.className = "oklabColorRgbRects";
+        rectLineB.className = "oklabColorRgbRectsB";
 
         const rectRB = document.createElement("span");
         rectRB.id = `oklabColor${i + 1}BRgbRectR`;
@@ -529,12 +529,13 @@ function buildColorSelectors() {
 
         const colorCountLabel = document.createElement("label");
         colorCountLabel.setAttribute("for", `color-count_${i + 1}`);
-        colorCountLabel.innerText = `Color count for Palette ${i + 1}:`;
+        colorCountLabel.innerText = `Color count for Palette ${i + 1}: `;
 
         const colorCountInput = document.createElement("input");
         colorCountInput.id = `color-count_${i + 1}`;
         colorCountInput.name = `color-count_${i + 1}`;
         colorCountInput.type = "number";
+        colorCountInput.style.width = "3em";
         colorCountInput.min = "3";
         colorCountInput.max = "317";
         colorCountInput.value = "8";
@@ -542,8 +543,10 @@ function buildColorSelectors() {
         colorCountLine.appendChild(colorCountLabel);
         colorCountLine.appendChild(colorCountInput);
 
-        const divider = document.createElement("hr");
-        divider.className = "group-divider";
+        const divider_color = document.createElement("div");
+        divider_color.className = "color-divider";
+        const divider_group = document.createElement("div");
+        divider_group.className = "group-divider";
 
         // Append elements for Color A
         colorLineA.appendChild(labelA);
@@ -563,9 +566,10 @@ function buildColorSelectors() {
 
         // Insert into the form before the generate button
         colorForm.insertBefore(colorLineA, tail);
+        colorForm.insertBefore(divider_color, tail);
         colorForm.insertBefore(colorLineB, tail);
         colorForm.insertBefore(colorCountLine, tail);
-        colorForm.insertBefore(divider, tail);
+        colorForm.insertBefore(divider_group, tail);
     }
     initColorSelectors();
     attachInputListeners(); // Reattach listeners after rebuilding

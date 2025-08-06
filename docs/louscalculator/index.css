@@ -79,21 +79,49 @@ body {
 .rw_hex{
     position: relative;
     width: 10ch;
-    top: -2px;
+    margin-left: 32px;
+    margin-right: 2px;
 }
 .r_hsl{
     position: relative;
     width: 22.5ch;
     top: -2px;
 }
-.slctr_rgb{
-    width: 4ch;
-}
-.oklabColorRgbRectR, .oklabColorRgbRectG, .oklabColorRgbRectB, .oklabColorRgbRects {
+.slctr_rgb {
     position: absolute;
-    margin-top: 2.5px;
+    width: 31px;
+    height: 31px;
+    background-color: transparent;
+    border: none;
+}
+.slctr_rgb_a {
+    margin-top: -4px;
+}
+.slctr_rgb_b {
+    margin-top: -2px;
+}
+.r_rgbP {
+    top: -4px;
+}
+.color-divider {
+    height: 4px;
+}
+.group-divider {
+    height: 16px;
+}
+.oklabColorRgbRectsA {
+    margin-top: -1px !important;
+}
+.oklabColorRgbRectsB {
+    margin-top: -0.5px !important;
+}
+.oklabColorRgbRectR, .oklabColorRgbRectG, .oklabColorRgbRectB, .oklabColorRgbRectsA, .oklabColorRgbRectsB {
+    position: absolute;
     width: 100px;
+    margin-left: 0.5px;
+    margin-top: -0.5px;
     height: 5px;
+    z-index: -999;
 }
 .oklabColorRgbRectR {
    background-color: #f00;
