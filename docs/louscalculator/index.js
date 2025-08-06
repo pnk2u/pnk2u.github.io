@@ -327,20 +327,20 @@ function colorABSelector(paletteIndex) {
     const a_b = Number((oklabColorA.rgb[2] / 255 * 100).toFixed(1));
     const a_rgb = a_r + a_g + a_b + 1; // Adding 1 to avoid division by zero
     const a_w = Math.pow(a_rgb*3.17 + 237, 0.731) ; // Full width for the rectangles
-    oklabColorARgbRectR.style.width = (a_r / a_rgb) * a_w + "px";
+    oklabColorARgbRectR.style.width = ((a_r / a_rgb) * a_w).toFixed(0) + "px";
     oklabColorARgbRectR.style.height = "5px";
     if (isBarAbove) {oklabColorARgbRectG.style.marginLeft = (a_r / a_rgb) * a_w + "px";}
-            else    {oklabColorARgbRectR.style.marginLeft = "-0.5px";
+            else    {oklabColorARgbRectR.style.marginLeft = "-1px";
                     oklabColorARgbRectG.style.marginLeft = "-1px";
                     oklabColorARgbRectR.style.marginTop = "4px";
                     oklabColorARgbRectG.style.marginTop = "9px";}
-    oklabColorARgbRectG.style.width = (a_g / a_rgb) * a_w + "px";
+    oklabColorARgbRectG.style.width = ((a_g / a_rgb) * a_w).toFixed(0) + "px";
     oklabColorARgbRectG.style.height = "5px";
     if (isBarAbove) {oklabColorARgbRectB.style.marginLeft = ((a_r + a_g) / a_rgb) * a_w + "px";
                     oklabColorARgbRectG.style.marginTop = "-1px";}
             else    {oklabColorARgbRectB.style.marginLeft = "-1px";
                     oklabColorARgbRectB.style.marginTop = "14px";}
-    oklabColorARgbRectB.style.width = (a_b / a_rgb) * a_w + "px";
+    oklabColorARgbRectB.style.width = ((a_b / a_rgb) * a_w).toFixed(0) + "px";
     oklabColorARgbRectB.style.height = "5px";
 
     // Color B
@@ -353,20 +353,20 @@ function colorABSelector(paletteIndex) {
     const b_b = Number(((oklabColorB.rgb[2] / 255) * 100).toFixed(1));
     const b_rgb = b_r + b_g + b_b + 1; // Adding 1 to avoid division by zero
     const b_w = Math.pow(b_rgb*3.17 + 237, 0.731); // Full width for the rectangles
-    oklabColorBRgbRectR.style.width = (b_r / b_rgb) * b_w + "px";
+    oklabColorBRgbRectR.style.width = ((b_r / b_rgb) * b_w).toFixed(0) + "px";
     oklabColorBRgbRectR.style.height = "5px";
     if (isBarAbove) {oklabColorBRgbRectG.style.marginLeft = (b_r / b_rgb) * b_w + "px";}
-            else    {oklabColorBRgbRectR.style.marginLeft = "-0.5px";
+            else    {oklabColorBRgbRectR.style.marginLeft = "-1px";
                     oklabColorBRgbRectG.style.marginLeft = "-1px";
                     oklabColorBRgbRectR.style.marginTop = "3px";
                     oklabColorBRgbRectG.style.marginTop = "8px";}
-    oklabColorBRgbRectG.style.width = (b_g / b_rgb) * b_w + "px";
+    oklabColorBRgbRectG.style.width = ((b_g / b_rgb) * b_w).toFixed(0) + "px";
     oklabColorBRgbRectG.style.height = "5px";
     if (isBarAbove) {oklabColorBRgbRectB.style.marginLeft = ((b_r + b_g) / b_rgb) * b_w + "px";
                     oklabColorBRgbRectG.style.marginTop = "-1px";}
             else    {oklabColorBRgbRectB.style.marginLeft = "-1px";
                     oklabColorBRgbRectB.style.marginTop = "13px";}
-    oklabColorBRgbRectB.style.width = (b_b / b_rgb) * b_w + "px";
+    oklabColorBRgbRectB.style.width = ((b_b / b_rgb) * b_w).toFixed(0) + "px";
     oklabColorBRgbRectB.style.height = "5px";
 }
 
