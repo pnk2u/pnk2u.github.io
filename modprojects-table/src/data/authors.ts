@@ -4,6 +4,7 @@ export interface Author {
   link?: string;
   mr_id?: string; // Modrinth user ID
   sig_mod_id?: string; // Modrinth signature mod ID
+  gh_name?: string; // GitHub username, if different from 'name' and if first author (owner) of any mod
 }
 
 export interface Authors {
@@ -18,11 +19,12 @@ export interface Authors {
 export default <Authors>{
   pnku: {
     name: "pnku",
+    gh_name: "pnk2u",
     image:
       "https://cdn.modrinth.com/user/6XFnWjnN/2597b43521c3286c675842bed43d380543561052.jpeg",
     link: "https://modrinth.com/user/pnku",
     mr_id: "6XFnWjnN",
-    sig_mod_id: "ZVv4e6pP"
+    sig_mod_id: "ZVv4e6pP",
   },
   lieonlion: {
     name: "LieOnLion",
@@ -41,6 +43,7 @@ export default <Authors>{
   },
   nemonotfound: {
     name: "DevNemo",
+    gh_name: "NemoOnGH",
     image:
       "https://cdn.modrinth.com/user/djWlhnKQ/f6f099fc7bed17982a5ec6edcf1a0297a3052981.png",
     link: "https://modrinth.com/user/DevNemo",

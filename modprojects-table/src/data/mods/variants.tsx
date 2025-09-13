@@ -119,6 +119,7 @@ const variants: Mod[] = [
   },
   {
     id: "more-bookshelf-variants-lieonlion",
+    gh_repo: "LieOnLion/More-Bookshelf-Variants",
     name: "More Bookshelf Variants",
     image:
       "https://raw.githubusercontent.com/LieOnLion/More-Bookshelf-Variants/refs/heads/fabric+1.21/src/main/resources/logo.png",
@@ -223,6 +224,7 @@ const variants: Mod[] = [
   },
   {
     id: "more-chest-variants-lieonlion",
+    gh_repo: "LieOnLion/More-Chest-Variants",
     name: "More Chest Variants",
     image:
       "https://raw.githubusercontent.com/LieOnLion/More-Chest-Variants/refs/heads/fabric+1.21/src/main/resources/logo.png",
@@ -315,6 +317,7 @@ const variants: Mod[] = [
   },
   {
     id: "more-crafting-tables-lieonlion",
+    gh_repo: "LieOnLion/More-Crafting-Tables",
     name: "More Crafting Tables",
     image:
       "https://raw.githubusercontent.com/LieOnLion/More-Crafting-Tables/refs/heads/fabric+1.20.6/src/main/resources/logo.png",
@@ -383,6 +386,7 @@ const variants: Mod[] = [
   },
   {
     id: "more-furnace-variants-lieonlion",
+    gh_repo: "LieOnLion/More-Furnace-Variants",
     name: "More Furnace Variants",
     image:
       "https://raw.githubusercontent.com/LieOnLion/More-Furnace-Variants/refs/heads/fabric+1.20.6/src/main/resources/logo.png",

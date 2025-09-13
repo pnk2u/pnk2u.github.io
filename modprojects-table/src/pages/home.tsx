@@ -1,5 +1,6 @@
 import { Component, createSignal, For, onMount, Show } from "solid-js";
-import { TbMail } from "solid-icons/tb";
+import { TbCircleFilled, TbMail } from "solid-icons/tb";
+import { VsGithub } from 'solid-icons/vs'
 import { SiGithub, SiDiscord } from "solid-icons/si";
 import categories from "../data/mods";
 import { getColorAtTopLeft, getThemeUrlParam } from "../util/color.ts";
@@ -86,13 +87,31 @@ const Home: Component = () => {
                       return (
                         <>
                           <div class={`flex gap-0.5 bg-fore-350 ${isEvenRow ? "even_row" : "odd_row"}`}>
-                            <img
-                              id={elementModId + "_icon"}
-                              class="flex w-24 p-1.5 aspect-square bg-base-500"
-                              style={"background-color: " + (bgColor() == "rgb(0, 0, 0)" ? "var(--color-base-500)" : bgColor())}
-                              src={mod.image}
-                              alt={mod.name + " Icon"}
-                            />
+                            <div class={`flex max-w-24 min-w-24 justify-center items-center relative`}>
+                                <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute left-0 top-0">
+                                  <a
+                                      title={mod.name + " on Github"}
+                                      href={
+                                        mod.gh_repo
+                                          ? `https://github.com/${mod.gh_repo}`
+                                          : mod.authors?.[0]?.gh_name
+                                            ? `https://github.com/${mod.authors[0].gh_name}/${mod.id}`
+                                            : `https://github.com/${mod.authors?.[0]?.name ?? ""}/${mod.id}`
+                                      }
+                                      target={"_blank"}
+                                      class="p-0.5">
+                                      <VsGithub class="w-5 h-5 opacity-95 relative z-1 hover:opacity-100 text-fore-300 hover:text-acct-300"></VsGithub>
+                                      <TbCircleFilled class="w-[22px] h-[22px] absolute top-[1px] left-[1px] blur-[2px] opacity-80 z-0 text-base-900"></TbCircleFilled>
+                                  </a>
+                                </div>
+                              <img
+                                id={elementModId + "_icon"}
+                                class="flex w-24 p-1.5 aspect-square bg-base-500"
+                                style={"background-color: " + (bgColor() == "rgb(0, 0, 0)" ? "var(--color-base-500)" : bgColor())}
+                                src={mod.image}
+                                alt={mod.name + " Icon"}
+                              />
+                            </div>
                             <div class={`flex max-w-146.5 w-[25vw] min-w-50 justify-center items-center font-semibold text-xl text-fore-200 relative ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
                               <Show when={mod.requirements}>
                                 <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute left-0 top-0">

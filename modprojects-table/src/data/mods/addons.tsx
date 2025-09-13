@@ -27,6 +27,7 @@ const addons: Mod[] = [
   },
   {
     id: "more-feeding-trough-variants",
+    gh_repo: "pnk2u/More-Composter-Variants-AFT",
     name: "More Feeding Trough Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/More-Composter-Variants-AFT/1.21.4/src/main/resources/logo.png",
@@ -67,7 +68,8 @@ const addons: Mod[] = [
   },
   {
     id: "more-nemos-woodcutter-variants",
-    name: "More Nemo's Woodcutter Variants",
+    gh_repo: "pnk2u/More-NemosWoodcutter-Variants",
+    name: "More Nemoʼs Woodcutter Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-NemosWoodcutter-Variants/pres/logo/logo.png",
     authors: [authors.pnku, authors.nemonotfound],
@@ -95,11 +97,10 @@ const addons: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(5)",
+        display: "1.21.4(-8)",
         api: "1.21.4",
-        span: 2,
+        span: 3,
       },
-      {},
     ],
   },
   {

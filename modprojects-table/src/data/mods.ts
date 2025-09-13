@@ -13,6 +13,7 @@ interface Category {
 
 export interface Mod {
   id: string;
+  gh_repo?: string; // GitHub repository in the format "owner/repo", if different repo-name from mod-id or if owner is different from first author
   name: string;
   image: string;
   requirements?: Dependency[];

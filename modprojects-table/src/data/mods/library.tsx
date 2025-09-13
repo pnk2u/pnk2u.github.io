@@ -4,6 +4,7 @@ import { Mod } from "../mods.ts";
 const library: Mod[] = [
   {
     id: "7jzrCiK0",
+    gh_repo: "LieOnLion/Quad",
     name: "Quad",
     image:
       "https://raw.githubusercontent.com/LieOnLion/Quad/refs/heads/fabric+1.20.6/src/main/resources/logo.png",
@@ -31,8 +32,9 @@ const library: Mod[] = [
       },
       {
         api: "1.21.5",
+        display: "1.21.5(-8)",
+        span: 2,
       },
-      {},
     ],
   },
 ];

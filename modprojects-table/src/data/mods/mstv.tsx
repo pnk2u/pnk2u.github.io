@@ -126,7 +126,8 @@ const mstv: Mod[] = [
   },
   {
     id: "nemos-more-ladder-variants",
-    name: "Nemo's More Ladder Variants",
+    gh_repo: "pnk2u/Nemos-More-Ladder-Variants",
+    name: "Nemoʼs More Ladder Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/Nemos-More-Ladder-Variants/pres/logo/logo_c.png",
     requirements: [dependencies.more_stick_variants],
@@ -295,7 +296,7 @@ const mstv: Mod[] = [
       },
       {
         api: "1.21.4",
-        display: "1.21.4(-8)",
+        display: "1.21.4(-9)",
         span: 3,
       },
     ],

@@ -103,7 +103,7 @@ export default <Dependencies>{
     link: "https://modrinth.com/mod/jade",
   },
   nemos_woodcutter: {
-    name: "Nemo's Woodcutter",
+    name: "Nemoʼs Woodcutter",
     image: "https://raw.githubusercontent.com/NemoNotFound/NemosWoodcutter/master/fabric/src/main/resources/icon.png",
     link: "https://modrinth.com/mod/nemos-woodcutter",
   },
