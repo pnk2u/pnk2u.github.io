@@ -55,7 +55,7 @@ const Home: Component = () => {
           <a href="https://lieonlion.dev" title="LieOnLion.dev">
             <div class="absolute p-1 pt-1.5 ml-1 font-bold text-fore-300 hover:text-acct-500">LieOnStudios</div>
           </a>
-          <a href="https://dsc.lieonlion.dev" title="LoL Community Server invite">
+          <a href="https://discord.lieonlion.dev" title="LoL Community Server invite">
             <SiDiscord class="w-8 h-8 border-l-1 p-1 pb-0 inline ml-27 border-fore-300 hover:text-acct-500"></SiDiscord>
           </a>
         </div>
