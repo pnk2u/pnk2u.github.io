@@ -200,7 +200,7 @@ const Home: Component = () => {
                                             <a
                                               id={mod.id + "_" + (version.api ?? "unknown")}
                                               href=""
-                                              title={mod.name}
+                                              title={mod.name + " " + (version.display ?? version.api) + (version.unsupported ? " (inactive)" : "")}
                                               target="_blank"
                                               class={`group relative ${Array.isArray(version.combines) ? "combined_" + version.combines[0] + " " : ""}
                                               ${Array.isArray(version.combines) ? isEvenRow ? "not-hover:bg-base-500" : "not-hover:bg-base-475" : ""}

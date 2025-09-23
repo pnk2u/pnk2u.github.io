@@ -34,6 +34,7 @@ export async function fetchVersionsAndWriteToTable() {
       mc_version: string;
       mod_version: string;
       version_id: string;
+      version_name: string;
     }[] = [];
 
     if (!sessionStorage[mod_id] || now > sessionStorage["sessionTime"]) {
@@ -61,6 +62,7 @@ export async function fetchVersionsAndWriteToTable() {
               mc_version,
               mod_version: found.version_number,
               version_id: found.id,
+              version_name: found.name,
             });
           }
         }
@@ -112,11 +114,7 @@ export async function fetchVersionsAndWriteToTable() {
         );
         version_element.setAttribute(
           "title",
-          version_element.getAttribute("title") +
-            ": " +
-            version_number +
-            " + " +
-            version.mc_version +
+          version.version_name +
             (isUnsupported ? " (inactive)" : "")
         );
         version_number_element.innerHTML = version_number;
