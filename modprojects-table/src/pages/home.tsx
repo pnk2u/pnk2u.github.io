@@ -86,7 +86,7 @@ const Home: Component = () => {
 
                       return (
                         <>
-                          <div class={`flex gap-0.5 bg-fore-350 ${isEvenRow ? "even_row" : "odd_row"}`}>
+                          <div id={elementModId} class={`flex gap-0.5 bg-fore-350 ${isEvenRow ? "even_row" : "odd_row"}`}>
                             <div class={`flex max-w-24 min-w-24 justify-center items-center relative`}>
                                 <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute left-0 top-0">
                                   <a
@@ -148,7 +148,8 @@ const Home: Component = () => {
                                 </div>
                               </Show>
                               <a
-                                id={elementModId}
+                                id={elementModId + "_name"}
+                                title={mod.name + " on Modrinth"}
                                 href={"https://modrinth.com/mod/" + mod.id}
                                 class="hover:underline hover:text-acct-300 z-10 text-center leading-[80%]">
                                 {mod.name}
