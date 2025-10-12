@@ -39,7 +39,7 @@ const variants: Mod[] = [
         api: "1.21.5",
       }, 
       {
-        display: "1.21.6(-8)",
+        display: "1.21.6(-10)",
         api: "1.21.6"  
       }
     ],
@@ -113,7 +113,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -146,7 +146,7 @@ const variants: Mod[] = [
       },
       {},
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -182,7 +182,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -218,7 +218,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -254,7 +254,7 @@ const variants: Mod[] = [
         api: "1.21.4",
       },
       {
-        display: "1.21.5(-8)",
+        display: "1.21.5(-10)",
         api: "1.21.5",
         span: 2,
       },
@@ -291,7 +291,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -344,7 +344,7 @@ const variants: Mod[] = [
       },
       {},
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -380,7 +380,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -446,7 +446,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -485,7 +485,7 @@ const variants: Mod[] = [
         api: "1.21.4",
       },
       {
-        display: "1.21.5(-8)",
+        display: "1.21.5(-10)",
         api: "1.21.5",
         span: 2,
       },
@@ -524,7 +524,7 @@ const variants: Mod[] = [
         api: "1.21.4",
       },
       {
-        display: "1.21.5(-8)",
+        display: "1.21.5(-10)",
         api: "1.21.5",
         span: 2,
       },
@@ -560,7 +560,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -636,7 +636,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
@@ -672,7 +672,7 @@ const variants: Mod[] = [
         unsupported: true,
       },
       {
-        display: "1.21.4(-8)",
+        display: "1.21.4(-10)",
         api: "1.21.4",
         span: 3,
       },
