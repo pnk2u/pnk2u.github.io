@@ -22,7 +22,7 @@ const getVersionsToBeFetched = (): { mod_id: string; versions: string[] }[] => {
 export async function fetchVersionsAndWriteToTable() {
   const fetch_data = getVersionsToBeFetched();
   const now = Date.now();
-  const session_TTL = 317237;
+  const session_TTL = 317237; // 5 minutes and 17.237 seconds in milliseconds, arbitrary value
   const headers = new Headers({
     "Content-Type": "application/json",
     "User-Agent": "pnk2u/pnk2u.github.io (contact@pnku.de)",
@@ -37,7 +37,7 @@ export async function fetchVersionsAndWriteToTable() {
       version_name: string;
     }[] = [];
 
-    if (!sessionStorage[mod_id] || now > sessionStorage["sessionTime"]) {
+    if (!sessionStorage[mod_id] || now > parseInt(sessionStorage["sessionTime"])) {
       const version_list = mod_data.versions.join('","');
       const api_url = `https://api.modrinth.com/v2/project/${mod_id}/version?game_versions=%5B%22${version_list}%22%5D&loaders=%5B%22fabric%22%5D`;
 
@@ -74,7 +74,7 @@ export async function fetchVersionsAndWriteToTable() {
       }
     } else {
       let current_TTL = sessionStorage["sessionTime"] - now;
-      let m = Math.floor(current_TTL / 60000) << 0;
+      let m = Math.floor(current_TTL / 60000);
       let s = Math.floor(current_TTL / 1000) % 60;
       console.log(
         "TTL left in mm:ss (SSS): " +
@@ -117,7 +117,7 @@ export async function fetchVersionsAndWriteToTable() {
           version.version_name +
             (isUnsupported ? " (inactive)" : "")
         );
-        version_number_element.innerHTML = version_number;
+        version_number_element.textContent = version_number;
         list.add("group-hover:underline");
         if (isUnsupported) {
           list.add("text-acct-600/80");
@@ -136,7 +136,7 @@ export async function fetchVersionsAndWriteToTable() {
 
   await Promise.all(promises);
 
-  if (!sessionStorage["sessionTime"] || now >= sessionStorage["sessionTime"]) {
+  if (!sessionStorage["sessionTime"] || now >= parseInt(sessionStorage["sessionTime"])) {
     sessionStorage["sessionTime"] = now + session_TTL;
     console.log("Session time updated.");
   }
