@@ -54,16 +54,22 @@ const addons: Mod[] = [
       {
         api: "1.21.3",
         unsupported: true,
+        combines: ["top", "1.21.4"],
       },
       {
-        display: "1.21.4(5)",
+        display: "1.21.4",
         api: "1.21.4",
-        span: 2,
+        combines: ["bottom", "1.21.3"],
+      },
+      {
+        display: "1.21.5",
+        api: "1.21.5",
       },
       {
         api: "1.21.6",
         display: "1.21.6(-8)",
       },
+      {}
     ],
   },
   {
@@ -95,10 +101,16 @@ const addons: Mod[] = [
       {
         api: "1.21.3",
         unsupported: true,
+        combines: ["top", "1.21.4"],
+      },
+      {
+        api: "1.21.4",
+        combines: ["bottom", "1.21.3"],
+        unsupported: false
       },
       {
         display: "1.21.4(-10)",
-        api: "1.21.4",
+        api: "1.21.10",
         span: 3,
       },
     ],
@@ -122,12 +134,11 @@ const addons: Mod[] = [
       {
         api: "1.21.1",
       },
-      {},
       {
         api: "1.21.4",
       },
       {
-        span: 2,
+        span: 3,
       },
     ],
   },

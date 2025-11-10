@@ -73,11 +73,11 @@ const Home: Component = () => {
                   <For each={category.mods}>
                     {(mod, index) => {
                       const isEvenRow = index() % 2 === 0;
-                      let skippedApis = new Set<string>();
+                      const skippedApis = new Set<string>();
                       const [currentCol, setCurrentCol] = createSignal<number>(0);
                       const elementModId = mod.name
                         .toLowerCase()
-                        .replace(/[^a-z-A-Z ]/g, "")
+                        .replace(/[^A-Za-z ]/g, "")
                         .replace(/[ ]/g, "_");
 
                       const [bgColor, setBgColor] = createSignal<string>("");
@@ -107,7 +107,7 @@ const Home: Component = () => {
                               <img
                                 id={elementModId + "_icon"}
                                 class="flex w-24 p-1.5 aspect-square bg-base-500"
-                                style={"background-color: " + (bgColor() == "rgb(0, 0, 0)" ? "var(--color-base-500)" : bgColor())}
+                                style={"background-color: " + (bgColor() === "rgb(0, 0, 0)" ? "var(--color-base-500)" : bgColor())}
                                 src={mod.image}
                                 alt={mod.name + " Icon"}
                               />
@@ -175,7 +175,7 @@ const Home: Component = () => {
                               <For each={mod.versions}>
                                 {(version, i) => {
                                   if (!version) return null;
-                                  if (version.combines && version.combines[0] == "bottom") {
+                                  if (version.combines && version.combines[0] === "bottom") {
                                     if (version.api) skippedApis.add(version.api);
                                     return;
                                   }
@@ -185,9 +185,12 @@ const Home: Component = () => {
                                   setCurrentCol((prev) => (version.span ? prev + (version.span - 1) : prev));
                                   return (
                                     <div
-                                      class={`version ${version.combines && version.combines[0] == "top" ? "grid grid-rows-2 combined_cell" : "flex single_cell"}
-                                                                             justify-center items-center text-xl ${empty ? "empty_cell" : version.unsupported ? "text-fore-200/50 line-through decoration-fore-200/10 decoration-2 unsupported" : "text-fore-200 font-semibold supported"}
-                                                                             ${empty ? (isEvenRow ? "bg-base-500" : "bg-base-475") : isEvenRow && !version.unsupported ? "bg-base-500 hover:bg-base-450" : isEvenRow && version.unsupported ? "bg-base-500 hover:bg-base-475" : !isEvenRow && !version.unsupported ? "bg-base-475 hover:bg-base-425" : "bg-base-475 hover:bg-base-450"}`}
+                                      class={`version ${version.combines && version.combines[0] === "top" ? "grid grid-rows-2 combined_cell" : "flex single_cell"}
+                                             justify-center items-center text-xl ${empty ? "empty_cell" : version.unsupported ? "unsupported" : "supported"}
+                                             ${empty ?  isEvenRow ? "bg-base-500" : "bg-base-475" : 
+                                                        isEvenRow && !version.unsupported ? "bg-base-500 hover:bg-base-450" :
+                                                        isEvenRow && version.unsupported ? "bg-base-500 hover:bg-base-475" :
+                                                        !isEvenRow && !version.unsupported ? "bg-base-475 hover:bg-base-425" : "bg-base-475 hover:bg-base-450"}`}
                                       style={version.span ? `grid-column: ${offset} / ${offset + version.span};` : undefined}>
                                       <For
                                         each={[
@@ -200,24 +203,45 @@ const Home: Component = () => {
                                           version ? (
                                             <a
                                               id={mod.id + "_" + (version.api ?? "unknown")}
-                                              href=""
+                                              href={"https://modrinth.com/mod/" + mod.id + "/versions?g=" + version.api}
                                               title={mod.name + " " + (version.display ?? version.api) + (version.unsupported ? " (inactive)" : "")}
                                               target="_blank"
                                               class={`group relative ${Array.isArray(version.combines) ? "combined_" + version.combines[0] + " " : ""}
+                                              ${version.unsupported ? "text-fore-200/50 line-through decoration-fore-200/10 decoration-2 hover:text-acct-300/50 hover:decoration-acct-500/5 unsupported" :
+                                                                      "text-fore-200 font-semibold hover:text-acct-300 hover:decoration-acct-300/75 hover:underline supported"}
                                               ${Array.isArray(version.combines) ? isEvenRow ? "not-hover:bg-base-500" : "not-hover:bg-base-475" : ""}
-                                              ${version.unsupported ? "hover:text-acct-300/50 hover:decoration-acct-500/5" : "hover:text-acct-300 hover:decoration-acct-300/75 hover:underline"}`}>
+                                              `}>
                                               <div
                                                 id={mod.id + "_" + (version.api ?? "unknown") + "_version_number"}
                                                 class={
                                                   "mod_version_number absolute transform" +
                                                   (version.unsupported ? " unsupported" : " supported") +
                                                   (version.span && version.span > 1
-                                                    ? " -left-[20%] -translate-x-1/" + (version.span == 2 ? "2" : "4")
+                                                    ? " -left-[20%] " + (version.span === 2 ? "-translate-x-1/2" : "-translate-x-1/4")
                                                     : " absolute ml-0 -translate-x-1/6")
                                                 }>
                                                 {version.api ? "?.?.?" : ""}
                                               </div>
-                                              {version.display || version.api}
+                                              {version.display
+                                                ? (() => {
+                                                  const d = version.display as string;
+                                                  const open = d.indexOf("(");
+                                                  const close = d.indexOf(")", open + 1);
+                                                  if (open !== -1 && close !== -1 && open < close) {
+                                                    const main = d.slice(0, open);
+                                                    const suffix = d.slice(open, close + 1);
+                                                    return (
+                                                      <>
+                                                        {main}
+                                                        <span class={"version_suffix " + (version.span && version.span > 1 ? "version_wide" : "version_narrow")}
+                                                        >{suffix}</span>
+                                                        {d.slice(close + 1)}
+                                                      </>
+                                                    );
+                                                  }
+                                                  return d;
+                                                })()
+                                              : version.api}
                                             </a>
                                           ) : null
                                         }

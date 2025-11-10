@@ -30,10 +30,16 @@ const misc: Mod[] = [
       {
         api: "1.21.3",
         unsupported: true,
+        combines: ["top", "1.21.4"],
+      },
+      {
+        api: "1.21.4",
+        combines: ["bottom", "1.21.3"],
+        unsupported: false,
       },
       {
         display: "1.21.4(-10)",
-        api: "1.21.4",
+        api: "1.21.10",
         span: 3,
       },
     ],
@@ -71,12 +77,15 @@ const misc: Mod[] = [
       {
         api: "1.21.3",
         unsupported: true,
+        combines: ["top", "1.21.4"],
       },
       {
         api: "1.21.4",
+        combines: ["bottom", "1.21.3"],
+        unsupported: false,
       },
       {
-        span: 2,
+        span: 3,
       },
     ],
   },

@@ -255,16 +255,26 @@ body {
   width: 100%;
 }
 
-.combined_top {
+.combined_top, .combined_bottom {
   border-bottom: 1px solid var(--color-fore-300);
 }
 
-.combined_bottom {
+.combined_bottom.supported, .combined_top.supported {
   border-top: 1px solid var(--color-fore-300);
+  font-family: Rubik, Ubuntu, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.version_suffix {
+  font-size: 16px;
+  margin-left: 1px;
+  margin-right: -5px;
+  vertical-align: text-top;
 }
 
 .mod_version_number, .unsupported {
-  font-family: "Departure Mono", mono;
+  font-family: "Departure Mono", monospace;
   font-size: 11px;
 }
 
