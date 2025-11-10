@@ -43,7 +43,7 @@ const variants: Mod[] = [
       }, 
       {
         display: "1.21.6(-10)",
-        api: "1.21.11",
+        api: "1.21.10",
         span: 2,
       }
     ],
