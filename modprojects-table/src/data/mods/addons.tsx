@@ -27,10 +27,9 @@ const addons: Mod[] = [
   },
   {
     id: "more-feeding-trough-variants",
-    gh_repo: "pnk2u/More-Composter-Variants-AFT",
     name: "More Feeding Trough Variants",
     image:
-      "https://raw.githubusercontent.com/pnk2u/More-Composter-Variants-AFT/1.21.4/src/main/resources/logo.png",
+      "https://raw.githubusercontent.com/pnk2u/More-Feeding-Trough-Variants/1.21.4/src/main/resources/logo.png",
     requirements: [dependencies.more_composter_variants],
     authors: [authors.pnku],
     versions: [
