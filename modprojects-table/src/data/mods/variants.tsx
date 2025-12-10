@@ -39,12 +39,9 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        api: "1.21.5",
-      }, 
-      {
-        display: "1.21.6(-10)",
-        api: "1.21.10",
-        span: 2,
+        display: "1.21.4(-11)",
+        api: "1.21.11",
+        span: 3,
       }
     ],
   },
@@ -84,13 +81,15 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
+        api: "1.21.8",
         display: "1.21.5(-8)",
-        api: "1.21.5",
-        span: 2,
       },
       {
         api: "1.21.10",
-        display: "1.21.9(10)",
+        display: "1.21.9(10)"
+      },
+      {
+        api: "1.21.11"
       }
     ],
   },
@@ -130,8 +129,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -207,8 +206,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -249,8 +248,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.5",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -284,11 +283,17 @@ const variants: Mod[] = [
         api: "1.21.4",
       },
       {
-        api: "1.21.5"
+        api: "1.21.5",
+        combines: ["top", "1.21.8"],
       },
       {
-        display: "1.21.6(-8)",
         api: "1.21.8",
+        display: "1.21.6(-8)",
+        combines: ["bottom", "1.21.5"],
+      },
+      {
+        api: "1.21.10",
+        display: "1.21.9(10)",
       },
       {}
     ],
@@ -330,8 +335,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -427,8 +432,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -499,8 +504,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -541,8 +546,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -583,8 +588,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -625,8 +630,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -670,11 +675,11 @@ const variants: Mod[] = [
       {
         display: "1.21.5(-8)",
         api: "1.21.5",
-        span: 2,
       },
       {
-        display: "1.21.9(10)",
-        api: "1.21.10",
+        display: "1.21.9(-11)",
+        api: "1.21.11",
+        span: 2,
       }
     ],
   },
@@ -714,8 +719,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
@@ -756,8 +761,8 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.5(-10)",
-        api: "1.21.10",
+        display: "1.21.5(-11)",
+        api: "1.21.11",
         span: 3,
       },
     ],
