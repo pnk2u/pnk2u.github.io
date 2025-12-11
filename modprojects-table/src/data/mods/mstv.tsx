@@ -273,6 +273,7 @@ const mstv: Mod[] = [
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tool-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
+    recommended: [dependencies.quad],
     authors: [authors.pnku],
     versions: [
       {
@@ -358,7 +359,7 @@ const mstv: Mod[] = [
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo.png",
     requirements: [dependencies.more_stick_variants],
-    recommended: [dependencies.quad],
+    recommended: [dependencies.quad, dependencies.more_tool_variants],
     authors: [authors.pnku],
     versions: [
       {

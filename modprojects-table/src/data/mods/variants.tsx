@@ -162,12 +162,9 @@ const variants: Mod[] = [
       },
       {
         api: "1.21.5",
-        display: "1.21.4(5)",
-        span: 2,
-      },
-      {
-        span: 2,
-      },
+        display: "1.21.4(-11)",
+        span: 4,
+      }
     ],
   },
   {
@@ -293,9 +290,9 @@ const variants: Mod[] = [
       },
       {
         api: "1.21.10",
-        display: "1.21.9(10)",
+        display: "1.21.9(-11)",
+        span: 2
       },
-      {}
     ],
   },
 
@@ -388,12 +385,9 @@ const variants: Mod[] = [
       },
       {
         api: "1.21.5",
-        display: "1.21.4(5)",
-        span: 2,
-      },
-      {
-        span: 2,
-      },
+        display: "1.21.4(-11)",
+        span: 4,
+      }
     ],
   },
   {

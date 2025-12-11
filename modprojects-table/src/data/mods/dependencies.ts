@@ -16,6 +16,7 @@ export interface Dependencies {
   more_stick_variants: Dependency;
   more_fishing_rod_variants: Dependency;
   more_torch_variants: Dependency;
+  more_tool_variants: Dependency;
   more_weapon_variants: Dependency;
   appleskin: Dependency;
   extra_shields: Dependency;
@@ -74,6 +75,11 @@ export default <Dependencies>{
     name: "More (Fishing) Rod Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Fishing-Rod-Variants/pres/logo/logo_c.png",
     link: "/#more_fishing_rod_variants_icon",
+  },
+  more_tool_variants: {
+    name: "More Tool Variants",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Tool-Variants/pres/logo/logo_c.png",
+    link: "/#more_tool_variants_icon",
   },
   more_torch_variants: {
     name: "More Torch Variants",
