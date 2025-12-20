@@ -9,6 +9,7 @@ export interface Dependencies {
   cloth_config: Dependency;
   modmenu: Dependency;
   owo_lib: Dependency;
+  yacl: Dependency;
 
   more_bed_variants: Dependency;
   more_composter_variants: Dependency;
@@ -48,6 +49,11 @@ export default <Dependencies>{
     name: "oωo (owo-lib)",
     image: "https://raw.githubusercontent.com/wisp-forest/owo-lib/1.21.4/src/main/resources/assets/owo/icon.png",
     link: "https://modrinth.com/mod/owo-lib",
+  },
+  yacl: {
+    name: "YetAnotherConfigLib (YACL)",
+    image: "https://raw.githubusercontent.com/isXander/YetAnotherConfigLib/multiversion/dev/src/main/resources/yacl-128x.png",
+    link: "https://modrinth.com/mod/yacl",
   },
 
   /* mods */

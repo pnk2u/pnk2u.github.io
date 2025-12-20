@@ -258,6 +258,7 @@ const variants: Mod[] = [
     image:
       "https://raw.githubusercontent.com/LieOnLion/More-Chest-Variants/refs/heads/fabric+1.21/src/main/resources/logo.png",
     requirements: [dependencies.quad],
+    recommended: [dependencies.yacl],
     authors: [authors.lieonlion],
     versions: [
       {
