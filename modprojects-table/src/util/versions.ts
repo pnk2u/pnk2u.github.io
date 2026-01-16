@@ -39,7 +39,7 @@ export async function fetchVersionsAndWriteToTable() {
 
     if (!sessionStorage[mod_id] || now > parseInt(sessionStorage["sessionTime"])) {
       const version_list = mod_data.versions.join('","');
-      const api_url = `https://api.modrinth.com/v2/project/${mod_id}/version?game_versions=%5B%22${version_list}%22%5D&loaders=%5B%22fabric%22%5D`;
+      const api_url = `https://api.modrinth.com/v2/project/${mod_id}/version?game_versions=%5B%22${version_list}%22%5D&loaders=%5B%22fabric%22%5D?include_changelog=false`;
 
       try {
         const response = await fetch(api_url, { method: "GET", headers });
