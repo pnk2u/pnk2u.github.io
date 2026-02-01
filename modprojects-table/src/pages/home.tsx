@@ -19,12 +19,12 @@ const Home: Component = () => {
     <>
       <div class="absolute fill-fore-300 text-fore-300">
         <a href="" title="pnku">
-          <div class="absolute p-1 font-bold hover:text-acct-500">pnku</div>
+          <div class="absolute p-[4px] text-[16px] font-bold hover:text-acct-500">pnku</div>
         </a>
         <div class="border-fore-300">
           <a href="https://modrinth.com/user/pnku" title="pnku's projects on Modrinth">
             <svg
-              class="w-8 h-8 border-l-1 p-1 pb-0.5 inline ml-11 hover:fill-acct-500"
+              class="w-[32px] h-[32px] border-l-1 p-[4px] pb-[2px] inline ml-[44px] hover:fill-acct-500"
               xmlns="http://www.w3.org/2000/svg"
               clip-rule="evenodd"
               fill-rule="evenodd"
@@ -40,34 +40,34 @@ const Home: Component = () => {
             </svg>
           </a>
           <a href="https://www.curseforge.com/members/pnku" title="pnku's projects on CurseForge">
-            <svg class="w-8 h-8 border-l-1 p-1 pb-1 inline hover:fill-acct-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 56">
+            <svg class="w-[32px] h-[32px] border-l-1 p-[4px] pb-[4px] inline hover:fill-acct-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 114 56">
               <path d="M86.9804 22.9535C86.9804 22.9535 110.238 19.2696 113.911 8.52538H78.2827V0H0L9.64353 11.2401V22.7565C9.64353 22.7565 33.9764 21.4856 43.3888 28.655C56.2728 40.6503 28.898 56.8651 28.898 56.8651L24.2038 72.4678C31.5443 65.4472 45.5345 56.365 71.1848 56.8028C61.4236 59.9015 51.6085 64.7416 43.9674 72.4678H95.8198L90.937 56.8651C90.937 56.8651 53.3556 34.6059 86.9804 22.9549V22.9535Z"></path>
             </svg>
           </a>
           <a href="https://www.github.com/pnk2u/?tab=repositories" title="pnku's projects on Github">
-            <SiGithub class="w-8 h-8 border-l-1 p-1 pb-0.5 inline border-fore-300 hover:text-acct-500"></SiGithub>
+            <SiGithub class="w-[32px] h-[32px] border-l-1 p-[4px] pb-[2px] inline border-fore-300 hover:text-acct-500"></SiGithub>
           </a>
           <a href="mailto:contact@pnku.de" target="_blank" title="Write an e-mail to contact@pnku.de">
-            <TbMail class="w-8 h-8 border-l-1 p-1 pb-0 inline border-fore-300 hover:text-acct-500"></TbMail>
+            <TbMail class="w-[32px] h-[32px] border-l-1 p-[4px] pb-0 inline border-fore-300 hover:text-acct-500"></TbMail>
           </a>
         </div>
         <div>
           <a href="https://lieonlion.dev" title="LieOnLion.dev">
-            <div class="absolute p-1 pt-1.5 ml-1 font-bold text-fore-300 hover:text-acct-500">LieOnStudios</div>
+            <div class="absolute p-[4px] pt-[6px] ml-[4px] font-bold text-[16px] text-fore-300 hover:text-acct-500">LieOnStudios</div>
           </a>
           <a href="https://discord.lieonlion.dev" title="LoL Community Server invite">
-            <SiDiscord class="w-8 h-8 border-l-1 p-1 pb-0 inline ml-27 border-fore-300 hover:text-acct-500"></SiDiscord>
+            <SiDiscord class="w-[32px] h-[32px] border-l-1 p-[4px] pb-0 inline ml-[108px] border-fore-300 hover:text-acct-500"></SiDiscord>
           </a>
         </div>
       </div>
       <NavBar />
-      <div class="w-full overflow-x-auto min-h-svh py-12">
+      <div class="w-full overflow-x-auto min-h-svh py-[48px]">
         <div class="flex flex-col min-w-max max-w-[1100px] mx-auto">
           <For each={categories}>
             {(category) => {
               return (
-                <div class="flex flex-col justify-center items-center p-1 gap-0.5 bg-fore-300">
-                  <div class="sticky left-0 max-w-[1280px] w-screen mx-auto flex justify-center items-center h-12 font-bold text-2xl text-base-500 hover:text-shadow-xs hover:text-shadow-acct-400">
+                <div class="flex flex-col justify-center items-center p-[4px] gap-[2px] bg-fore-300">
+                  <div class="sticky left-0 max-w-[1280px] w-screen mx-auto flex justify-center items-center h-[48px] font-bold text-[24px] text-base-500 hover:text-shadow-xs hover:text-shadow-acct-400">
                     {category.name}
                   </div>
                   <For each={category.mods}>
@@ -86,9 +86,9 @@ const Home: Component = () => {
 
                       return (
                         <>
-                          <div id={elementModId} class={`flex gap-0.5 bg-fore-350 ${isEvenRow ? "even_row" : "odd_row"}`}>
-                            <div class={`flex max-w-24 min-w-24 justify-center items-center relative`}>
-                                <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute left-0 top-0">
+                          <div id={elementModId} class={`flex gap-[2px] bg-fore-350 ${isEvenRow ? "even_row" : "odd_row"}`}>
+                            <div class={`flex max-w-[96px] min-w-[96px] justify-center items-center relative`}>
+                                <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-[96px] aspect-square absolute left-0 top-0">
                                   <a
                                       title={mod.name + " on Github"}
                                       href={
@@ -99,22 +99,22 @@ const Home: Component = () => {
                                             : `https://github.com/${mod.authors?.[0]?.name ?? ""}/${mod.id}`
                                       }
                                       target={"_blank"}
-                                      class="p-0.5">
-                                      <VsGithub class="w-5 h-5 opacity-95 relative z-1 hover:opacity-100 text-fore-300 hover:text-acct-300"></VsGithub>
+                                      class="p-[2px]">
+                                      <VsGithub class="w-[20px] h-[20px] opacity-95 relative z-1 hover:opacity-100 text-fore-300 hover:text-acct-300"></VsGithub>
                                       <TbCircleFilled class="w-[22px] h-[22px] absolute top-[1px] left-[1px] blur-[2px] opacity-80 z-0 text-base-900"></TbCircleFilled>
                                   </a>
                                 </div>
                               <img
                                 id={elementModId + "_icon"}
-                                class="flex w-24 p-1.5 aspect-square bg-base-500"
+                                class="flex w-[96px] p-[6px] aspect-square bg-base-500"
                                 style={"background-color: " + (bgColor() === "rgb(0, 0, 0)" ? "var(--color-base-500)" : bgColor())}
                                 src={mod.image}
                                 alt={mod.name + " Icon"}
                               />
                             </div>
-                            <div class={`flex max-w-146.5 w-[25vw] min-w-50 justify-center items-center font-semibold text-xl text-fore-200 relative ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
+                            <div class={`flex max-w-[568px] w-[25vw] min-w-[200px] justify-center items-center font-semibold text-[20px] text-fore-200 relative ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
                               <Show when={mod.requirements}>
-                                <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute left-0 top-0">
+                                <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-[96px] aspect-square absolute left-0 top-0">
                                   <For each={mod.requirements}>
                                     {(dependency) => {
                                       return (
@@ -122,7 +122,7 @@ const Home: Component = () => {
                                           title={dependency.name + " (required)"}
                                           href={dependency.link}
                                           target={dependency.link?.startsWith("http") ? "_blank" : undefined}
-                                          class="p-0.5 bg-base-300 hover:bg-acct-300">
+                                          class="p-[2px] bg-base-300 hover:bg-acct-300">
                                           <img src={dependency.image} alt={dependency.name + " Icon"} />
                                         </a>
                                       );
@@ -131,7 +131,7 @@ const Home: Component = () => {
                                 </div>
                               </Show>
                               <Show when={mod.recommended}>
-                                <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-24 aspect-square absolute right-0 top-0" dir="rtl">
+                                <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-[96px] aspect-square absolute right-0 top-0" dir="rtl">
                                   <For each={mod.recommended}>
                                     {(dependency) => {
                                       return (
@@ -139,7 +139,7 @@ const Home: Component = () => {
                                           title={dependency.name + " (recommended)"}
                                           href={dependency.link}
                                           target={dependency.link?.startsWith("http") ? "_blank" : undefined}
-                                          class="p-0.5 bg-base-300 hover:bg-acct-300">
+                                          class="p-[2px] bg-base-300 hover:bg-acct-300">
                                           <img src={dependency.image} alt={dependency.name + " Icon"} />
                                         </a>
                                       );
@@ -155,13 +155,13 @@ const Home: Component = () => {
                                 {mod.name}
                               </a>
                             </div>
-                            <div class={`flex max-w-48 w-[10vw] min-w-26 justify-center items-center gap-[0.5vw] min-gap-1 ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
+                            <div class={`flex max-w-[192px] w-[10vw] min-w-[104px] justify-center items-center gap-[0.5vw] ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
                               <For each={mod.authors}>
                                 {(author) => {
                                   return (
                                     <a title={author.name} href={author.link} id={author.name + "_profile_" + mod.id} target="_blank">
                                       <img
-                                        class="w-10 aspect-square rounded-full border-3 bg-fore-200 border-fore-200 hover:bg-acct-400 hover:border-acct-400"
+                                        class="w-[40px] aspect-square rounded-full border-3 bg-fore-200 border-fore-200 hover:bg-acct-400 hover:border-acct-400"
                                         src={author.image}
                                         alt={author.name + " Icon"}
                                         id={author.name + "_image_" + mod.id}
@@ -171,7 +171,7 @@ const Home: Component = () => {
                                 }}
                               </For>
                             </div>
-                            <div class="grid grid-cols-7 w-171 gap-0.5">
+                            <div class="grid grid-cols-7 w-[684px] gap-[2px]">
                               <For each={mod.versions}>
                                 {(version, i) => {
                                   if (!version) return null;
@@ -186,7 +186,7 @@ const Home: Component = () => {
                                   return (
                                     <div
                                       class={`version ${version.combines && version.combines[0] === "top" ? "grid grid-rows-2 combined_cell" : "flex single_cell"}
-                                             justify-center items-center text-xl ${empty ? "empty_cell" : version.unsupported ? "unsupported" : "supported"}
+                                             justify-center items-center text-[20px] ${empty ? "empty_cell" : version.unsupported ? "unsupported" : "supported"}
                                              ${empty ?  isEvenRow ? "bg-base-500" : "bg-base-475" : 
                                                         isEvenRow && !version.unsupported ? "bg-base-500 hover:bg-base-450" :
                                                         isEvenRow && version.unsupported ? "bg-base-500 hover:bg-base-475" :

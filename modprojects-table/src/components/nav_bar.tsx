@@ -42,7 +42,7 @@ const NavBar: Component = () => {
   });
 
   return (
-    <div class="flex w-full justify-between p-4">
+    <div class="flex w-full justify-between p-[16px]">
       <div />
       <div>
         <Select

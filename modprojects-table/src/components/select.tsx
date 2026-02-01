@@ -16,10 +16,10 @@ const Select: Component<props> = (props) => {
   const [open, setOpen] = createSignal(false);
 
   return (
-    <div class="relative z-1 text-fore-100 text-lg">
+    <div class="relative z-1 text-fore-100 text-[18px]">
       <button
         onClick={() => setOpen((prev) => !prev)}
-        class="flex items-center p-2 gap-2 cursor-pointer rounded-sm bg-base-600/85"
+        class="flex items-center p-[8px] gap-[8px] cursor-pointer rounded-sm bg-base-600/85"
       >
         {props.options
           .find((option) => option.value === props.value())
@@ -28,7 +28,7 @@ const Select: Component<props> = (props) => {
       </button>
       <div
         class={
-          "absolute flex flex-col items-center bg-base-600/85 p-2 gap-1 rounded-sm top-[calc(100%+(var(--spacing)*1.5))] w-full " +
+          "absolute flex flex-col items-center bg-base-600/85 p-[8px] gap-[4px] rounded-sm top-[calc(100%+6px)] w-full " +
           (open() ? "visible" : "invisible")
         }
       >
@@ -42,7 +42,7 @@ const Select: Component<props> = (props) => {
                   setOpen((prev) => !prev);
                 }}
                 class={
-                  "hover:bg-base-700/25 hover:text-fore-400 p-2 cursor-pointer rounded-sm " +
+                  "hover:bg-base-700/25 hover:text-fore-400 p-[8px] cursor-pointer rounded-sm " +
                   (isTheme(props.value()) ? "bg-base-500" :
                       isTheme("hunnycakehorse") ? "bg-themet5-base/75 text-themet5-fore hover:bg-themet5-base hover:text-themet5-acct" :
                           isTheme("book") ? "bg-themet4-base/75 text-themet4-fore hover:bg-themet4-base hover:text-themet4-acct" :
