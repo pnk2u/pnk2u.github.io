@@ -71,10 +71,10 @@ const addons: Mod[] = [
         unsupported: false,
       },
       {
-        api: "1.21.10",
-        display: "1.21.9(10)",
-      },
-      {}
+        api: "1.21.11",
+        display: "1.21.9(-11)",
+        span: 2,
+      }
     ],
   },
   {
