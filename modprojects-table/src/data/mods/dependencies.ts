@@ -111,7 +111,7 @@ export default <Dependencies>{
   },
   jade: {
     name: "Jade",
-    image: "https://raw.githubusercontent.com/Snownee/Jade/docs/docs/images/site_icon.png",
+    image: "https://raw.githubusercontent.com/Snownee/Jade/refs/heads/26.1-fabric/src/main/resources/icon.png",
     link: "https://modrinth.com/mod/jade",
   },
   nemos_woodcutter: {

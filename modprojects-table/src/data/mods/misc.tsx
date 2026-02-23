@@ -85,8 +85,21 @@ const misc: Mod[] = [
         unsupported: false,
       },
       {
-        span: 3,
+        api: "1.21.5",
+        combines: ["top", "1.21.8"],
+        unsupported: false,
       },
+      {
+        api: "1.21.8",
+        display: "1.21.6(-8)",
+        combines: ["bottom", "1.21.5"],
+        unsupported: false,
+      },
+      {
+        api: "1.21.11",
+        display: "1.21.9(-11)",
+        span: 2
+      }
     ],
   },
 ];

@@ -39,7 +39,7 @@ const variants: Mod[] = [
         unsupported: false,
       },
       {
-        display: "1.21.4(-11)",
+        display: "1.21.5(-11)",
         api: "1.21.11",
         span: 3,
       }
