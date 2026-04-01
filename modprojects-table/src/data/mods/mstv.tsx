@@ -14,28 +14,11 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
       {
-        api: "1.21.3",
-        unsupported: true,
-        combines: ["top", "1.21.4"],
-      },
-      {
         api: "1.21.4",
-        combines: ["bottom", "1.21.3"],
-        unsupported: false
       },
       {
         display: "1.21.5(-10)",
@@ -44,6 +27,9 @@ const mstv: Mod[] = [
       },
       {
         api: "1.21.11",
+      },
+      {
+        api: "26.1"
       }
     ],
   },
@@ -60,28 +46,11 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
       {
-        api: "1.21.3",
-        unsupported: true,
-        combines: ["top", "1.21.4"],
-      },
-      {
         api: "1.21.4",
-        combines: ["bottom", "1.21.3"],
-        unsupported: false
       },
       {
         api: "1.21.5",
@@ -99,6 +68,7 @@ const mstv: Mod[] = [
         display: "1.21.9(-11)",
         span: 2,
       },
+      {}
     ],
   },
   {
@@ -113,28 +83,11 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
       {
-        api: "1.21.3",
-        unsupported: true,
-        combines: ["top", "1.21.4"],
-      },
-      {
         api: "1.21.4",
-        combines: ["bottom", "1.21.3"],
-        unsupported: false
       },
       {
         api: "1.21.5",
@@ -153,7 +106,8 @@ const mstv: Mod[] = [
       },
       {
         api: "1.21.11"
-      }
+      },
+      {}
     ],
   },
   {
@@ -170,33 +124,15 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
       {
-        api: "1.21.3",
-        unsupported: true,
-        combines: ["top", "1.21.4"],
-      },
-      {
-        api: "1.21.4",
-        combines: ["bottom", "1.21.3"],
-      },
-      {
-        display: "1.21.5(-11)",
+        display: "1.21.4(-11)",
         api: "1.21.11",
-        span: 3,
+        span: 4,
       },
+      {}
     ],
   },
   {
@@ -212,9 +148,6 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        span: 1,
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
@@ -223,6 +156,7 @@ const mstv: Mod[] = [
         api: "1.21.11",
         span: 4,
       },
+      {}
     ],
   },
   {
@@ -237,34 +171,15 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
       {
-        api: "1.21.3",
-        unsupported: true,
-        combines: ["top", "1.21.4"],
-      },
-      {
-        api: "1.21.4",
-        combines: ["bottom", "1.21.3"],
-        unsupported: false
-      },
-      {
-        display: "1.21.5(-11)",
+        display: "1.21.4(-11)",
         api: "1.21.11",
-        span: 3,
+        span: 4,
       },
+      {}
     ],
   },
   {
@@ -280,34 +195,18 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
       {
-        api: "1.21.3",
-        unsupported: true,
-        combines: ["top", "1.21.4"],
-      },
-      {
         api: "1.21.4",
-        combines: ["bottom", "1.21.3"],
-        unsupported: false
       },
       {
         display: "1.21.5(-11)",
         api: "1.21.11",
         span: 3,
       },
+      {}
     ],
   },
   {
@@ -323,34 +222,15 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
       {
-        api: "1.21.3",
-        unsupported: true,
-        combines: ["top", "1.21.4"],
-      },
-      {
-        api: "1.21.4",
-        combines: ["bottom", "1.21.3"],
-        unsupported: false
-      },
-      {
-        display: "1.21.5(-11)",
+        display: "1.21.4(-11)",
         api: "1.21.11",
-        span: 3,
+        span: 4,
       },
+      {}
     ],
   },
   {
@@ -366,28 +246,11 @@ const mstv: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         display: "1.21(.1)",
         api: "1.21.1",
       },
       {
-        api: "1.21.3",
-        unsupported: true,
-        combines: ["top", "1.21.4"],
-      },
-      {
         api: "1.21.4",
-        combines: ["bottom", "1.21.3"],
-        unsupported: false
       },
       {
         api: "1.21.5",
@@ -406,7 +269,8 @@ const mstv: Mod[] = [
       },
       {
         api: "1.21.11"
-      }
+      },
+      {}
     ],
   },
 ];

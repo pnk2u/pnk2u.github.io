@@ -14,16 +14,6 @@ const library: Mod[] = [
         api: "1.20.1",
       },
       {
-        api: "1.20.4",
-        unsupported: true,
-        combines: ["top", "1.20.6"],
-      },
-      {
-        api: "1.20.6",
-        unsupported: true,
-        combines: ["bottom", "1.20.4"],
-      },
-      {
         api: "1.21.1",
       },
       {
@@ -39,6 +29,9 @@ const library: Mod[] = [
       },
       {
         api: "1.21.11",
+      },
+      {
+        api: "26.1"
       }
     ],
   },
