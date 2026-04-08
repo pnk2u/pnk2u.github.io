@@ -20,6 +20,7 @@ export interface Dependencies {
   more_tool_variants: Dependency;
   more_weapon_variants: Dependency;
   appleskin: Dependency;
+  animal_feeding_trough: Dependency;
   extra_shields: Dependency;
   jade: Dependency;
   nemos_woodcutter: Dependency;
@@ -103,6 +104,11 @@ export default <Dependencies>{
     name: "Appleskin",
     image: "https://www.ryanliptak.com/images/appleskin.png",
     link: "https://modrinth.com/mod/appleskin",
+  },
+  animal_feeding_trough: {
+    name: "Animal Feeding Trough",
+    image: "https://raw.githubusercontent.com/Slexom/animal-feeding-trough/1.21.11/common/src/main/resources/assets/animal_feeding_trough/icon.png",
+    link: "https://modrinth.com/mod/animal_feeding_trough",
   },
   extra_shields: {
     name: "Extra Shields",

@@ -30,7 +30,7 @@ const addons: Mod[] = [
     name: "More Feeding Trough Variants",
     image:
       "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Feeding-Trough-Variants/pres/logo/logo_c.png",
-    requirements: [dependencies.more_composter_variants],
+    requirements: [dependencies.animal_feeding_trough,dependencies.more_composter_variants],
     authors: [authors.pnku],
     versions: [
       {
