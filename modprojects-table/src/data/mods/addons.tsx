@@ -55,10 +55,10 @@ const addons: Mod[] = [
   },
   {
     id: "more-nemos-woodcutter-variants",
-    gh_repo: "pnk2u/More-NemosWoodcutter-Variants",
-    name: "More Nemoʼs Woodcutter Variants",
+    gh_repo: "pnk2u/More-Nemos-Woodcutter-Variants",
+    name: "More Nemo's Woodcutter Variants",
     image:
-      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-NemosWoodcutter-Variants/pres/logo/logo.png",
+      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Nemos-Woodcutter-Variants/pres/logo/logo.png",
     authors: [authors.pnku, authors.nemonotfound],
     requirements: [dependencies.nemos_woodcutter],
     versions: [
