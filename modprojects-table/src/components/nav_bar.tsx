@@ -3,6 +3,7 @@ import { FiMonitor, FiMoon, FiSun, FiBookOpen } from "solid-icons/fi";
 import { TbMoonStars } from "solid-icons/tb"
 import Select, { option } from "./select";
 import { SiArchlinux } from "solid-icons/si";
+import { getThemeUrlParam } from "../util/color.ts";
 
 const themes: option[] = [
   {
@@ -33,7 +34,7 @@ const themes: option[] = [
 
 const NavBar: Component = () => {
   const [currentTheme, setCurrentTheme] = createSignal<string>(
-    localStorage.getItem("theme") || "system"
+    getThemeUrlParam() || localStorage.getItem("theme") || "system"
   );
 
   createEffect(() => {

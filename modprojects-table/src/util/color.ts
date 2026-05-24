@@ -26,8 +26,18 @@ export const getColorAtTopLeft = (imageSrc: string): Promise<string> => {
 };
 
 export function getThemeUrlParam() {
-  const theme = new URLSearchParams(window.location.search).get("theme");
-  if (theme) {
-    document.body.setAttribute("data-theme", theme);
+  try {
+    const theme = new URLSearchParams(window.location.search).get("theme");
+    if (!theme) return null;
+    const allowed = new Set(["light", "dark", "lieon", "book", "hunnycakehorse", "system"]);
+    if (!allowed.has(theme)) {
+      console.warn('Unknown theme from URL param:', theme);
+      return null;
+    }
+    localStorage.setItem('theme', theme);
+    console.info('Applied theme from URL:', theme);
+    return theme;
+  } catch (err) {
+    console.error('Error during theme URL param parsing:', err);
   }
 }

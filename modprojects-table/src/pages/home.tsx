@@ -3,7 +3,7 @@ import { TbCircleFilled, TbMail } from "solid-icons/tb";
 import { VsGithub } from 'solid-icons/vs'
 import { SiGithub, SiDiscord } from "solid-icons/si";
 import categories from "../data/mods";
-import { getColorAtTopLeft, getThemeUrlParam } from "../util/color.ts";
+import { getColorAtTopLeft } from "../util/color.ts";
 import { fetchVersionsAndWriteToTable } from "../util/versions.ts";
 import NavBar from "../components/nav_bar.tsx";
 import {fetchAuthorsAndWriteToTable} from "../util/authors.ts";
@@ -11,7 +11,6 @@ import {fetchAuthorsAndWriteToTable} from "../util/authors.ts";
 const Home: Component = () => {
   onMount(() => {
     fetchVersionsAndWriteToTable().catch(console.error);
-    getThemeUrlParam();
     fetchAuthorsAndWriteToTable().catch(console.error);
   });
 
