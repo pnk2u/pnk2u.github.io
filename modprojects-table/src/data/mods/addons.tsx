@@ -50,7 +50,9 @@ const addons: Mod[] = [
         display: "1.21.9(-11)",
         span: 2,
       },
-      {}
+      {
+        api: "26.1"
+      }
     ],
   },
   {
@@ -74,7 +76,9 @@ const addons: Mod[] = [
         api: "1.21.11",
         span: 4,
       },
-      {}
+      {
+        api: "26.1"
+      }
     ],
   },
   {
