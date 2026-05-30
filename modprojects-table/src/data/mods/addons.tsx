@@ -4,6 +4,48 @@ import { Mod } from "../mods.ts";
 
 const addons: Mod[] = [
   {
+    id: "more-variants-core",
+    name: "More Variants Core",
+    image:
+      "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Variants-Core/pres/logo/logo_c.png",
+    authors: [authors.pnku],
+    recommended: [
+      dependencies.more_variants_pale_oak_backport
+    ],
+    versions: [
+      {
+        api: "1.20.1",
+      },
+      {
+        display: "1.21(.1)",
+        api: "1.21.1",
+      },
+      {
+        span: 5
+      }
+    ],
+  },
+  {
+    id: "more-variants-pale-oak-backport",
+    name: "More Variants: Pale Oak Backport",
+    image:
+        "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Variants-Pale-Oak-Backport/pres/logo/logo_c.png",
+    requirements: [dependencies.more_variants_core],
+    authors: [authors.pnku],
+    versions: [
+      {
+        api: "1.20.1",
+      },
+      {
+        display: "1.21(.1)",
+        api: "1.21.1",
+      },
+      {
+        span: 5
+      }
+    ],
+  },
+  {
     id: "more-extra-shield-variants",
     name: "More Extra Shield Variants",
     image:

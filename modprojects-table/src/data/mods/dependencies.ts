@@ -19,6 +19,8 @@ export interface Dependencies {
   more_torch_variants: Dependency;
   more_tool_variants: Dependency;
   more_weapon_variants: Dependency;
+  more_variants_core: Dependency;
+  more_variants_pale_oak_backport: Dependency;
   appleskin: Dependency;
   animal_feeding_trough: Dependency;
   extra_shields: Dependency;
@@ -97,6 +99,16 @@ export default <Dependencies>{
     name: "More Weapon Variants",
     image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Weapon-Variants/pres/logo/logo_c.png",
     link: "/#more_weapon_variants_icon",
+  },
+  more_variants_core: {
+    name: "More Variants Core",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Variants-Core/pres/logo/logo_c.png",
+    link: "/#more_variants_core_icon",
+  },
+  more_variants_pale_oak_backport: {
+    name: "More Variants: Pale Oak Backport",
+    image: "https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Variants-Pale-Oak-Backport/pres/logo/logo_c.png",
+    link: "/#more_variants_pale_oak_backport_icon",
   },
 
   /* external mods */
