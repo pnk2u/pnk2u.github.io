@@ -21,15 +21,21 @@ const mstv: Mod[] = [
         api: "1.21.4",
       },
       {
-        display: "1.21.5(-10)",
+        display: "1.21.5(-8)",
+        api: "1.21.8",
+      },
+      {
+        display: "1.21.9(10)",
         api: "1.21.10",
-        span: 2,
+        combines: ["top", "1.21.11"]
       },
       {
         api: "1.21.11",
+        combines: ["bottom", "1.21.10"]
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
@@ -54,22 +60,20 @@ const mstv: Mod[] = [
       },
       {
         api: "1.21.5",
-        combines: ["top", "1.21.8"],
-        unsupported: false
+        combines: ["top", "1.21.8"]
       },
       {
         api: "1.21.8",
         display: "1.21.6(-8)",
-        combines: ["bottom", "1.21.5"],
-        unsupported: false
+        combines: ["bottom", "1.21.5"]
       },
       {
         api: "1.21.11",
-        display: "1.21.9(-11)",
-        span: 2,
+        display: "1.21.9(-11)"
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
@@ -103,14 +107,22 @@ const mstv: Mod[] = [
         unsupported: false
       },
       {
+        display: "1.21.9(10)",
         api: "1.21.10",
-        display: "1.21.9(10)"
+        combines: ["top", "1.21.11"]
       },
       {
-        api: "1.21.11"
+        api: "1.21.11",
+        combines: ["bottom", "1.21.10"]
       },
       {
-        api: "26.1"
+        api: "26.1",
+        combines: ["top", "26.2"]
+      },
+      {
+        api: "26.2",
+        combines: ["bottom", "26.1"],
+        unsupported: true
       }
     ],
   },
@@ -134,10 +146,11 @@ const mstv: Mod[] = [
       {
         display: "1.21.4(-11)",
         api: "1.21.11",
-        span: 4,
+        span: 3,
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
@@ -160,10 +173,11 @@ const mstv: Mod[] = [
       {
         display: "1.21.4(-11)",
         api: "1.21.11",
-        span: 4,
+        span: 3,
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
@@ -185,10 +199,11 @@ const mstv: Mod[] = [
       {
         display: "1.21.4(-11)",
         api: "1.21.11",
-        span: 4,
+        span: 3,
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
@@ -214,10 +229,11 @@ const mstv: Mod[] = [
       {
         display: "1.21.5(-11)",
         api: "1.21.11",
-        span: 3,
+        span: 2,
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
@@ -240,10 +256,11 @@ const mstv: Mod[] = [
       {
         display: "1.21.4(-11)",
         api: "1.21.11",
-        span: 4,
+        span: 3,
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
@@ -278,14 +295,17 @@ const mstv: Mod[] = [
         unsupported: false
       },
       {
+        display: "1.21.9(10)",
         api: "1.21.10",
-        display: "1.21.9(10)"
+        combines: ["top", "1.21.11"]
       },
       {
-        api: "1.21.11"
+        api: "1.21.11",
+        combines: ["bottom", "1.21.10"]
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },

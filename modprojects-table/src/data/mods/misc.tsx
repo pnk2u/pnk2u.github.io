@@ -20,10 +20,11 @@ const misc: Mod[] = [
       {
         display: "1.21.4(-11)",
         api: "1.21.11",
-        span: 4,
+        span: 3,
       },
       {
-        api: "26.1"
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
@@ -63,8 +64,7 @@ const misc: Mod[] = [
       },
       {
         api: "1.21.11",
-        display: "1.21.9(-11)",
-        span: 2
+        display: "1.21.9(-11)"
       },
       {}
     ],

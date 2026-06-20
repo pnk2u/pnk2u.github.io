@@ -111,7 +111,7 @@ const Home: Component = () => {
                                 alt={mod.name + " Icon"}
                               />
                             </div>
-                            <div class={`flex max-w-[568px] w-[25vw] min-w-[200px] justify-center items-center font-semibold text-[20px] text-fore-200 relative ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
+                            <div class={`flex max-w-[568px] w-[25vw] min-w-[458px] justify-center items-center font-semibold text-[20px] text-fore-200 relative ${isEvenRow ? "bg-base-500 hover:bg-base-450" : "bg-base-475 hover:bg-base-425"}`}>
                               <Show when={mod.requirements}>
                                 <div class="grid grid-cols-3 grid-rows-3 grid-flow-col w-[96px] aspect-square absolute left-0 top-0">
                                   <For each={mod.requirements}>
@@ -170,7 +170,7 @@ const Home: Component = () => {
                                 }}
                               </For>
                             </div>
-                            <div class="grid grid-cols-7 w-[684px] gap-[2px]">
+                            <div class="grid grid-cols-6 w-[576px] gap-[2px]">
                               <For each={mod.versions}>
                                 {(version, i) => {
                                   if (!version) return null;
