@@ -256,13 +256,8 @@ const variants: Mod[] = [
         span: 3,
       },
       {
-        api: "26.1",
-        combines: ["top", "26.2"]
-      },
-      {
-        api: "26.2",
-        combines: ["bottom", "26.1"],
-        unsupported: true
+        display: "26.1(2)",
+        api: "26.2"
       }
     ],
   },
