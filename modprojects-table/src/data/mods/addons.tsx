@@ -96,8 +96,7 @@ const addons: Mod[] = [
       },
       {
         api: "26.2",
-        combines: ["bottom", "26.1"],
-        unsupported: true
+        combines: ["bottom", "26.1"]
       }
     ],
   },
@@ -128,8 +127,7 @@ const addons: Mod[] = [
       },
       {
         api: "26.2",
-        combines: ["bottom", "26.1"],
-        unsupported: true
+        combines: ["bottom", "26.1"]
       }
     ],
   },
