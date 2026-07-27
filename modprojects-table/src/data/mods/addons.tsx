@@ -91,12 +91,8 @@ const addons: Mod[] = [
         display: "1.21.9(-11)"
       },
       {
-        api: "26.1",
-        combines: ["top", "26.2"]
-      },
-      {
         api: "26.2",
-        combines: ["bottom", "26.1"]
+        display: "26.1(2)"
       }
     ],
   },
@@ -122,12 +118,8 @@ const addons: Mod[] = [
         span: 3,
       },
       {
-        api: "26.1",
-        combines: ["top", "26.2"]
-      },
-      {
         api: "26.2",
-        combines: ["bottom", "26.1"]
+        display: "26.1(2)"
       }
     ],
   },
