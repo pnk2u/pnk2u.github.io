@@ -49,7 +49,7 @@ export async function fetchVersionsAndWriteToTable() {
           console.error("API fetch failed for", mod_id);
           return;
         } else {
-          console.log("API fetch successful for", mod_id);
+          console.debug("API fetch successful for", mod_id);
         }
 
         for (const mc_version of mod_data.versions) {
@@ -76,7 +76,7 @@ export async function fetchVersionsAndWriteToTable() {
       let current_TTL = sessionStorage["sessionTime"] - now;
       let m = Math.floor(current_TTL / 60000);
       let s = Math.floor(current_TTL / 1000) % 60;
-      console.log(
+      console.debug(
         "TTL left in mm:ss (SSS): " +
           (m < 10 ? "0" + m : m) +
           ":" +
@@ -85,7 +85,7 @@ export async function fetchVersionsAndWriteToTable() {
           current_TTL +
           ")"
       );
-      console.log("Fetching data from sessionStorage for", mod_id);
+      console.debug("Fetching data from sessionStorage for", mod_id);
       try {
         fetched_mod_data = JSON.parse(sessionStorage[mod_id]);
       } catch {
@@ -102,22 +102,23 @@ export async function fetchVersionsAndWriteToTable() {
       const version_number_element = document.getElementById(
         `${mod_id}_${version.mc_version}_version_number`
       );
+      const game_version_element = document.getElementById(
+        `${mod_id}_${version.mc_version}_game_version`
+      );
       let version_number =
         version.mod_version.match(/^\d+\.\d+\.\d+/)?.[0] || "?.?.?";
-
-      if (version_element && version_number_element) {
-        let list = version_number_element.classList;
+      if (version_element && version_number_element && game_version_element) {
+        let list = version_element.classList;
         let isUnsupported = list.contains("unsupported");
-        version_element.setAttribute(
-          "href",
-          `https://modrinth.com/mod/${mod_id}/version/${version.version_id}`
-        );
-        version_element.setAttribute(
-          "title",
-          version.version_name +
-            (isUnsupported ? " (inactive)" : "")
-        );
+        let isMultiApi = list.contains("multi-api");
+        let version_elements = [version_number_element];
+        if (!isMultiApi) {version_elements.push(game_version_element);}
+        version_elements.forEach((el) => {
+            el.setAttribute("href", `https://modrinth.com/mod/${mod_id}/version/${version.version_id}`);
+            el.setAttribute("title", version.version_name + (isUnsupported ? " (inactive)" : ""));
+        })
         version_number_element.textContent = version_number;
+        list = version_number_element.classList;
         list.add("group-hover:underline");
         if (isUnsupported) {
           list.add("text-acct-600/80");
@@ -138,6 +139,6 @@ export async function fetchVersionsAndWriteToTable() {
 
   if (!sessionStorage["sessionTime"] || now >= parseInt(sessionStorage["sessionTime"])) {
     sessionStorage["sessionTime"] = now + session_TTL;
-    console.log("Session time updated.");
+    console.debug("Session time updated.");
   }
 }

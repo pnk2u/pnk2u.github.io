@@ -27,12 +27,15 @@ export async function fetchAuthorsAndWriteToTable() {
 
         // Check author.image
         try {
-            const imgResponse = await fetch(author.image);
-            if (imgResponse.headers.get("content-type")?.includes("application/json")) {
-                const imgJsonData = await imgResponse.json();
-                imgFound = !(imgJsonData.error === "not_found");
-            } else {
-                imgFound = true; // Not a JSON response, assume valid
+            imgFound = false;
+            if (author.image) {
+                const imgResponse = await fetch(author.image);
+                if (imgResponse.headers.get("content-type")?.includes("application/json")) {
+                    const imgJsonData = await imgResponse.json();
+                    imgFound = !(imgJsonData.error === "not_found");
+                } else {
+                    imgFound = true; // Not a JSON response, assume valid
+                }
             }
         } catch (error) {
             console.error(`Error fetching image from ${author.image}:`, error);
@@ -78,6 +81,8 @@ export async function fetchAuthorsAndWriteToTable() {
                 const api_json = await response.json();
 
                 if (response.status !== 200) {
+                    console.error(`Failed to fetch avatar for ${author.name} with ID ${author_id}`);
+                    console.debug(`Response status: ${response.status}, message: ${api_json.error || 'No error message provided'}`);
                     return;
                 } else {
                     sessionStorage.setItem(`${author.name}.img`, api_json.avatar_url);
@@ -87,9 +92,9 @@ export async function fetchAuthorsAndWriteToTable() {
             }
         }
         if (sessionStorage.getItem(`${author.name}.img`)) {
-            const author_img_elements = document.querySelectorAll(`img[src="${author.image}"]`);
+            const author_img_elements = document.querySelectorAll(`img[src="${author.image ?? author.name + ".img"}"]`);
             for (const img of author_img_elements) {
-                (img as HTMLImageElement).src = sessionStorage.getItem(`${author.name}.img`) || author.image;
+                (img as HTMLImageElement).src = sessionStorage.getItem(`${author.name}.img`) || (author.image ?? "");
             }
         }
     });
