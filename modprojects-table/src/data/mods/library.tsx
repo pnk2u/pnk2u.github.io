@@ -17,23 +17,17 @@ const library: Mod[] = [
         api: "1.21.1",
       },
       {
-        api: "1.21.4",
-      },
-      {
-        api: "1.21.8",
-        display: "1.21.5(-8)",
-      },
-      {
-        display: "1.21.9(10)",
+        rangeMin: "1.21.4",
         api: "1.21.10",
-        combines: ["top", "1.21.11"]
+        combines: ["top", "1.21.11"],
+        multiApi: true
       },
       {
         api: "1.21.11",
         combines: ["bottom", "1.21.10"]
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],

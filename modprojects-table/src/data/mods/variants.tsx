@@ -15,17 +15,19 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
-        api: "1.21.11",
-        span: 3,
+        rangeMin: "1.21.4",
+        api: "1.21.11"
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
+      },
+      {
+        api: "26.3",
       }
     ],
   },
@@ -41,20 +43,14 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        api: "1.21.4",
-      },
-      {
-        api: "1.21.8",
-        display: "1.21.5(-8)",
-      },
-      {
+        rangeMin: "1.21.4",
         api: "1.21.10",
-        display: "1.21.9(10)",
-        combines: ["top", "1.21.11"]
+        combines: ["top", "1.21.11"],
+        multiApi: true
       },
       {
         api: "1.21.11",
@@ -82,17 +78,19 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
+        rangeMin: "1.21.4",
         api: "1.21.11",
-        span: 3,
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
+      },
+      {
+        api: "26.3"
       }
     ],
   },
@@ -112,11 +110,9 @@ const variants: Mod[] = [
         api: "1.21.1",
       },
       {
-        api: "1.21.11",
-        display: "1.21.4(-11)",
-        span: 3,
-      },
-      {}
+        rangeMin: "1.21.4",
+        api: "1.21.11"
+      }
     ],
   },
   {
@@ -131,16 +127,15 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
+        rangeMin: "1.21.4",
         api: "1.21.11",
-        span: 3,
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],
@@ -157,17 +152,19 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
-        api: "1.21.11",
-        span: 3,
+        rangeMin: "1.21.4",
+        api: "1.21.11"
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
+      },
+      {
+        api: "26.3"
       }
     ],
   },
@@ -188,24 +185,20 @@ const variants: Mod[] = [
         api: "1.21.1",
       },
       {
-        api: "1.21.4",
-      },
-      {
-        api: "1.21.5",
-        combines: ["top", "1.21.8"],
-      },
-      {
+        rangeMin: "1.21.4",
         api: "1.21.8",
-        display: "1.21.6(-8)",
-        combines: ["bottom", "1.21.5"],
+        combines: ["top", "1.21.10"],
+        multiApi: true
       },
       {
         api: "1.21.10",
-        display: "1.21.9(-11)",
-        span: 1
+        rangeMin: "1.21.9",
+        rangeMax: "1.21.11",
+        combines: ["bottom", "1.21.8"],
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
+        rangeMax: "26.2",
         api: "26.1"
       }
     ],
@@ -223,16 +216,15 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
+        rangeMin: "1.21.4",
         api: "1.21.11",
-        span: 3,
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],
@@ -247,16 +239,15 @@ const variants: Mod[] = [
     versions: [
       {},
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
         api: "1.21.11",
-        display: "1.21.4(-11)",
-        span: 3,
+        rangeMin: "1.21.4",
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],
@@ -278,10 +269,9 @@ const variants: Mod[] = [
       },
       {
         api: "1.21.5",
-        display: "1.21.4(-11)",
-        span: 3,
-      },
-      {}
+        rangeMin: "1.21.4",
+        rangeMax: "1.21.11"
+      }
     ],
   },
   {
@@ -296,17 +286,19 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
+        rangeMin: "1.21.4",
         api: "1.21.11",
-        span: 3,
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
+      },
+      {
+        api: "26.3"
       }
     ],
   },
@@ -324,10 +316,7 @@ const variants: Mod[] = [
       },
       {
         api: "1.21.1",
-      },
-      {
-        span: 4,
-      },
+      }
     ],
   },
   {
@@ -342,16 +331,15 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
-        api: "1.21.11",
-        span: 3,
+        rangeMin: "1.21.4",
+        api: "1.21.11"
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],
@@ -368,19 +356,20 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
         api: "1.21.4",
+        combines: ["top", "1.21.11"],
       },
       {
-        display: "1.21.5(-11)",
+        rangeMin: "1.21.5",
         api: "1.21.11",
-        span: 2,
+        combines: ["bottom", "1.21.4"],
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],
@@ -397,20 +386,24 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
         api: "1.21.4",
+        combines: ["top", "1.21.11"],
       },
       {
-        display: "1.21.5(-11)",
+        rangeMin: "1.21.5",
         api: "1.21.11",
-        span: 2,
+        combines: ["bottom", "1.21.4"],
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
+      },
+      {
+        api: "26.3"
       }
     ],
   },
@@ -426,16 +419,15 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
-        api: "1.21.11",
-        span: 3,
+        rangeMin: "1.21.4",
+        api: "1.21.11"
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],
@@ -453,19 +445,20 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
         api: "1.21.4",
+        combines: ["top", "1.21.11"],
       },
       {
-        display: "1.21.5(-11)",
+        rangeMin: "1.21.5",
         api: "1.21.11",
-        span: 2,
+        combines: ["bottom", "1.21.4"],
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],
@@ -482,16 +475,15 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
-        api: "1.21.11",
-        span: 3,
+        rangeMin: "1.21.4",
+        api: "1.21.11"
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],
@@ -508,16 +500,15 @@ const variants: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
-        api: "1.21.11",
-        span: 3,
+        rangeMin: "1.21.4",
+        api: "1.21.11"
       },
       {
-        display: "26.1(2)",
+        rangeMin: "26.1",
         api: "26.2"
       }
     ],

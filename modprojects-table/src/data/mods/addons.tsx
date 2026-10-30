@@ -17,11 +17,8 @@ const addons: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
-      },
-      {
-        span: 4
       }
     ],
   },
@@ -37,11 +34,8 @@ const addons: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
-      },
-      {
-        span: 4
       }
     ],
   },
@@ -60,9 +54,6 @@ const addons: Mod[] = [
       },
       {
         api: "1.21.1",
-      },
-      {
-        span: 4,
       }
     ],
   },
@@ -78,21 +69,22 @@ const addons: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
         api: "1.21.1",
       },
       {
+        rangeMin: "1.21.4",
         api: "1.21.8",
-        display: "1.21.4(-8)",
-        span: 2,
+        combines: ["top", "1.21.11"],
       },
       {
+        rangeMin: "1.21.9",
         api: "1.21.11",
-        display: "1.21.9(-11)"
+        combines: ["bottom", "1.21.8"]
       },
       {
-        api: "26.2",
-        display: "26.1(2)"
+        rangeMin: "26.1",
+        api: "26.2"
       }
     ],
   },
@@ -109,17 +101,18 @@ const addons: Mod[] = [
         api: "1.20.1",
       },
       {
-        display: "1.21(.1)",
+        rangeMin: "1.21",
+        rangeMax: "1.21.1",
         api: "1.21.1",
       },
       {
-        display: "1.21.4(-11)",
-        api: "1.21.11",
-        span: 3,
+        rangeMin: "1.21.4",
+        api: "1.21.11"
       },
       {
+        rangeMin: "26.1",
         api: "26.2",
-        display: "26.1(2)"
+        discontinued: "Woodcutter variants are included within \"Nemo's Woodcutter\" itself starting with its version 1.15 and Minecraft version 26.3. Existing versions will continue to receive bug fixes similar to the other mods.",
       }
     ],
   },
@@ -143,9 +136,11 @@ const addons: Mod[] = [
       },
       {
         api: "1.21.4",
+        combines: ["top", "0"],
       },
       {
-        span: 3,
+        api: "0",
+        combines: ["bottom", "1.21.4"],
       }
     ],
   },
