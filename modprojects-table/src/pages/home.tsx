@@ -2,11 +2,61 @@ import { Component, createSignal, For, onMount, Show } from "solid-js";
 import { TbCircleFilled, TbMail } from "solid-icons/tb";
 import { VsGithub } from 'solid-icons/vs'
 import { SiGithub, SiDiscord } from "solid-icons/si";
-import categories from "../data/mods";
+import categories, {getVersionColumnCount, Version} from "../data/mods";
 import { getColorAtTopLeft } from "../util/color.ts";
 import { fetchVersionsAndWriteToTable } from "../util/versions.ts";
 import NavBar from "../components/nav_bar.tsx";
 import {fetchAuthorsAndWriteToTable} from "../util/authors.ts";
+
+const resolveVersionDisplay = (version: Version): string[] => {
+  if (version.api === "0") return ["",""];
+  if (!version.rangeMin) return [`${version.api ?? ""}`,""];
+  version.rangeMax = version.rangeMax ?? version.api ?? version.rangeMin;
+  if (version.rangeMin === version.rangeMax) return [`${version.rangeMin}`,""];
+
+  const min = version.rangeMin.split(".");
+  const max = version.rangeMax.split(".");
+  const minLast = Number(min[min.length - 1]);
+  const maxLast = Number(max[max.length - 1]);
+
+  if (max.length > min.length) {
+    return [`${version.rangeMin}`,`(.${max.slice(min.length).join(".")})`];
+  }
+
+  const base = max.length === min.length ? version.rangeMin : min.slice(0, max.length - 1).join(".");
+  const suffix = maxLast - minLast > 1 ? `-${maxLast}` : `${maxLast}`;
+  return [`${base || version.rangeMin}`,`(${suffix})`];
+};
+
+export const getModVersionSearchLink = (modId: string, version: Version): string => {
+  const rangeMax = version.rangeMax ?? version.api ?? version.rangeMin ?? "";
+  const rangeMin = version.rangeMin ?? version.api ?? rangeMax ?? "";
+  const versions = [rangeMin];
+  const max = rangeMax.split(".").map(Number);
+  const current = rangeMin.split(".").map(Number);
+  const stepIndex = max.length - 1;
+
+  while (current[stepIndex] < max[stepIndex]) {
+    current[stepIndex] += 1;
+    const version = current.join(".");
+    if (!versions.includes(version)) versions.push(version);
+  }
+
+  return `https://modrinth.com/mod/${modId}/versions?${versions.map((version) => `g=${version}`).join("&")}`;
+};
+
+const versionColumnCount = Math.max(
+  ...categories.flatMap((category) => category.mods.map(getVersionColumnCount)),
+);
+
+const getTableMaxWidth = (isOuter: boolean): number => {
+    const baseWidth = isOuter ? 600 : 620;
+    const columnWidth = isOuter ? 120 : 110;
+    return baseWidth + versionColumnCount * columnWidth;
+}
+
+const tableMaxWidth = getTableMaxWidth(true);
+const tableInnerMaxWidth = getTableMaxWidth(false);
 
 const Home: Component = () => {
   onMount(() => {
@@ -59,21 +109,32 @@ const Home: Component = () => {
           </a>
         </div>
       </div>
-      <NavBar />
+      <NavBar /><div /* Hidden div to load tailwind classes*/ class="hidden grid-cols-5 w-[488px] max-w-[1170px] max-w-[1200px] grid-cols-6 w-[586px] max-w-[1280px] max-w-[1320px] grid-cols-7 w-[684px] max-w-[1390px] max-w-[1440px] grid-cols-8 w-[782px] max-w-[1500px] max-w-[1560px]"></div>
       <div class="w-full overflow-x-auto min-h-svh py-[48px]">
-        <div class="flex flex-col min-w-max max-w-[1100px] mx-auto">
+        <div class={`flex flex-col min-w-max max-w-[${tableMaxWidth}px] mx-auto modprojects-table-${tableMaxWidth}`}>
           <For each={categories}>
             {(category) => {
               return (
                 <div class="flex flex-col justify-center items-center p-[4px] gap-[2px] bg-fore-300">
-                  <div class="sticky left-0 max-w-[1280px] w-screen mx-auto flex justify-center items-center h-[48px] font-bold text-[24px] text-base-500 hover:text-shadow-xs hover:text-shadow-acct-400">
+                  <div class={`sticky left-0 max-w-[${tableInnerMaxWidth}px] w-screen mx-auto flex justify-center items-center h-[48px] font-bold text-[24px] text-base-500 hover:text-shadow-xs hover:text-shadow-acct-400`}>
                     {category.name}
                   </div>
                   <For each={category.mods}>
                     {(mod, index) => {
                       const isEvenRow = index() % 2 === 0;
                       const skippedApis = new Set<string>();
+                      const discontinued = mod.versions[mod.versions.length - 1]?.discontinued ?? "";
+                      const discontinuedElement = discontinued ? (
+                        <span class="discontinued-text">
+                          Discontinued
+                          <div class="discontinued-tooltip">{discontinued}</div>
+                        </span>
+                      ) : null;
                       const [currentCol, setCurrentCol] = createSignal<number>(0);
+                      const leftoverColumns = () =>
+                        versionColumnCount -
+                        (currentCol() +
+                          mod.versions.filter((version) => version?.combines?.[0] !== "bottom").length);
                       const elementModId = mod.name
                         .toLowerCase()
                         .replace(/[^A-Za-z ]/g, "")
@@ -161,7 +222,7 @@ const Home: Component = () => {
                                     <a title={author.name} href={author.link} id={author.name + "_profile_" + mod.id} target="_blank">
                                       <img
                                         class="w-[40px] aspect-square rounded-full border-3 bg-fore-200 border-fore-200 hover:bg-acct-400 hover:border-acct-400"
-                                        src={author.image}
+                                        src={author.image ?? author.name + ".img"}
                                         alt={author.name + " Icon"}
                                         id={author.name + "_image_" + mod.id}
                                       />
@@ -170,17 +231,17 @@ const Home: Component = () => {
                                 }}
                               </For>
                             </div>
-                            <div class="grid grid-cols-6 w-[576px] gap-[2px]">
+                            <div class={"grid grid-cols-" + `${versionColumnCount}` + " w-[" + `${98 * versionColumnCount - 2}` + "px] gap-[2px]"}>
                               <For each={mod.versions}>
                                 {(version, i) => {
-                                  if (!version) return null;
+                                  if (!version || (!version.api && version.unsupported)) return null;
                                   if (version.combines && version.combines[0] === "bottom") {
                                     if (version.api) skippedApis.add(version.api);
                                     return;
                                   }
                                   const skippedBefore = mod.versions.slice(0, i()).filter((v) => v && v.api && skippedApis.has(v.api)).length;
                                   const offset = currentCol() + i() + 1 - skippedBefore;
-                                  const empty = version.display == null && version.api == null;
+                                  const empty = version.rangeMin == null && version.api == null;
                                   setCurrentCol((prev) => (version.span ? prev + (version.span - 1) : prev));
                                   return (
                                     <div
@@ -198,20 +259,23 @@ const Home: Component = () => {
                                             ? [mod.versions.find((v) => v && v.api === version.combines?.[1])].filter(Boolean)
                                             : []),
                                         ]}>
-                                        {(version) =>
-                                          version ? (
-                                            <a
-                                              id={mod.id + "_" + (version.api ?? "unknown")}
-                                              href={"https://modrinth.com/mod/" + mod.id + "/versions?g=" + version.api}
-                                              title={mod.name + " " + (version.display ?? version.api) + (version.unsupported ? " (inactive)" : "")}
-                                              target="_blank"
-                                              class={`group relative ${Array.isArray(version.combines) ? "combined_" + version.combines[0] + " " : ""}
+                                        {(version) => {
+                                          if (!version) return null;
+                                          const [versionName, versionSuffix] = resolveVersionDisplay(version);
+                                          const modVersionSearchLink = getModVersionSearchLink(mod.id, version);
+                                          return (
+                                            <div
+                                              id={mod.id + "_" + (version.api ?? "unknown" + Math.random())}
+                                              class={`group relative ${Array.isArray(version.combines) ? "combined_" + version.combines[0] + " " : ""} ${version.multiApi ? "multi-api" : ""}
                                               ${version.unsupported ? "text-fore-200/50 line-through decoration-fore-200/10 decoration-2 hover:text-acct-300/50 hover:decoration-acct-500/5 unsupported" :
                                                                       "text-fore-200 font-semibold hover:text-acct-300 hover:decoration-acct-300/75 hover:underline supported"}
                                               ${Array.isArray(version.combines) ? isEvenRow ? "not-hover:bg-base-500" : "not-hover:bg-base-475" : ""}
                                               `}>
-                                              <div
+                                              <a
                                                 id={mod.id + "_" + (version.api ?? "unknown") + "_version_number"}
+                                                href={modVersionSearchLink}
+                                                title={mod.name + " " + versionName + versionSuffix + (version.unsupported ? " (inactive)" : "")}
+                                                target="_blank"
                                                 class={
                                                   "mod_version_number absolute transform" +
                                                   (version.unsupported ? " unsupported" : " supported") +
@@ -219,36 +283,31 @@ const Home: Component = () => {
                                                     ? " -left-[20%] " + (version.span === 2 ? "-translate-x-1/2" : "-translate-x-1/4")
                                                     : " absolute ml-0 -translate-x-1/6")
                                                 }>
-                                                {version.api ? "?.?.?" : ""}
-                                              </div>
-                                              {version.display
-                                                ? (() => {
-                                                  const d = version.display as string;
-                                                  const open = d.indexOf("(");
-                                                  const close = d.indexOf(")", open + 1);
-                                                  if (open !== -1 && close !== -1 && open < close) {
-                                                    const main = d.slice(0, open);
-                                                    const suffix = d.slice(open, close + 1);
-                                                    return (
-                                                      <>
-                                                        {main}
-                                                        <span class={"version_suffix " + (version.span && version.span > 1 ? "version_wide" : "version_narrow")}
-                                                        >{suffix}</span>
-                                                        {d.slice(close + 1)}
-                                                      </>
-                                                    );
-                                                  }
-                                                  return d;
-                                                })()
-                                              : version.api}
-                                            </a>
-                                          ) : null
-                                        }
+                                                {version.api && version.api !== "0" ? "?.?.?" : ""}
+                                              </a>
+                                              <a
+                                                  id={mod.id + "_" + (version.api ?? "unknown") + "_game_version"}
+                                                  href={modVersionSearchLink}
+                                                  title={mod.name + " " + versionName + versionSuffix + (version.unsupported ? " (inactive)" : "")}
+                                                  target="_blank">
+                                                  {versionName}<span class="version_suffix">{versionSuffix}</span>
+                                              </a>
+                                            </div>
+                                          )
+                                        }}
                                       </For>
                                     </div>
                                   );
                                 }}
                               </For>
+                              <Show
+                                when={leftoverColumns() > 0}>
+                                <div
+                                  class={`version flex empty_cell ${isEvenRow ? "bg-base-500" : "bg-base-475"}
+                                        ${discontinued ? `discontinued${leftoverColumns() > 2 ? "-wide" : ""} justify-center pt-[38px] text-fore-100` : ""}`}
+                                  style={`grid-column: span ${leftoverColumns()};`}
+                                >{discontinuedElement}</div>
+                              </Show>
                             </div>
                           </div>
                         </>

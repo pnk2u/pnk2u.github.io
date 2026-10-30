@@ -264,16 +264,91 @@ body {
   font-family: Rubik, Ubuntu, sans-serif;
   font-size: 16px;
   line-height: 20px;
+  & .version_suffix {
+    font-size: 13px;
+  }
+}
+
+.discontinued, .discontinued-wide {
+  anchor-name: --post-title;
+  opacity: 0.95;
+  span {
+    margin-bottom: 41px;
+    cursor: help;
+    text-decoration: 1px underline dotted;
+    width: 100%;
+    text-align: center;
+    anchor-name: --post-text;
+    &:hover {
+      color: var(--color-acct-300);
+        .discontinued-tooltip {
+            display: block;
+            color: var(--color-fore-100);
+        }
+    }
+    .discontinued-tooltip {
+      cursor: text;
+      display: none;
+      position: absolute;
+      text-align: left;
+      width: round(15vw, 2px);
+      background-color: var(--color-base-500);
+      border: 1px solid var(--color-fore-700);
+      border-radius: 4px;
+      padding: 4px;
+      position-anchor: --post-title;
+      left: calc(anchor(start) - min(48px, 1.5vw));
+      min-width: calc(anchor-size(width) + 1px);
+      max-width: round(calc(anchor-size(width) * 2), 2px);
+      box-shadow: 2px 2px 2px rgba(from var(--color-fore-900) r g b / 0.5);
+    }
+  }
+}
+.discontinued-wide span.discontinued-text .discontinued-tooltip {
+  left: calc(anchor(start) + 1px);
+  width: anchor-size(width);
+}
+
+@media(max-width: 1335px) {
+  .modprojects-table-1200 .discontinued span .discontinued-tooltip {
+    left: unset !important;
+    right: calc(anchor(end) + 1px);
+    max-width: round(calc(anchor-size(width) * 1.5), 2px) !important;
+  }
+}
+@media(max-width: 1455px) {
+  .modprojects-table-1320 .discontinued span .discontinued-tooltip {
+    left: unset !important;
+    right: calc(anchor(end) + 1px);
+    max-width: round(calc(anchor-size(width) * 1.5), 2px) !important;
+  }
+}
+@media(max-width: 1575px) {
+  .modprojects-table-1440 .discontinued span .discontinued-tooltip {
+    left: unset !important;
+    right: calc(anchor(end) + 1px);
+    max-width: round(calc(anchor-size(width) * 1.5), 2px) !important;
+  }
+}
+@media(max-width: 1695px) {
+  .modprojects-table-1560 .discontinued span .discontinued-tooltip {
+    left: unset !important;
+    right: calc(anchor(end) + 1px);
+    max-width: round(calc(anchor-size(width) * 1.5), 2px) !important;
+  }
 }
 
 .version_suffix {
-  font-size: 16px;
-  margin-left: 1px;
+  font-size: 15px;
+  margin-left: 0;
   margin-right: -5px;
-  vertical-align: text-top;
+  letter-spacing: 0;
+  vertical-align: center;
+  font-weight: 400;
+  opacity: 0.95;
 }
 
-.mod_version_number, .unsupported {
+.mod_version_number, .unsupported, .discontinued-text {
   font-family: "Departure Mono", monospace;
   font-size: 11px;
 }
